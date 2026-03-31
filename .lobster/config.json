@@ -1,0 +1,12 @@
+{
+  "vault_path": "d:\\DATA\\cgq-obsidian",
+  "notes_dir": "d:\\DATA\\cgq-obsidian\\notes",
+  "templates_dir": "d:\\DATA\\cgq-obsidian\\templates",
+  "card_types": ["judgment", "method", "case", "information", "todo"],
+  "confidence_levels": ["high", "medium", "low"],
+  "status_levels": {
+    "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
+    "todo": ["pending", "in_progress", "completed", "cancelled"]
+  },
+  "filename_pattern": "{{DATE}}-{{TYPE}}-{{SLUG}}.md"
+}
