@@ -1,0 +1,35 @@
+{
+  "name": "llm-wiki-skill",
+  "version": "1.0.0",
+  "description": "LLM Wiki - 用 LLM 构建持久化知识库，基于 Andrej Karpathy 的 llm-wiki 概念",
+  "main": "skill.md",
+  "scripts": {
+    "init": "bash ./bin/init-wiki.sh",
+    "query": "bash ./bin/query-wiki.sh",
+    "lint": "bash ./bin/lint-wiki.sh",
+    "test": "echo \"运行测试...\" && exit 0"
+  },
+  "keywords": [
+    "llm",
+    "wiki",
+    "knowledge-base",
+    "rag",
+    "obsidian",
+    "claude"
+  ],
+  "author": "基于 Andrej Karpathy 的 llm-wiki 概念",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+  },
+  "claude": {
+    "skill": true,
+    "trigger": [
+      "构建个人知识库",
+      "摄取文档到 wiki",
+      "查询知识库",
+      "wiki 健康检查"
+    ]
+  }
+}
