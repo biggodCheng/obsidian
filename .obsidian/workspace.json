@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "findings.md",
+                "file": "personal-wiki/wiki/concepts/知识原子化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "findings"
+              "title": "知识原子化"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "findings.md",
+                "file": "personal-wiki/wiki/concepts/知识原子化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "findings 的反向链接列表"
+              "title": "知识原子化 的反向链接列表"
             }
           },
           {
@@ -184,8 +184,16 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "5d77380955790776",
   "lastOpenFiles": [
+    "personal-wiki/wiki/concepts/判断卡.md",
+    "personal-wiki/wiki/concepts/方法卡.md",
+    "personal-wiki/wiki/concepts/第二大脑.md",
+    "personal-wiki/wiki/concepts/闭环系统.md",
+    "personal-wiki/wiki/concepts/案例卡.md",
+    "personal-wiki/wiki/concepts/知识原子化.md",
+    "personal-wiki/wiki/concepts/信息卡.md",
+    "findings.md",
     "personal-wiki/wiki/synthesis/wiki-health-check-2026-04-09.md",
     "CLAUDE.md",
     "templates/method.md",
@@ -193,15 +201,11 @@
     "templates/information.md",
     "templates/case.md",
     "templates/todo.md",
-    "personal-wiki/wiki/concepts/闭环系统.md",
     "personal-wiki/wiki/summaries/obsidian-digital-asset-factory.md",
     "personal-wiki/wiki/synthesis/判断卡应用指南.html",
     "未命名.md",
     "未命名.base",
     "未命名.canvas",
-    "personal-wiki/wiki/concepts/知识原子化.md",
-    "personal-wiki/wiki/concepts/判断卡.md",
-    "personal-wiki/wiki/concepts/第二大脑.md",
     "personal-wiki/wiki/entities/龙虾AI.md",
     "personal-wiki/wiki/synthesis/判断卡应用指南.md",
     "personal-wiki/wiki/log.md",
@@ -211,7 +215,6 @@
     "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
     "personal-wiki/raw/sources/obsidian-theory.md",
     "personal-wiki/README.md",
-    "personal-wiki/CLAUDE.md",
     "personal-wiki/wiki/entities",
     "personal-wiki/wiki/synthesis",
     "personal-wiki/wiki/summaries",
@@ -219,9 +222,6 @@
     "personal-wiki/wiki",
     "personal-wiki/raw/sources",
     "personal-wiki/raw/assets",
-    "personal-wiki/raw",
-    "cgq-obsidian/2026-04-08.md",
-    "notes/2026-04-05-method-openclaw-skill目录结构.md",
-    "notes/2026-04-05-judgment-skill来源是分层次的.md"
+    "personal-wiki/raw"
   ]
 }
