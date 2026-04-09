@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "c6542a3d20fb13af",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c5e921759eb4375",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a693dd9fa700ee9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "93b04f3b40a8ec16",
+    "type": "split",
+    "children": [
+      {
+        "id": "25a1ee330fc6c4b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b544c27046955be1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "fede75ccf4725b27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "8cd177c665df8deb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a0c28e34ccb37cd4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3536c573e070fbc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9e00e6b45dd7d77",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-04-05-method-openclaw-skill三层结构设计 的反向链接列表"
+            }
+          },
+          {
+            "id": "2fcbcaa6679d233b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026-04-05-method-openclaw-skill三层结构设计 的出链列表"
+            }
+          },
+          {
+            "id": "1ab6e0aaccbda0db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "7d7dc2c7bdcb092c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "fb40df6d54205247",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026-04-05-method-openclaw-skill三层结构设计 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "qmd-as-md-obsidian:Toggle Quarto Preview": false,
+      "marp-slides:Show Slide Preview": false
+    }
+  },
+  "active": "b544c27046955be1",
+  "lastOpenFiles": [
+    "cgq-obsidian/2026-04-08.md",
+    "notes/2026-04-05-method-openclaw-skill目录结构.md",
+    "notes/2026-04-05-judgment-skill来源是分层次的.md",
+    "notes/2026-04-05-judgment-skill放置是架构问题.md",
+    "notes/2026-04-05-judgment-openclaw中tool和skill的区别.md",
+    "notes/2026-04-05-judgment-main-agent的skill不会天然共享.md",
+    "notes/2026-04-05-information-openclaw-tool-vs-skill对照表.md",
+    "notes/2026-04-05-information-同名skill优先级问题.md",
+    "notes/2026-04-05-method-skill共享问题判断逻辑.md",
+    "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+    "notes/2026-04-05-case-130个ai员工的多agent系统.md",
+    "findings.md",
+    "CLAUDE.md",
+    "templates/todo.md",
+    "templates/method.md",
+    "templates/judgment.md",
+    "templates/information.md",
+    "templates/case.md"
+  ]
+}
