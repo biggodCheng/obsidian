@@ -5,6 +5,20 @@ date: 2026-04-09
 tags: [AI工具, Claude Code, Obsidian插件, 自动化]
 sources: [obsidian-theory]
 related: [ob-search, ob-todo, ob-note, article-processor]
+
+## 四个子技能
+
+### [[ob-search]]
+全库检索技能 - 提供精准的全文检索和语义搜索能力
+
+### [[ob-todo]]
+任务管理技能 - 提供快速捕捉和智能任务管理能力
+
+### [[ob-note]]
+笔记记录技能 - 提供随时记录和智能分类归档能力
+
+### [[article-processor]]
+文章处理技能 - 提供自动化内容处理和智能拆卡能力
 confidence: high
 status: mature
 ---
