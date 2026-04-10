@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8e9d4c40a43b1811",
+        "id": "f11b1afabe81711c",
         "type": "tabs",
-        "dimension": 21.675774134790526,
         "children": [
           {
-            "id": "a3d615dac957540d",
+            "id": "a417b3870b01a7bc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          }
-        ]
-      },
-      {
-        "id": "efe5877ead43f699",
-        "type": "tabs",
-        "dimension": 78.32422586520947,
-        "children": [
-          {
-            "id": "4c6215682dceb946",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "webviewer",
+              "state": {
+                "url": "https://mp.weixin.qq.com/s/SVjHER6TT9zP4izr10lHkQ",
+                "title": "垂直小号依然有红利，分享我做三年公众号精准获客的思路",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "垂直小号依然有红利，分享我做三年公众号精准获客的思路"
             }
           }
         ]
@@ -212,8 +198,10 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "a3d615dac957540d",
+  "active": "a417b3870b01a7bc",
   "lastOpenFiles": [
+    "2026-04-09.md",
+    "垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
     "Excalidraw/Drawing 2026-04-03 11.04.16.excalidraw.md",
     "Excalidraw",
     "kasjdfa.md",

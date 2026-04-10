@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/wiki/concepts/方法卡.md",
+                "file": "personal-wiki/wiki/concepts/痛点分级.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "方法卡"
+              "title": "痛点分级"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "personal-wiki/wiki/concepts/方法卡.md",
+                "file": "personal-wiki/wiki/concepts/痛点分级.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "方法卡 的反向链接列表"
+              "title": "痛点分级 的反向链接列表"
             }
           },
           {
@@ -186,6 +186,15 @@
   },
   "active": "4e4aa0c2e3a23332",
   "lastOpenFiles": [
+    "personal-wiki/wiki/concepts/四步转化结构.md",
+    "personal-wiki/wiki/concepts/生存画像.md",
+    "personal-wiki/wiki/concepts/60-30-10法则.md",
+    "personal-wiki/wiki/concepts/方法卡.md",
+    "personal-wiki/wiki/concepts/痛点分级.md",
+    "personal-wiki/wiki/summaries/wechat-vertical-account-acquisition.md",
+    "cgq-obsidian/2026-04-09.md",
+    "personal-wiki/raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
+    "cgq-obsidian/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
     "personal-wiki/wiki/concepts/第二大脑.md",
     "personal-wiki/wiki/concepts/闭环系统.md",
     "personal-wiki/wiki/concepts/案例卡.md",
@@ -198,7 +207,6 @@
     "personal-wiki/wiki/synthesis/判断卡应用指南.md",
     "personal-wiki/wiki/entities/龙虾AI.md",
     "personal-wiki/wiki/entities/article-processor.md",
-    "personal-wiki/wiki/concepts/方法卡.md",
     "知识进化.md",
     "personal-wiki/wiki/index.md.tmp.35264.1775731854667",
     "personal-wiki/wiki/index.md.tmp.35264.1775731849649",
@@ -206,14 +214,6 @@
     "personal-wiki/wiki/summaries/four-skills-research-findings.md",
     "personal-wiki/wiki/summaries/four-skills-implementation-plan.md",
     "personal-wiki/raw/sources/progress.md",
-    "personal-wiki/raw/sources/findings.md",
-    "personal-wiki/raw/sources/task_plan.md",
-    "findings.md",
-    "personal-wiki/wiki/synthesis/wiki-health-check-2026-04-09.md",
-    "CLAUDE.md",
-    "templates/method.md",
-    "templates/judgment.md",
-    "templates/information.md",
     "personal-wiki/wiki/synthesis/判断卡应用指南.html",
     "未命名.base",
     "未命名.canvas",
