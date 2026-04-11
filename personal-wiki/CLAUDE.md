@@ -14,6 +14,13 @@
   - `summaries/` - 源文件摘要
   - `synthesis/` - 综合分析页面
 
+- `notes/` - Lobster 卡片（与 Wiki 集成）
+  - `judgments/` - 判断卡（价值最高）
+  - `methods/` - 方法卡（可复用流程）
+  - `cases/` - 案例卡（验证过的事实）
+  - `information/` - 信息卡（基础信息）
+  - `todos/` - 任务卡
+
 ## 摄取流程
 
 当用户要求摄取源文件时：
@@ -26,10 +33,17 @@
    - 创建或更新 `wiki/entities/` 中的实体页面
    - 创建或更新 `wiki/concepts/` 中的概念页面
    - 添加交叉引用
-5. **更新索引**：更新 `wiki/index.md`
-6. **记录日志**：在 `wiki/log.md` 追加条目
+5. **提取 Lobster 卡片**（融合模式）：
+   - 提炼判断卡（优先级最高）
+   - 提炼方法卡、案例卡
+   - 卡片引用相关 Wiki 概念（wiki_concepts 字段）
+6. **建立双向链接**：
+   - Wiki 页面添加 lobster_cards 引用
+   - 卡片添加 wiki_concepts 引用
+7. **更新索引**：更新 `wiki/index.md`（包含卡片信息）
+8. **记录日志**：在 `wiki/log.md` 追加条目
 
-单个源文件可能影响 10-15 个 wiki 页面。
+单个源文件可能影响 10-15 个 wiki 页面和 1-5 张 Lobster 卡片。
 
 ## 查询流程
 
@@ -69,6 +83,10 @@ date: YYYY-MM-DD
 tags: [tag1, tag2]
 sources: [source1, source2]
 related: [page1, page2]
+
+# Lobster 集成字段（可选）
+lobster_cards: []  # 引用的Lobster卡片，如：[[卡片名]], [[另一个卡片]]
+lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
 ---
 
 # 页面标题
@@ -82,6 +100,10 @@ related: [page1, page2]
 ## 关联
 - [[相关页面1]]
 - [[相关页面2]]
+
+## Lobster 卡片（如有）
+- [[判断卡示例]]
+- [[方法卡示例]]
 
 ## 来源
 - [[源文件摘要]]
@@ -122,6 +144,49 @@ related: [page1, page2]
 2. **Wiki 完全由 LLM 拥有**：LLM 创建、更新、维护所有 wiki 页面
 3. **保持一致性**：确保交叉引用始终最新
 4. **记录一切**：所有操作都记录在 `wiki/log.md`
+
+## Lobster 卡片格式
+
+所有 Lobster 卡片应包含：
+
+```markdown
+---
+type: judgment|method|case|information|todo
+confidence: high|medium|low
+tags: []
+status: new|growing|mature|outdated|discarded
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+
+# Wiki 集成字段
+wiki_concepts: []  # 引用的Wiki概念，如：[[概念名]], [[另一个概念]]
+sources: []        # 来源文章或文件
+related: []        # 相关卡片或页面
+---
+
+# 卡片标题
+
+## 内容
+...
+
+## 相关 Wiki 概念
+- [[相关概念1]]
+- [[相关概念2]]
+```
+
+## Wiki-Lobster 交叉引用
+
+**Wiki 页面引用 Lobster 卡片**：
+- 在 frontmatter 中添加 `lobster_cards: [[卡片名]]`
+- 在页面内容中添加 `## Lobster 卡片` 章节
+
+**Lobster 卡片引用 Wiki 概念**：
+- 在 frontmatter 中添加 `wiki_concepts: [[概念名]]`
+- 在卡片内容中添加 `## 相关 Wiki 概念` 章节
+
+**自动化维护**：
+- 每次摄取时自动扫描并更新所有相关引用
+- 确保双向链接的一致性
 
 ---
 

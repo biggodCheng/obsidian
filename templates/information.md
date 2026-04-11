@@ -5,6 +5,11 @@ tags: []
 status: new
 created: {{DATE}}
 updated: {{DATE}}
+
+# Wiki 集成字段
+wiki_concepts: []  # 引用的Wiki概念，如：[[概念名]], [[另一个概念]]
+sources: []        # 来源文章或文件
+related: []        # 相关卡片或页面
 ---
 
 # {{TITLE}}

@@ -9,7 +9,7 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 
 
 class LobsterConfig:
@@ -261,6 +261,157 @@ def slugify(text: str) -> str:
     return text.strip('-')
 
 
+class UnifiedIngestionWorkflow:
+    """统一的摄取工作流 - 融合 Wiki 和 Lobster"""
+
+    def __init__(self, lobster_config: LobsterConfig = None, wiki_dir: str = None):
+        self.lobster_config = lobster_config or LobsterConfig()
+        self.lobster = LobsterVault(self.lobster_config)
+        self.wiki_dir = Path(wiki_dir) if wiki_dir else Path(self.lobster_config.config.get('wiki_dir', 'personal-wiki/wiki'))
+        self.notes_dir = Path(self.lobster_config.notes_dir)
+
+    def extract_content(self, source_file: str) -> Dict[str, Any]:
+        """从源文件提取内容"""
+        # TODO: 实现内容提取逻辑
+        return {"title": "", "content": "", "metadata": {}}
+
+    def create_summary(self, content: Dict[str, Any]) -> str:
+        """创建 Wiki 摘要页面"""
+        # TODO: 实现 Wiki 摘要创建逻辑
+        summary_path = self.wiki_dir / "summaries" / f"{slugify(content['title'])}.md"
+        return str(summary_path)
+
+    def extract_cards(self, content: Dict[str, Any], summary_path: str) -> List[NoteCard]:
+        """从内容中提取 Lobster 卡片"""
+        cards = []
+
+        # TODO: 实现智能卡片提取逻辑
+        # 1. 识别判断（优先级最高）
+        # 2. 识别方法
+        # 3. 识别案例
+
+        return cards
+
+    def link_cards_and_concepts(self, cards: List[NoteCard], summary_path: str):
+        """建立卡片和 Wiki 概念的双向链接"""
+        linker = BidirectionalLinker(self.wiki_dir, self.notes_dir)
+
+        for card in cards:
+            # 识别卡片中的关键概念
+            concepts = linker.identify_concepts_in_card(card)
+
+            # 给卡片添加 Wiki 概念引用
+            if concepts:
+                linker.add_wiki_concepts_to_card(card.filepath, concepts)
+
+        # 给 Wiki 页面添加卡片引用
+        linker.add_lobster_cards_to_wiki(summary_path, cards)
+
+    def update_index(self, summary_path: str, cards: List[NoteCard]):
+        """更新 Wiki 索引"""
+        # TODO: 实现索引更新逻辑
+        index_path = self.wiki_dir / "index.md"
+
+    def ingest_article(self, source_file: str) -> Tuple[str, List[NoteCard]]:
+        """完整的摄取流程"""
+        # 1. 提取内容
+        content = self.extract_content(source_file)
+
+        # 2. 创建 Wiki 摘要
+        summary_page = self.create_summary(content)
+
+        # 3. 提取 Lobster 卡片
+        cards = self.extract_cards(content, summary_page)
+
+        # 4. 建立双向链接
+        self.link_cards_and_concepts(cards, summary_page)
+
+        # 5. 更新索引
+        self.update_index(summary_page, cards)
+
+        return summary_page, cards
+
+
+class BidirectionalLinker:
+    """双向链接维护器 - Wiki 和 Lobster 卡片之间的链接"""
+
+    def __init__(self, wiki_dir: Path, notes_dir: Path):
+        self.wiki_dir = wiki_dir
+        self.notes_dir = notes_dir
+        self.concepts_dir = wiki_dir / "concepts"
+        self.entities_dir = wiki_dir / "entities"
+
+    def identify_concepts_in_card(self, card: NoteCard) -> List[str]:
+        """识别卡片中的关键概念"""
+        concepts = []
+
+        # 扫描卡片内容，查找可能的概念引用
+        # TODO: 实现智能概念识别逻辑
+
+        return concepts
+
+    def find_matching_concept_pages(self, keywords: List[str]) -> List[Path]:
+        """在 wiki/concepts/ 中查找匹配的页面"""
+        matching_pages = []
+
+        if not self.concepts_dir.exists():
+            return matching_pages
+
+        for concept_file in self.concepts_dir.glob("*.md"):
+            # TODO: 实现关键词匹配逻辑
+            pass
+
+        return matching_pages
+
+    def add_wiki_concepts_to_card(self, card_path: Path, concepts: List[str]):
+        """给卡片添加 Wiki 概念引用"""
+        if not concepts:
+            return
+
+        card = NoteCard(str(card_path))
+
+        # 更新 frontmatter
+        if 'wiki_concepts' not in card.frontmatter:
+            card.frontmatter['wiki_concepts'] = []
+
+        for concept in concepts:
+            concept_link = f"[[{concept}]]"
+            if concept_link not in card.frontmatter['wiki_concepts']:
+                card.frontmatter['wiki_concepts'].append(concept_link)
+
+        # TODO: 写回文件
+
+    def add_lobster_cards_to_wiki(self, wiki_page: str, cards: List[NoteCard]):
+        """给 Wiki 页面添加卡片引用"""
+        if not cards:
+            return
+
+        wiki_path = Path(wiki_page)
+
+        # 读取 Wiki 页面
+        # TODO: 实现读取和更新逻辑
+
+    def scan_and_update_references(self):
+        """扫描所有文件，更新相互引用"""
+        # 1. 扫描所有 Lobster 卡片
+        all_cards = []
+        for card_type in ["judgments", "methods", "cases", "information"]:
+            type_dir = self.notes_dir / card_type
+            if type_dir.exists():
+                all_cards.extend(type_dir.glob("*.md"))
+
+        # 2. 对于每张卡片，识别相关概念
+        for card_path in all_cards:
+            card = NoteCard(str(card_path))
+            concepts = self.identify_concepts_in_card(card)
+
+            if concepts:
+                self.add_wiki_concepts_to_card(card_path, concepts)
+
+        # 3. 扫描所有 Wiki 页面，更新卡片引用
+        # TODO: 实现 Wiki 页面扫描和更新逻辑
+
+
 if __name__ == '__main__':
     # 测试代码
     config = LobsterConfig()
@@ -274,3 +425,12 @@ if __name__ == '__main__':
     if notes:
         results = vault.search("测试")
         print(f"Search results: {len(results)}")
+
+    # 测试统一摄取工作流
+    try:
+        workflow = UnifiedIngestionWorkflow()
+        print(f"Unified workflow initialized")
+        print(f"Wiki dir: {workflow.wiki_dir}")
+        print(f"Notes dir: {workflow.notes_dir}")
+    except Exception as e:
+        print(f"Error initializing workflow: {e}")

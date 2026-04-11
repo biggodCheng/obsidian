@@ -1,6 +1,7 @@
 {
   "vault_path": "d:\\DATA\\cgq-obsidian",
-  "notes_dir": "d:\\DATA\\cgq-obsidian\\notes",
+  "notes_dir": "d:\\DATA\\cgq-obsidian\\personal-wiki\\notes",
+  "wiki_dir": "d:\\DATA\\cgq-obsidian\\personal-wiki\\wiki",
   "templates_dir": "d:\\DATA\\cgq-obsidian\\templates",
   "card_types": ["judgment", "method", "case", "information", "todo"],
   "confidence_levels": ["high", "medium", "low"],
@@ -8,5 +9,17 @@
     "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
     "todo": ["pending", "in_progress", "completed", "cancelled"]
   },
-  "filename_pattern": "{{DATE}}-{{TYPE}}-{{SLUG}}.md"
+  "filename_pattern": "{{DATE}}-{{TYPE}}-{{SLUG}}.md",
+  "card_subdirs": {
+    "judgment": "judgments",
+    "method": "methods",
+    "case": "cases",
+    "information": "information",
+    "todo": "todos"
+  },
+  "wiki_integration": {
+    "enabled": true,
+    "auto_link": true,
+    "bidirectional_references": true
+  }
 }
