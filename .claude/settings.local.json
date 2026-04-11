@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/87044/.claude/skills/fetch-wechat-article/**)",
+      "Bash(python scripts/fetch_wechat_article.py \"https://mp.weixin.qq.com/s/XFjcBkwxypQeGZDIJ6n-vg\")"
+    ]
+  }
+}
