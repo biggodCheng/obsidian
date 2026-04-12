@@ -144,13 +144,20 @@ version: 1.0.0
 title: 页面标题
 type: entity|concept|summary|synthesis
 date: 2026-04-12
-tags: [tag1, tag2]
-sources: [source1]
-related: [page1, page2]
-
-# Lobster 集成
-lobster_cards: [[卡片1]], [[卡片2]]
-lobster_type: ["judgment", "method"]
+tags:
+  - tag1
+  - tag2
+sources:
+  - source1
+related:
+  - page1
+  - page2
+lobster_cards:
+  - 卡片1
+  - 卡片2
+lobster_type:
+  - judgment
+  - method
 ---
 
 # 页面标题
@@ -159,7 +166,7 @@ lobster_type: ["judgment", "method"]
 ...
 
 ## Lobster 卡片
-详见 [[判断卡示例]]
+- [[判断卡示例]]
 
 ## 来源
 - [[源文件摘要]]
@@ -173,15 +180,20 @@ lobster_type: ["judgment", "method"]
 ---
 type: judgment|method|case|information
 confidence: high|medium|low
-tags: []
+tags:
+  - tag1
+  - tag2
 status: new|growing|mature
 created: 2026-04-12
 updated: 2026-04-12
-
-# Wiki 集成
-wiki_concepts: [[概念1]], [[概念2]]
-sources: [source1]
-related: [card1, page1]
+wiki_concepts:
+  - 概念1
+  - 概念2
+sources:
+  - source1
+related:
+  - card1
+  - page1
 ---
 
 # 卡片标题
@@ -193,6 +205,13 @@ related: [card1, page1]
 - [[相关概念]]
 - [[另一个概念]]
 ```
+
+### Frontmatter 格式规范（必须遵守）
+
+1. **不要在 frontmatter 内使用 `[[wikilink]]` 语法** — `[[ ]]` 是 Obsidian Markdown 语法，YAML frontmatter 不支持。所有属性值必须使用纯字符串。`[[ ]]` 只能用在正文（`---` 之后）中。
+2. **不要在 frontmatter 内放 Markdown 标题或注释**（如 `# Wiki 集成`）— frontmatter `---` 分隔符之间的每一行必须是合法 YAML key-value。
+3. **使用 YAML 列表格式**（每项一行 `- value`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误。
+4. **`lobster_cards` 和 `wiki_concepts` 字段同理** — 全部用纯字符串列表。
 
 ## 自动化特性
 

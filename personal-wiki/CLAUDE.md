@@ -153,15 +153,19 @@ lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
 ---
 type: judgment|method|case|information|todo
 confidence: high|medium|low
-tags: []
+tags:
+  - tag1
+  - tag2
 status: new|growing|mature|outdated|discarded
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-
-# Wiki 集成字段
-wiki_concepts: []  # 引用的Wiki概念，如：[[概念名]], [[另一个概念]]
-sources: []        # 来源文章或文件
-related: []        # 相关卡片或页面
+wiki_concepts:
+  - 概念名
+  - 另一个概念
+sources:
+  - 来源文章或文件
+related:
+  - 相关卡片或页面
 ---
 
 # 卡片标题
@@ -173,6 +177,13 @@ related: []        # 相关卡片或页面
 - [[相关概念1]]
 - [[相关概念2]]
 ```
+
+### Frontmatter 规范（重要）
+
+1. **不要在 frontmatter 内使用 `[[wikilink]]` 语法** — `[[ ]]` 是 Markdown 语法，YAML frontmatter 不支持。所有属性值必须使用**纯字符串**
+2. **不要在 frontmatter 内放 Markdown 标题**（如 `# Wiki 集成`）— frontmatter `---` 分隔符之间的内容必须是合法 YAML
+3. **使用 YAML 列表格式**（`- item`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误
+4. **`lobster_cards` 字段同理** — Wiki 页面的 frontmatter 中也不要用 `[[ ]]`，用纯字符串列表
 
 ## Wiki-Lobster 交叉引用
 

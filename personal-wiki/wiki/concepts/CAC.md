@@ -5,8 +5,13 @@ date: 2026-04-11
 tags: [增长, 出海, 营销]
 sources: [SBTI传播核武器拆解]
 related: [病毒循环, 社交货币]
-lobster_cards: [[传播力大于功能完备性]], [[情境依赖型内容适合出海]], [[SBTI零成本爆火案例]]
-lobster_type: ["judgment", "case"]
+lobster_cards:
+  - 传播力大于功能完备性
+  - 情境依赖型内容适合出海
+  - SBTI零成本爆火案例
+lobster_type:
+  - judgment
+  - case
 ---
 
 # CAC（Customer Acquisition Cost）
