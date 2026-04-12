@@ -1,5 +1,5 @@
 ---
-name: lobster-article-wiki
+name: ob-article-wiki
 description: 融合文章处理技能 - 同时构建 Wiki 知识网络和沉淀 Lobster 价值卡片。一次摄取，双向收益。
 trigger:
   - 当用户要求摄取文章到 wiki 时
