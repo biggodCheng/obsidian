@@ -305,13 +305,13 @@
 - `raw/sources/SBTI传播核武器拆解.md` - 微信公众号文章（作者：袁锐钦）
 
 **创建 Lobster 卡片**:
-- `notes/judgments/2026-04-12-judgment-传播力大于功能完备性.md` - 判断卡：最好的产品不是功能最全的，是最容易被传播的
-- `notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md` - 判断卡：人们分享的是他们自己
-- `notes/judgments/2026-04-12-judgment-情绪波动等于记忆深度.md` - 判断卡：情绪波动=记忆深度=传播动力
-- `notes/judgments/2026-04-12-judgment-情境依赖型内容适合出海.md` - 判断卡：情境依赖型内容天然具备出海基因
-- `notes/methods/2026-04-12-method-三步传播产品设计心法.md` - 方法卡：让结果可分享→让过程有情绪→给传播找借口
-- `notes/methods/2026-04-12-method-情绪化流程设计法.md` - 方法卡：将数据收集改造为情绪体验
-- `notes/cases/2026-04-12-case-SBTI零成本爆火案例.md` - 案例卡：HTML+27图+30题，零推广服务器被挤爆
+- `notes/judgments/传播力大于功能完备性.md` - 判断卡：最好的产品不是功能最全的，是最容易被传播的
+- `notes/judgments/用户分享的是自己不是产品.md` - 判断卡：人们分享的是他们自己
+- `notes/judgments/情绪波动等于记忆深度.md` - 判断卡：情绪波动=记忆深度=传播动力
+- `notes/judgments/情境依赖型内容适合出海.md` - 判断卡：情境依赖型内容天然具备出海基因
+- `notes/methods/三步传播产品设计心法.md` - 方法卡：让结果可分享→让过程有情绪→给传播找借口
+- `notes/methods/情绪化流程设计法.md` - 方法卡：将数据收集改造为情绪体验
+- `notes/cases/SBTI零成本爆火案例.md` - 案例卡：HTML+27图+30题，零推广服务器被挤爆
 
 **更新 Wiki 页面（添加 lobster_cards 双向引用）**:
 - `wiki/summaries/sbti-viral-propagation-analysis.md` - 添加7张卡片引用

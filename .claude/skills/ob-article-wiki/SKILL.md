@@ -213,6 +213,16 @@ related:
 3. **使用 YAML 列表格式**（每项一行 `- value`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误。
 4. **`lobster_cards` 和 `wiki_concepts` 字段同理** — 全部用纯字符串列表。
 
+### 文件命名规范
+
+所有文件统一使用 `{{SLUG}}.md` 命名：
+- **卡片**: `notes/{type}/{{SLUG}}.md`（如 `notes/judgments/传播力大于功能完备性.md`）
+- **摘要**: `wiki/summaries/{{SLUG}}.md`
+- **概念**: `wiki/concepts/{{SLUG}}.md`
+- **实体**: `wiki/entities/{{SLUG}}.md`
+- **SLUG** = 标题的简洁标识（中文直接用标题），日期和类型放 frontmatter 不放文件名
+- **核心原则**: 文件名 = Obsidian wikilink 解析名，确保 `[[文件名]]` 直接命中
+
 ## 自动化特性
 
 ### 智能概念识别

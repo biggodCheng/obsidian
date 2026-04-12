@@ -188,6 +188,16 @@ related:
 3. **使用 YAML 列表格式**（`- item`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误
 4. **`lobster_cards` 字段同理** — Wiki 页面的 frontmatter 中也不要用 `[[ ]]`，用纯字符串列表
 
+### 文件命名规范
+
+- **卡片文件**: `{{SLUG}}.md`（如 `notes/judgments/传播力大于功能完备性.md`）
+  - SLUG = 卡片标题的简洁标识，中文直接用标题
+  - 日期和类型信息放在 frontmatter 的 `created` 和 `type` 字段中，不重复到文件名
+- **Wiki 摘要文件**: `{{SLUG}}.md`（如 `wiki/summaries/sbti-viral-propagation-analysis.md`）
+- **Wiki 概念文件**: `{{SLUG}}.md`（如 `wiki/concepts/社交货币.md`）
+- **Wiki 实体文件**: `{{SLUG}}.md`（如 `wiki/entities/袁锐钦.md`）
+- **命名原则**: 文件名 = Obsidian wikilink 解析名，确保 `[[文件名]]` 能直接命中
+
 ## Wiki-Lobster 交叉引用
 
 **Wiki 页面引用 Lobster 卡片**：

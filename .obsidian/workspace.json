@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/notes/methods/2026-04-12-method-三步传播产品设计心法.md",
+                "file": "personal-wiki/notes/methods/三步传播产品设计心法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-12-method-三步传播产品设计心法"
+              "title": "三步传播产品设计心法"
             }
           }
         ]
@@ -187,13 +187,20 @@
   },
   "active": "d60b1cc2959c1db3",
   "lastOpenFiles": [
+    "personal-wiki/notes/methods/情绪化流程设计法.md",
+    "personal-wiki/notes/judgments/用户分享的是自己不是产品.md",
+    "personal-wiki/notes/judgments/情绪波动等于记忆深度.md",
+    "personal-wiki/notes/judgments/情境依赖型内容适合出海.md",
+    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
+    "personal-wiki/notes/cases/2026-04-12-case-SBTI零成本爆火案例.md",
+    "personal-wiki/notes/cases/SBTI零成本爆火案例.md",
+    "personal-wiki/notes/methods/三步传播产品设计心法.md",
+    "personal-wiki/notes/methods/2026-04-12-method-三步传播产品设计心法.md",
     "personal-wiki/notes/methods/2026-04-12-method-情绪化流程设计法.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-情绪波动等于记忆深度.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-情境依赖型内容适合出海.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-传播力大于功能完备性.md",
-    "personal-wiki/notes/cases/2026-04-12-case-SBTI零成本爆火案例.md",
-    "personal-wiki/notes/methods/2026-04-12-method-三步传播产品设计心法.md",
     "personal-wiki/wiki/synthesis/拆卡方法论.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/concepts/方法卡.md",
@@ -215,13 +222,6 @@
     "personal-wiki/wiki/synthesis/拆卡模式对比分析.md",
     "personal-wiki/wiki/concepts/第二大脑.md",
     "personal-wiki/wiki/concepts/病毒循环.md",
-    "SBTI传播核武器拆解.md",
-    "personal-wiki/raw/sources/SBTI测试一夜刷屏朋友圈，我拆解了它的源码，发现了3个传播核弹.md",
-    "notes/2026-04-05-judgment-skill来源是分层次的.md",
-    "personal-wiki/wiki/entities/乔纳·伯杰.md",
-    "personal-wiki/wiki/entities/袁锐钦.md",
-    "personal-wiki/wiki/concepts/CAC.md",
-    "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
-    "personal-wiki/wiki/synthesis/判断卡应用指南.md"
+    "SBTI传播核武器拆解.md"
   ]
 }
