@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/wiki/concepts/方法卡.md",
+                "file": "personal-wiki/notes/cases/2026-04-12-case-SBTI零成本爆火案例.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "方法卡"
+              "title": "2026-04-12-case-SBTI零成本爆火案例"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 358.5
   },
   "right": {
     "id": "a0c28e34ccb37cd4",
@@ -185,8 +185,24 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "d60b1cc2959c1db3",
   "lastOpenFiles": [
+    "personal-wiki/notes/methods/2026-04-12-method-情绪化流程设计法.md",
+    "personal-wiki/notes/methods/2026-04-12-method-三步传播产品设计心法.md",
+    "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md",
+    "personal-wiki/notes/judgments/2026-04-12-judgment-情绪波动等于记忆深度.md",
+    "personal-wiki/notes/judgments/2026-04-12-judgment-传播力大于功能完备性.md",
+    "personal-wiki/notes/cases/2026-04-12-case-SBTI零成本爆火案例.md",
+    "personal-wiki/wiki/concepts/方法卡.md",
+    "personal-wiki/notes/judgments/2026-04-12-judgment-情境依赖型内容适合出海.md",
+    "personal-wiki/wiki/concepts/社交货币.md",
+    "personal-wiki/wiki/concepts/闭环系统.md",
+    "personal-wiki/raw/sources/findings.md",
+    "personal-wiki/wiki/concepts/情绪触发器.md",
+    "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
+    "personal-wiki/raw/sources/SBTI传播核武器拆解.md",
+    "article_result.json",
+    "personal-wiki/wiki/concepts/情境依赖型幽默.md",
     "personal-wiki/notes/todos",
     "personal-wiki/notes/information",
     "personal-wiki/notes/cases",
@@ -197,31 +213,15 @@
     "personal-wiki/wiki/synthesis/拆卡模式对比分析.md",
     "personal-wiki/wiki/concepts/第二大脑.md",
     "personal-wiki/wiki/concepts/病毒循环.md",
-    "personal-wiki/wiki/concepts/情境依赖型幽默.md",
     "SBTI传播核武器拆解.md",
     "personal-wiki/raw/sources/SBTI测试一夜刷屏朋友圈，我拆解了它的源码，发现了3个传播核弹.md",
     "notes/2026-04-05-judgment-skill来源是分层次的.md",
     "personal-wiki/wiki/entities/乔纳·伯杰.md",
     "personal-wiki/wiki/entities/袁锐钦.md",
     "personal-wiki/wiki/concepts/CAC.md",
-    "personal-wiki/wiki/concepts/情绪触发器.md",
-    "personal-wiki/wiki/concepts/社交货币.md",
     "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
     "personal-wiki/wiki/synthesis/判断卡应用指南.md",
     "personal-wiki/wiki/synthesis/判断卡应用指南.html",
-    "personal-wiki/wiki/synthesis/wiki-health-check-2026-04-09.md",
-    "personal-wiki/wiki/entities/龙虾AI.md",
-    "personal-wiki/wiki/entities/ob-search.md",
-    "personal-wiki/wiki/entities/ob-todo.md",
-    "personal-wiki/wiki/entities/ob-note.md",
-    "personal-wiki/wiki/entities/article-processor.md",
-    "personal-wiki/wiki/concepts/60-30-10法则.md",
-    "personal-wiki/wiki/concepts/知识原子化.md",
-    "personal-wiki/wiki/summaries/wechat-vertical-account-acquisition.md",
-    "personal-wiki/wiki/summaries/obsidian-digital-asset-factory.md",
-    "personal-wiki/wiki/summaries/four-skills-research-findings.md",
-    "personal-wiki/wiki/synthesis",
-    "personal-wiki/wiki/entities",
-    "personal-wiki/wiki/summaries"
+    "personal-wiki/wiki/synthesis/wiki-health-check-2026-04-09.md"
   ]
 }

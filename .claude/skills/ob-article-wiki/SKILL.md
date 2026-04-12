@@ -1,0 +1,378 @@
+---
+name: lobster-article-wiki
+description: 融合文章处理技能 - 同时构建 Wiki 知识网络和沉淀 Lobster 价值卡片。一次摄取，双向收益。
+trigger:
+  - 当用户要求摄取文章到 wiki 时
+  - 当用户要求处理文章并拆卡时
+  - 当用户提到"融合模式"、"lobster-wiki"时
+  - 当用户需要同时创建知识网络和价值资产时
+author: 基于 lobster-article 和 llm-wiki 的融合
+version: 1.0.0
+---
+
+# Lobster-Article-Wiki 融合技能
+
+## 核心理念
+
+**一次摄取，双重收益**：
+
+1. **Wiki 知识网络** - 构建结构化的实体、概念、摘要页面
+2. **Lobster 价值卡片** - 提炼判断卡、方法卡、案例卡
+3. **双向交叉引用** - 自动建立概念与卡片之间的链接
+
+### 为什么需要融合？
+
+| 单一模式问题 | 融合模式解决方案 |
+|--------------|------------------|
+| 只有 Wiki，缺乏价值排序 | 提取判断卡，优先沉淀核心洞察 |
+| 只有 Lobster，缺乏知识网络 | 创建概念页面，构建知识图谱 |
+| 手动维护链接，容易遗漏 | 自动化双向引用，保持一致性 |
+| 两次操作，效率低下 | 一次摄取，同步完成 |
+
+## 三层架构
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        Raw Sources                           │
+│  文章、论文、PDF、网页（只读）                                │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                  融合摄取引擎（本技能）                       │
+│  ┌─────────────────────────────────────────────────────────┐ │
+│  │  1. 内容提取与分析                                       │ │
+│  │  2. Wiki 网络构建（摘要、实体、概念）                     │ │
+│  │  3. Lobster 卡片提炼（判断、方法、案例）                  │ │
+│  │  4. 双向链接建立（自动化）                               │ │
+│  │  5. 索引和日志更新                                       │ │
+│  └─────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌───────────────────────────┬─────────────────────────────────┐
+│       Wiki 网络层          │       Lobster 卡片层             │
+│  ┌─────────────────────┐ │  ┌─────────────────────────────┐ │
+│  │ summaries/          │ │  │ judgments/  (价值最高)       │ │
+│  │ entities/           │ │  │ methods/                    │ │
+│  │ concepts/           │ │  │ cases/                      │ │
+│  │ synthesis/          │ │  │ information/                │ │
+│  └─────────────────────┘ │  └─────────────────────────────┘ │
+└───────────────────────────┴─────────────────────────────────┘
+              ↑                               ↑
+              └─────────── 双向引用 ───────────┘
+```
+
+## 摄取流程
+
+### 标准流程
+
+```
+文章输入
+    ↓
+1. 内容提取
+   - 读取源文件
+   - 识别标题、作者、结构
+   - 提取核心观点
+    ↓
+2. Wiki 网络构建
+   - 创建摘要页面 (wiki/summaries/)
+   - 创建/更新实体页面 (wiki/entities/)
+   - 创建/更新概念页面 (wiki/concepts/)
+    ↓
+3. Lobster 卡片提炼
+   - 识别判断（优先级最高）
+   - 识别方法（可复用流程）
+   - 识别案例（验证过的事实）
+   - 识别信息（基础数据）
+    ↓
+4. 双向链接建立
+   - 卡片添加 wiki_concepts 引用
+   - Wiki 页面添加 lobster_cards 引用
+   - 自动发现相关概念和卡片
+    ↓
+5. 索引和日志更新
+   - 更新 wiki/index.md
+   - 追加 wiki/log.md
+```
+
+### 价值导向
+
+**优先级排序**：
+1. **判断卡** - "怎么判断"的核心决策依据
+2. **方法卡** - "具体做法"的可复用流程
+3. **案例卡** - "真实发生"的验证事实
+4. **信息卡** - "是什么"的基础数据（谨慎创建）
+
+## 使用方式
+
+### 基本用法
+
+```
+# 摄取文章（融合模式）
+帮我摄取这个文章：[文章路径/URL]
+
+# 明确指定融合模式
+用 lobster-article-wiki 处理这篇文章
+
+# 从 URL 摄取
+摄取 https://example.com/article
+```
+
+### 高级用法
+
+```
+# 指定提取重点
+重点提取这篇文章的判断卡
+
+# 批量处理
+处理这个目录下的所有文章
+
+# 只创建 Wiki，不拆卡
+只创建 Wiki 摘要，不提取卡片
+
+# 只拆卡，不创建 Wiki
+只提取判断卡，不创建 Wiki 页面
+```
+
+## 输出格式
+
+### Wiki 页面
+
+**位置**: `personal-wiki/wiki/`
+
+```markdown
+---
+title: 页面标题
+type: entity|concept|summary|synthesis
+date: 2026-04-12
+tags: [tag1, tag2]
+sources: [source1]
+related: [page1, page2]
+
+# Lobster 集成
+lobster_cards: [[卡片1]], [[卡片2]]
+lobster_type: ["judgment", "method"]
+---
+
+# 页面标题
+
+## 摘要
+...
+
+## Lobster 卡片
+详见 [[判断卡示例]]
+
+## 来源
+- [[源文件摘要]]
+```
+
+### Lobster 卡片
+
+**位置**: `personal-wiki/notes/`
+
+```markdown
+---
+type: judgment|method|case|information
+confidence: high|medium|low
+tags: []
+status: new|growing|mature
+created: 2026-04-12
+updated: 2026-04-12
+
+# Wiki 集成
+wiki_concepts: [[概念1]], [[概念2]]
+sources: [source1]
+related: [card1, page1]
+---
+
+# 卡片标题
+
+## 判断内容
+...
+
+## 相关 Wiki 概念
+- [[相关概念]]
+- [[另一个概念]]
+```
+
+## 自动化特性
+
+### 智能概念识别
+
+- 扫描卡片内容，识别关键概念
+- 在 wiki/concepts/ 中查找匹配页面
+- 自动添加 wiki_concepts 引用
+
+### 双向引用维护
+
+- 每次摄取时扫描相关页面
+- 自动更新 lobster_cards 字段
+- 保持引用的一致性
+
+### 增量更新
+
+- 识别已有概念和卡片
+- 更新而非重复创建
+- 保持版本历史
+
+## 配置要求
+
+### 必需目录
+
+```
+personal-wiki/
+├── raw/sources/           # 源文件存放
+├── wiki/                  # Wiki 输出
+│   ├── index.md
+│   ├── log.md
+│   ├── entities/
+│   ├── concepts/
+│   ├── summaries/
+│   └── synthesis/
+└── notes/                # 卡片输出
+    ├── judgments/
+    ├── methods/
+    ├── cases/
+    └── information/
+```
+
+### 配置文件
+
+**`.lobster/config.json`**:
+```json
+{
+  "notes_dir": "personal-wiki/notes",
+  "wiki_dir": "personal-wiki/wiki",
+  "wiki_integration": {
+    "enabled": true,
+    "auto_link": true,
+    "bidirectional_references": true
+  }
+}
+```
+
+**`personal-wiki/CLAUDE.md`**:
+- 定义摄取流程
+- 定义页面格式
+- 定义交叉引用规则
+
+## 最佳实践
+
+### 摄取建议
+
+1. **一次一篇** - 保持参与，验证质量
+2. **验证输出** - 检查 Wiki 页面和卡片质量
+3. **指导重点** - 告诉 AI 什么最重要
+4. **定期回顾** - 检查判断卡的验证状态
+
+### 价值判断
+
+**创建判断卡的标准**：
+- 是否回答了"怎么判断"的问题？
+- 是否有明确的适用/不适用条件？
+- 是否可以被验证和应用？
+
+**谨慎创建信息卡**：
+- 信息随时可搜索，无需记录
+- 优先创建有判断力的卡片
+- 信息卡价值最低，避免滥用
+
+### 闭环维护
+
+**验证记录**：
+- 每次应用判断卡时记录结果
+- 更新 verification_count
+- 根据反馈调整 confidence
+
+**状态流转**：
+- new → growing: 被应用1次
+- growing → mature: 被应用3次以上且反馈良好
+- mature → outdated: 条件变化不再适用
+
+## 工具集成
+
+### 依赖
+
+- `lobster_utils.py` - Python 核心工具
+- `llm-wiki` - Wiki 基础技能
+- Obsidian - Markdown 编辑器
+
+### Python 类
+
+**`UnifiedIngestionWorkflow`**:
+```python
+workflow = UnifiedIngestionWorkflow()
+summary_page, cards = workflow.ingest_article(source_file)
+```
+
+**`BidirectionalLinker`**:
+```python
+linker = BidirectionalLinker(wiki_dir, notes_dir)
+linker.scan_and_update_references()
+```
+
+## 验证方法
+
+### 功能检查
+
+摄取一篇文章后验证：
+- [ ] Wiki 摘要页面已创建
+- [ ] 相关实体/概念页面已更新
+- [ ] 判断卡/方法卡已提取
+- [ ] 双向引用已建立
+- [ ] 索引和日志已更新
+
+### 质量检查
+
+- [ ] 判断卡有明确的适用条件
+- [ ] Wiki 概念页面引用了相关卡片
+- [ ] 所有链接都是有效的
+- [ ] 元数据完整且一致
+
+## 示例
+
+### 输入
+
+```
+帮我摄取这篇文章：personal-wiki/raw/sources/SBTI传播核武器拆解.md
+```
+
+### 输出
+
+```
+=== Wiki 网络构建 ===
+✓ 创建摘要: wiki/summaries/sbti-viral-propagation-analysis.md
+✓ 创建实体: wiki/entities/袁锐钦.md
+✓ 创建实体: wiki/entities/乔纳·伯杰.md
+✓ 创建概念: wiki/concepts/社交货币.md
+✓ 创建概念: wiki/concepts/病毒循环.md
+
+=== Lobster 卡片提炼 ===
+✓ 创建判断卡: notes/judgments/2026-04-12-judgment-社交货币优先级.md
+✓ 创建方法卡: notes/methods/2026-04-12-method-病毒循环设计.md
+✓ 创建案例卡: notes/cases/2026-04-12-case-SBTI传播案例.md
+
+=== 双向链接建立 ===
+✓ 卡片引用 Wiki 概念: 6 个链接
+✓ Wiki 页面引用卡片: 5 个链接
+
+=== 索引和日志 ===
+✓ 更新 wiki/index.md
+✓ 追加 wiki/log.md
+
+=== 统计 ===
+- Wiki 页面: 5 个
+- Lobster 卡片: 3 个
+- 双向链接: 11 个
+```
+
+## 开始使用
+
+1. **确认目录结构** - 检查 personal-wiki/ 结构
+2. **验证配置** - 检查 config.json 和 CLAUDE.md
+3. **摄取第一篇文章** - 从简单文章开始
+4. **验证输出** - 检查 Wiki 和卡片质量
+5. **迭代优化** - 根据反馈调整
+
+---
+
+> 本技能融合了 lobster-article 的价值导向拆卡能力和 llm-wiki 的知识网络构建能力，实现一次摄取、双重收益的完整知识管理方案。
