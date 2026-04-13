@@ -11,14 +11,10 @@
             "id": "60d90ca9f3b9d757",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Tool是能力Skill是方法"
+              "title": "新标签页"
             }
           }
         ]
@@ -185,9 +181,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "60d90ca9f3b9d757",
+  "active": "b544c27046955be1",
   "lastOpenFiles": [
     "personal-wiki/notes/todos/发布youtube短视频.md",
+    "personal-wiki/notes/todos/复盘youtube发布数据.md",
+    "personal-wiki/notes/todos/发布抖音短视频.md",
+    "2026-04-13.md",
+    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
+    "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
     "构建数字资产工厂.md",
     "personal-wiki/wiki/concepts/第二大脑.md",
     "personal-wiki/wiki/entities/ob-note.md",
@@ -204,15 +205,10 @@
     "obsidian.md",
     "人脑对比.md",
     "personal-wiki/notes/judgments/情绪波动等于记忆深度.md",
-    "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
     "personal-wiki/notes/methods/工具出海需求挖掘三信号法.md",
     "personal-wiki/notes/工具出海需求挖掘三信号法.md",
-    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
     "personal-wiki/notes/2026-04-13-method-工具出海需求挖掘三信号法.md",
     "personal-wiki/raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
-    "templates/todo.md",
-    "templates/method.md",
-    "templates/judgment.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
     "article_result.json",

@@ -30,8 +30,8 @@ user-invocable: true
 ```yaml
 ---
 type: todo
-status: pending
-priority: medium
+status: 待办
+priority: 中
 tags: []
 created: YYYY-MM-DD
 due: YYYY-MM-DD
@@ -52,7 +52,7 @@ due: YYYY-MM-DD
 
 返回任务信息：
 - 任务标题
-- 状态（pending/in_progress/completed/cancelled）
-- 优先级（low/medium/high）
+- 状态（待办/进行中/已完成/已取消）
+- 优先级（低/中/高）
 - 截止日期
 - 子任务列表
