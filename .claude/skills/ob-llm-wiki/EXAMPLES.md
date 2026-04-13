@@ -70,8 +70,8 @@ cd ml-research
 ### 初始化
 
 ```
-./bin/init-wiki.sh novel-notes
-cd novel-notes
+./bin/init-wiki.sh novel-卡片库
+cd novel-卡片库
 ```
 
 ### 第 1 章处理

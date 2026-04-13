@@ -19,7 +19,7 @@
         "ob-llm-wiki"
       ],
       "config": {
-        "notes_dir": "personal-wiki/notes",
+        "notes_dir": "personal-wiki/卡片库",
         "wiki_dir": "personal-wiki/wiki",
         "wiki_integration": {
           "enabled": true,
@@ -30,7 +30,7 @@
     }
   },
   "directories": {
-    "notes": "personal-wiki/notes",
+    "notes": "personal-wiki/卡片库",
     "wiki": "personal-wiki/wiki"
   },
   "card_types": {

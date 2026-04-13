@@ -174,7 +174,7 @@ lobster_type:
 
 ### Lobster 卡片
 
-**位置**: `personal-wiki/notes/`
+**位置**: `personal-wiki/卡片库/`
 
 ```markdown
 ---
@@ -215,7 +215,7 @@ related:
 ### 文件命名规范
 
 所有文件统一使用 `{{SLUG}}.md` 命名：
-- **卡片**: `notes/{type}/{{SLUG}}.md`（如 `notes/判断卡/传播力大于功能完备性.md`）
+- **卡片**: `卡片库/{type}/{{SLUG}}.md`（如 `卡片库/判断卡/传播力大于功能完备性.md`）
 - **摘要**: `wiki/summaries/{{SLUG}}.md`
 - **概念**: `wiki/concepts/{{SLUG}}.md`
 - **实体**: `wiki/entities/{{SLUG}}.md`
@@ -256,7 +256,7 @@ personal-wiki/
 │   ├── concepts/
 │   ├── summaries/
 │   └── synthesis/
-└── notes/                # 卡片输出
+└── 卡片库/                # 卡片输出
     ├── 判断卡/
     ├── 方法卡/
     ├── 案例卡/
@@ -268,7 +268,7 @@ personal-wiki/
 **`.lobster/config.json`**:
 ```json
 {
-  "notes_dir": "personal-wiki/notes",
+  "notes_dir": "personal-wiki/卡片库",
   "wiki_dir": "personal-wiki/wiki",
   "wiki_integration": {
     "enabled": true,
@@ -369,9 +369,9 @@ linker.scan_and_update_references()
 ✓ 创建概念: wiki/concepts/病毒循环.md
 
 === Lobster 卡片提炼 ===
-✓ 创建判断卡: notes/判断卡/社交货币优先级.md
-✓ 创建方法卡: notes/方法卡/病毒循环设计.md
-✓ 创建案例卡: notes/案例卡/SBTI传播案例.md
+✓ 创建判断卡: 卡片库/判断卡/社交货币优先级.md
+✓ 创建方法卡: 卡片库/方法卡/病毒循环设计.md
+✓ 创建案例卡: 卡片库/案例卡/SBTI传播案例.md
 
 === 双向链接建立 ===
 ✓ 卡片引用 Wiki 概念: 6 个链接

@@ -20,7 +20,7 @@ user-invocable: true
 ## How It Works
 
 使用 `lobster_utils.py` 核心工具模块：
-- 扫描 notes 目录下的所有 .md 文件
+- 扫描 卡片库 目录下的所有 .md 文件
 - 解析 frontmatter 元数据
 - 支持关键词搜索（标题、内容、标签）
 - 支持按类型过滤（判断卡/方法卡/案例卡/信息卡/任务卡）
@@ -35,7 +35,7 @@ user-invocable: true
 ```json
 {
   "vault_path": "d:\\DATA\\cgq-obsidian",
-  "notes_dir": "d:\\DATA\\cgq-obsidian\\notes",
+  "notes_dir": "d:\\DATA\\cgq-obsidian\\卡片库",
   "templates_dir": "d:\\DATA\\cgq-obsidian\\templates"
 }
 ```

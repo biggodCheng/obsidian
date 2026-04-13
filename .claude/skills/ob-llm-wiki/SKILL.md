@@ -128,7 +128,7 @@ personal-wiki/
 │   ├── entities/          # 实体页面
 │   ├── concepts/          # 概念页面
 │   └── synthesis/         # 综合分析
-└── notes/                # Lobster 卡片层
+└── 卡片库/                # Lobster 卡片层
     ├── 判断卡/             # 判断卡（价值最高）
     ├── 方法卡/             # 方法卡
     ├── 案例卡/             # 案例卡

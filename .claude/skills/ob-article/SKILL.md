@@ -30,7 +30,7 @@ user-invocable: true
 
 3. **保存到知识库**
    - 自动生成 frontmatter（遵循 CLAUDE.md 格式规范）
-   - 保存到 notes 目录
+   - 保存到 卡片库 目录
    - 添加原文链接
 
 ---

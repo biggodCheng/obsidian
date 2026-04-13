@@ -14,7 +14,7 @@
   - `summaries/` - 源文件摘要
   - `synthesis/` - 综合分析页面
 
-- `notes/` - Lobster 卡片（与 Wiki 集成）
+- `卡片库/` - Lobster 卡片（与 Wiki 集成）
   - `判断卡/` - 判断卡（价值最高）
   - `方法卡/` - 方法卡（可复用流程）
   - `案例卡/` - 案例卡（验证过的事实）
@@ -190,7 +190,7 @@ related:
 
 ### 文件命名规范
 
-- **卡片文件**: `{{SLUG}}.md`（如 `notes/判断卡/传播力大于功能完备性.md`）
+- **卡片文件**: `{{SLUG}}.md`（如 `卡片库/判断卡/传播力大于功能完备性.md`）
   - SLUG = 卡片标题的简洁标识，中文直接用标题
   - 日期和类型信息放在 frontmatter 的 `created` 和 `type` 字段中，不重复到文件名
 - **Wiki 摘要文件**: `{{SLUG}}.md`（如 `wiki/summaries/sbti-viral-propagation-analysis.md`）

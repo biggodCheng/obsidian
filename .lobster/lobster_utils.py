@@ -158,7 +158,7 @@ class LobsterVault:
         """列出所有笔记"""
         notes = []
 
-        # 扫描 notes 目录
+        # 扫描 卡片库 目录
         if self.notes_dir.exists():
             for md_file in self.notes_dir.rglob('*.md'):
                 note = NoteCard(str(md_file))
@@ -179,14 +179,14 @@ class LobsterVault:
         return notes
 
     def search(self, query: str, filters: Dict[str, Any] = None,
-               scope: str = "notes", concepts: List[str] = None) -> List[NoteCard]:
+               scope: str = "卡片库", concepts: List[str] = None) -> List[NoteCard]:
         """
         搜索笔记和 Wiki 页面。
 
         Args:
             query: 搜索关键词
             filters: 元数据过滤（type, status, tags）
-            scope: 搜索范围 - "notes"（默认）/ "wiki" / "all"
+            scope: 搜索范围 - "卡片库"（默认）/ "wiki" / "all"
             concepts: 按 wiki 概念名过滤，返回引用了这些概念的卡片
         """
         results = []
@@ -198,8 +198,8 @@ class LobsterVault:
         # 模式 B：关键词搜索
         query_lower = query.lower() if query else ""
 
-        # 搜索 notes 层
-        if scope in ("notes", "all"):
+        # 搜索 卡片库 层
+        if scope in ("卡片库", "all"):
             notes = self.list_notes(filters)
             for note in notes:
                 if not query_lower:

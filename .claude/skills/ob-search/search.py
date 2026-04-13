@@ -66,7 +66,7 @@ def print_note(note, show_content=False, index=None, query=None):
 
     # 显示来源层
     rel_path = note.filepath
-    if 'personal-wiki/notes/' in str(rel_path):
+    if 'personal-wiki/卡片库/' in str(rel_path):
         layer = "[卡片]"
     elif 'personal-wiki/wiki/' in str(rel_path):
         layer = "[Wiki]"
@@ -116,8 +116,8 @@ def main():
     parser.add_argument('--confidence', '-c', choices=['low', 'medium', 'high'],
                         help='按信心程度过滤')
     parser.add_argument('--tags', help='按标签过滤，逗号分隔')
-    parser.add_argument('--scope', choices=['notes', 'wiki', 'all'], default='notes',
-                        help='搜索范围: notes(默认) / wiki / all')
+    parser.add_argument('--scope', choices=['卡片库', 'wiki', 'all'], default='卡片库',
+                        help='搜索范围: 卡片库(默认) / wiki / all')
     parser.add_argument('--concepts', help='按 wiki 概念搜索关联卡片，逗号分隔')
     parser.add_argument('--list', '-l', action='store_true',
                         help='列出所有笔记（不搜索）')

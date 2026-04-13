@@ -26,7 +26,7 @@
 - `concepts/` - 理论、方法、术语
 - `synthesis/` - 综合分析
 
-**Lobster 卡片层** (`notes/`):
+**Lobster 卡片层** (`卡片库/`):
 - `判断卡/` - 判断卡（价值最高）
 - `方法卡/` - 方法卡（可复用流程）
 - `案例卡/` - 案例卡（验证事实）
@@ -52,7 +52,7 @@ personal-wiki/
 │   ├── concepts/
 │   ├── summaries/
 │   └── synthesis/
-└── notes/                # 卡片输出
+└── 卡片库/                # 卡片输出
     ├── 判断卡/
     ├── 方法卡/
     ├── 案例卡/
@@ -71,7 +71,7 @@ personal-wiki/
 ```bash
 # 创建目录
 mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
-mkdir -p personal-wiki/notes/{判断卡,方法卡,案例卡,信息卡}
+mkdir -p personal-wiki/卡片库/{判断卡,方法卡,案例卡,信息卡}
 ```
 
 ## 使用示例
@@ -164,7 +164,7 @@ mkdir -p personal-wiki/notes/{判断卡,方法卡,案例卡,信息卡}
 ```bash
 # 创建所需目录
 mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
-mkdir -p personal-wiki/notes/{判断卡,方法卡,案例卡,信息卡}
+mkdir -p personal-wiki/卡片库/{判断卡,方法卡,案例卡,信息卡}
 ```
 
 ## 高级用法
