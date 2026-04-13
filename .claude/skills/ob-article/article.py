@@ -64,7 +64,7 @@ def create_cards_from_insights(insights, source_url="", title="文章摘录"):
         'type': 'information',
         'confidence': 'high',
         'tags': ['来源文章'],
-        'status': 'new',
+        'status': '新',
         'source_url': source_url
     }
 
@@ -80,7 +80,7 @@ def create_cards_from_insights(insights, source_url="", title="文章摘录"):
             {
                 'confidence': judgment.get('confidence', 'low'),
                 'tags': judgment.get('tags', []),
-                'status': 'new',
+                'status': '新',
                 'source': source_url
             }
         )
@@ -95,7 +95,7 @@ def create_cards_from_insights(insights, source_url="", title="文章摘录"):
             {
                 'confidence': method.get('confidence', 'medium'),
                 'tags': method.get('tags', []),
-                'status': 'new',
+                'status': '新',
                 'source': source_url
             }
         )
@@ -110,7 +110,7 @@ def create_cards_from_insights(insights, source_url="", title="文章摘录"):
             {
                 'confidence': 'medium',
                 'tags': case.get('tags', []),
-                'status': 'new',
+                'status': '新',
                 'source': source_url
             }
         )
@@ -125,7 +125,7 @@ def create_cards_from_insights(insights, source_url="", title="文章摘录"):
             {
                 'confidence': 'high',
                 'tags': info.get('tags', []),
-                'status': 'new',
+                'status': '新',
                 'source': source_url
             }
         )

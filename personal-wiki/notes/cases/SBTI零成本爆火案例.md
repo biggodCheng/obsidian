@@ -2,7 +2,7 @@
 type: case
 confidence: high
 tags: [案例, 病毒营销, 产品设计, 出海, 零成本增长]
-status: new
+status: 新
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:

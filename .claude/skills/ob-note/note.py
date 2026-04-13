@@ -38,7 +38,7 @@ def create_note(card_type, title, content="", tags=None, confidence="low"):
         'type': card_type,
         'confidence': confidence,
         'tags': tags or [],
-        'status': 'new'
+        'status': '新'
     }
 
     # 如果没有提供内容，使用模板内容

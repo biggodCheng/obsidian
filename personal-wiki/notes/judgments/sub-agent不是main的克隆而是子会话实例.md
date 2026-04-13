@@ -6,7 +6,7 @@ tags:
   - multi-agent
   - agent继承
   - OpenClaw
-status: new
+status: 新
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:

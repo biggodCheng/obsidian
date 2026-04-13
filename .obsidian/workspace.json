@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3038613a4e03b31d",
+        "id": "5f0add19de804463",
         "type": "tabs",
         "children": [
           {
-            "id": "60d90ca9f3b9d757",
+            "id": "4a0e0cf573c77a6a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/notes/cases/SBTI零成本爆火案例.md",
+                "file": "personal-wiki/wiki/concepts/谈判博弈.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SBTI零成本爆火案例"
+              "title": "谈判博弈"
             }
           }
         ]
@@ -185,35 +185,35 @@
       "bases:新建数据库": false
     }
   },
-  "active": "60d90ca9f3b9d757",
+  "active": "4a0e0cf573c77a6a",
   "lastOpenFiles": [
-    "personal-wiki/notes/todos/发布一条YouTube短视频.md",
-    "personal-wiki/notes/cases/130个AI员工的skill管理实战.md",
-    "personal-wiki/notes/todos",
-    "personal-wiki/notes/todos/发布youtube短视频.md",
-    "personal-wiki/notes/todos/复盘youtube发布数据.md",
-    "personal-wiki/notes/todos/发布抖音短视频.md",
-    "2026-04-13.md",
-    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
+    "personal-wiki/notes/judgments/需求感越强谈判地位越低.md",
+    "personal-wiki/notes/judgments/态度不是谈判筹码.md",
     "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
-    "构建数字资产工厂.md",
-    "personal-wiki/wiki/concepts/第二大脑.md",
-    "personal-wiki/wiki/entities/ob-note.md",
-    "personal-wiki/wiki/entities/ob-todo.md",
-    "personal-wiki/wiki/entities/ob-search.md",
-    "personal-wiki/wiki/summaries/wechat-vertical-account-acquisition.md",
-    "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
-    "personal-wiki/wiki/summaries/OpenClaw多Agent Skills分层调用机制.md",
-    "personal-wiki/wiki/summaries/obsidian-digital-asset-factory.md",
-    "personal-wiki/wiki/summaries/four-skills-research-findings.md",
-    "personal-wiki/wiki/summaries/four-skills-implementation-progress.md",
-    "personal-wiki/wiki/summaries/four-skills-implementation-plan.md",
-    "Obsidian.md",
-    "obsidian.md",
-    "人脑对比.md",
+    "personal-wiki/wiki/concepts/谈判博弈.md",
+    "personal-wiki/notes/methods/谈判核心两原则.md",
+    "personal-wiki/notes/judgments/离开谈判桌的能力才是真正的底牌.md",
+    "personal-wiki/notes/judgments/价值等于具体行动的结果和影响.md",
+    "personal-wiki/notes/judgments/情境依赖型内容适合出海.md",
+    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
     "personal-wiki/notes/judgments/情绪波动等于记忆深度.md",
-    "personal-wiki/notes/methods/工具出海需求挖掘三信号法.md",
-    "personal-wiki/notes/工具出海需求挖掘三信号法.md",
+    "personal-wiki/notes/judgments/同名skill多层共存需标注来源.md",
+    "personal-wiki/notes/judgments/sub-agent不是main的克隆而是子会话实例.md",
+    "personal-wiki/notes/judgments/main的私有skill不天然共享给其他agent.md",
+    "personal-wiki/notes/todos/发布一条YouTube短视频.md",
+    "personal-wiki/notes/judgments/用户分享的是自己不是产品.md",
+    "personal-wiki/wiki/concepts/判断卡.md",
+    "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
+    "personal-wiki/wiki/entities/袁锐钦.md",
+    "personal-wiki/wiki/concepts/情境依赖型幽默.md",
+    "personal-wiki/notes/cases/SBTI零成本爆火案例.md",
+    "personal-wiki/wiki/summaries/OpenClaw多Agent Skills分层调用机制.md",
+    "personal-wiki/wiki/entities/ob-todo.md",
+    "personal-wiki/wiki/entities/ob-note.md",
+    "personal-wiki/wiki/concepts/案例卡.md",
+    "personal-wiki/wiki/concepts/病毒循环.md",
+    "personal-wiki/wiki/concepts/第二大脑.md",
+    "personal-wiki/notes/todos",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
     "article_result.json",

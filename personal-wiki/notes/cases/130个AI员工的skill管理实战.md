@@ -6,7 +6,7 @@ tags:
   - multi-agent
   - skill管理
   - 实战案例
-status: new
+status: 新
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
