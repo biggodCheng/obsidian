@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "task_plan.md",
+                "file": "personal-wiki/wiki/concepts/skill三层发现机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "task_plan"
+              "title": "skill三层发现机制"
             }
           }
         ]
@@ -187,10 +187,12 @@
   },
   "active": "bd47d78bd8a1811e",
   "lastOpenFiles": [
-    "CLAUDE.md",
-    "progress.md",
-    "findings.md",
+    "templates/todo.md",
     "obsidian.md",
+    "findings.md",
+    "progress.md",
+    "task_plan.md",
+    "CLAUDE.md",
     "personal-wiki/CLAUDE.md",
     "personal-wiki/wiki/concepts/skill三层发现机制.md",
     "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
@@ -211,8 +213,6 @@
     "personal-wiki/notes/cases/SBTI零成本爆火案例.md",
     "personal-wiki/wiki/concepts/社交货币.md",
     "personal-wiki/wiki/entities/DracoVibeCoding.md",
-    "personal-wiki/notes/cases/130个AI员工的skill管理实战.md",
-    "personal-wiki/wiki/entities/OpenClaw.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
     "article_result.json",
