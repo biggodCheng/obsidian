@@ -50,8 +50,12 @@ PRIORITY_MAP = {
 
 
 def create_task(title, description="", priority="medium", due=None, tags=None):
-    """创建新任务"""
+    """创建新任务，存入 日常工作/YYYY-MM/ 目录，文件名：YYYY-MM-DD-任务名.md"""
     vault = lobster_utils.LobsterVault()
+
+    today = datetime.now()
+    month_dir_name = today.strftime('%Y-%m')
+    date_prefix = today.strftime('%Y-%m-%d')
 
     metadata = {
         'type': '日常工作',
@@ -65,22 +69,51 @@ def create_task(title, description="", priority="medium", due=None, tags=None):
 
     content = f"## 任务描述\n{description}\n\n## 子任务\n\n- [ ] \n\n## 备注\n"
 
-    note = vault.create_note('日常工作', title, content, metadata)
-    return note
+    # 构建 日常工作/YYYY-MM/ 目录路径
+    card_subdirs = vault.config.config.get('card_subdirs', {})
+    subdir = card_subdirs.get('日常工作', '日常工作')
+    target_dir = vault.notes_dir / subdir / month_dir_name
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    filename = f"{date_prefix}-{title}.md"
+    filepath = target_dir / filename
+
+    # 生成 frontmatter 并写入
+    date_str = today.strftime('%Y-%m-%d')
+    metadata.update({
+        'created': date_str,
+        'updated': date_str,
+        'title': title
+    })
+    frontmatter_str = lobster_utils.Frontmatter.generate(metadata)
+    full_content = f"{frontmatter_str}\n\n# {title}\n\n{content}"
+
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(full_content)
+
+    return lobster_utils.NoteCard(str(filepath))
 
 
 def list_tasks(status=None, show_completed=False):
-    """列出任务"""
+    """列出任务（从日常工作目录递归搜索）"""
     vault = lobster_utils.LobsterVault()
 
-    filters = {'type': '日常工作'}
+    # 直接搜索日常工作目录（递归包含 YYYY-MM 子目录）
+    card_subdirs = vault.config.config.get('card_subdirs', {})
+    subdir = card_subdirs.get('日常工作', '日常工作')
+    task_base_dir = vault.notes_dir / subdir
 
+    notes = []
+    if task_base_dir.exists():
+        for md_file in task_base_dir.rglob('*.md'):
+            note = lobster_utils.NoteCard(str(md_file))
+            notes.append(note)
+
+    # 状态过滤
     if not show_completed:
-        filters['status'] = ['待办', '进行中']
+        notes = [n for n in notes if n.frontmatter.get('status') in ('待办', '进行中')]
     elif status:
-        filters['status'] = status
-
-    notes = vault.list_notes(filters)
+        notes = [n for n in notes if n.frontmatter.get('status') == status]
 
     # 按截止日期和优先级排序
     def sort_key(note):
@@ -89,7 +122,6 @@ def list_tasks(status=None, show_completed=False):
         return (due, priority_order.get(note.frontmatter.get('priority', '中'), 1))
 
     notes.sort(key=sort_key)
-
     return notes
 
 

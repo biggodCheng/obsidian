@@ -11,10 +11,14 @@
             "id": "542d185ed7697c78",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "personal-wiki/wiki/概念卡/闭环系统.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "闭环系统"
             }
           }
         ]
@@ -181,8 +185,22 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/日常工作/2026-04/发布一条YouTube短视频.md",
+    "personal-wiki/日常工作/2026-04",
+    "personal-wiki/wiki/概念卡/skill与tool的分层.md",
+    "personal-wiki/wiki/概念卡/skill三层发现机制.md",
+    "personal-wiki/wiki/概念卡/CAC.md",
+    "personal-wiki/wiki/概念卡/知识原子化.md",
+    "personal-wiki/wiki/概念卡/信息卡.md",
+    "personal-wiki/wiki/概念卡/痛点分级.md",
+    "personal-wiki/wiki/概念卡/四步转化结构.md",
+    "personal-wiki/wiki/概念卡/社交货币.md",
+    "personal-wiki/wiki/概念卡/判断卡.md",
+    "personal-wiki/wiki/概念卡/第二大脑.md",
+    "personal-wiki/wiki/概念卡/60-30-10法则.md",
+    "personal-wiki/wiki/摘要卡/obsidian-digital-asset-factory.md",
     "personal-wiki/日常工作/发布一条YouTube短视频.md",
     "personal-wiki/日常工作",
     "personal-wiki/卡片库/日常工作/发布一条YouTube短视频.md",
@@ -202,22 +220,8 @@
     "personal-wiki/wiki/摘要卡/wechat-vertical-account-acquisition.md",
     "personal-wiki/wiki/摘要卡/sbti-viral-propagation-analysis.md",
     "personal-wiki/wiki/摘要卡/OpenClaw多Agent Skills分层调用机制.md",
-    "personal-wiki/wiki/摘要卡/obsidian-digital-asset-factory.md",
     "personal-wiki/wiki/摘要卡",
-    "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
-    "personal-wiki/wiki/summaries/OpenClaw多Agent Skills分层调用机制.md",
-    "personal-wiki/wiki/summaries/obsidian-digital-asset-factory.md",
-    "personal-wiki/wiki/概念卡/第二大脑.md",
-    "personal-wiki/wiki/概念卡/案例卡.md",
-    "personal-wiki/wiki/概念卡/60-30-10法则.md",
     "personal-wiki/CLAUDE.md.tmp.23784.1776099361804",
-    "personal-wiki/wiki/synthesis/拆卡模式对比分析.md.tmp.23784.1776099360753",
-    "personal-wiki/wiki/实体卡/乔纳·伯杰.md",
-    "personal-wiki/README.md.tmp.23784.1776099308973",
-    "personal-wiki/wiki/实体卡/龙虾AI.md",
-    "personal-wiki/wiki/概念卡/病毒循环.md",
-    "personal-wiki/wiki/实体卡/袁锐钦.md",
-    "personal-wiki/wiki/实体卡/ob-todo.md",
-    "personal-wiki/wiki/实体卡/OpenClaw.md"
+    "personal-wiki/wiki/synthesis/拆卡模式对比分析.md.tmp.23784.1776099360753"
   ]
 }
