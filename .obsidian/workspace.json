@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/wiki/entities/ob-note.md",
+                "file": "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ob-note"
+              "title": "Tool是能力Skill是方法"
             }
           }
         ]
@@ -187,9 +187,12 @@
   },
   "active": "60d90ca9f3b9d757",
   "lastOpenFiles": [
+    "personal-wiki/notes/todos/发布youtube短视频.md",
+    "构建数字资产工厂.md",
+    "personal-wiki/wiki/concepts/第二大脑.md",
+    "personal-wiki/wiki/entities/ob-note.md",
     "personal-wiki/wiki/entities/ob-todo.md",
     "personal-wiki/wiki/entities/ob-search.md",
-    "personal-wiki/wiki/entities/ob-note.md",
     "personal-wiki/wiki/summaries/wechat-vertical-account-acquisition.md",
     "personal-wiki/wiki/summaries/sbti-viral-propagation-analysis.md",
     "personal-wiki/wiki/summaries/OpenClaw多Agent Skills分层调用机制.md",
@@ -197,8 +200,6 @@
     "personal-wiki/wiki/summaries/four-skills-research-findings.md",
     "personal-wiki/wiki/summaries/four-skills-implementation-progress.md",
     "personal-wiki/wiki/summaries/four-skills-implementation-plan.md",
-    "构建数字资产工厂.md",
-    "personal-wiki/wiki/concepts/第二大脑.md",
     "Obsidian.md",
     "obsidian.md",
     "人脑对比.md",
@@ -212,7 +213,6 @@
     "templates/todo.md",
     "templates/method.md",
     "templates/judgment.md",
-    "templates/information.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
     "article_result.json",
