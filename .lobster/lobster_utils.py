@@ -223,10 +223,13 @@ class LobsterVault:
         slug = re.sub(r'[^\w\s-]', '', title.lower())
         slug = re.sub(r'[-\s]+', '-', slug)
         filename = f"{slug}.md"
-        filepath = self.notes_dir / filename
 
-        # 确保 notes 目录存在
-        self.notes_dir.mkdir(parents=True, exist_ok=True)
+        # 根据卡片类型确定子目录
+        card_subdirs = self.config.config.get('card_subdirs', {})
+        subdir = card_subdirs.get(card_type, card_type)
+        target_dir = self.notes_dir / subdir
+        target_dir.mkdir(parents=True, exist_ok=True)
+        filepath = target_dir / filename
 
         # 准备元数据
         metadata = metadata or {}
