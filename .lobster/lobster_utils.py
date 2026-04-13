@@ -222,7 +222,7 @@ class LobsterVault:
         date_str = datetime.now().strftime('%Y-%m-%d')
         slug = re.sub(r'[^\w\s-]', '', title.lower())
         slug = re.sub(r'[-\s]+', '-', slug)
-        filename = f"{date_str}-{card_type}-{slug}.md"
+        filename = f"{slug}.md"
         filepath = self.notes_dir / filename
 
         # 确保 notes 目录存在

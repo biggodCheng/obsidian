@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
+                "file": "personal-wiki/notes/judgments/Tool是能力Skill是方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "垂直小号依然有红利，分享我做三年公众号精准获客的思路"
+              "title": "Tool是能力Skill是方法"
             }
           }
         ]
@@ -185,10 +185,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "bd47d78bd8a1811e",
   "lastOpenFiles": [
-    "templates/todo.md",
+    "personal-wiki/notes/工具出海需求挖掘三信号法.md",
+    "personal-wiki/notes/judgments/传播力大于功能完备性.md",
+    "personal-wiki/notes/2026-04-13-method-工具出海需求挖掘三信号法.md",
     "personal-wiki/raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
+    "templates/todo.md",
     "templates/method.md",
     "templates/judgment.md",
     "templates/information.md",
@@ -210,9 +213,6 @@
     "personal-wiki/wiki/concepts/情境依赖型幽默.md",
     "personal-wiki/notes/judgments/情境依赖型内容适合出海.md",
     "personal-wiki/notes/judgments/情绪波动等于记忆深度.md",
-    "personal-wiki/notes/judgments/同名skill多层共存需标注来源.md",
-    "personal-wiki/notes/judgments/用户分享的是自己不是产品.md",
-    "personal-wiki/notes/judgments/main的私有skill不天然共享给其他agent.md",
     "personal-wiki/notes/judgments/2026-04-12-judgment-用户分享的是自己不是产品.md.tmp.19608.1775988394979",
     "personal-wiki/wiki/log.md.tmp.19608.1775987161283",
     "article_result.json",

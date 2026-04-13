@@ -9,7 +9,7 @@
     "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
     "todo": ["pending", "in_progress", "completed", "cancelled"]
   },
-  "filename_pattern": "{{DATE}}-{{TYPE}}-{{SLUG}}.md",
+  "filename_pattern": "{{SLUG}}.md",
   "card_subdirs": {
     "judgment": "judgments",
     "method": "methods",
