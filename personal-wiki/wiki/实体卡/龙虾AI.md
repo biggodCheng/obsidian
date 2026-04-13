@@ -1,6 +1,6 @@
 ---
 title: 龙虾AI
-type: entity
+type: 实体卡
 date: 2026-04-09
 tags: [AI工具, Claude Code, Obsidian插件, 自动化]
 sources: [obsidian-theory]

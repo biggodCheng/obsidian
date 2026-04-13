@@ -1,6 +1,6 @@
 ---
 title: SBTI传播核武器拆解
-type: summary
+type: 摘要
 date: 2026-04-11
 tags: [传播学, 产品设计, 病毒营销, 出海]
 sources: [SBTI传播核武器拆解]

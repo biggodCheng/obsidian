@@ -1,6 +1,6 @@
 ---
 title: 构建数字资产工厂 - Obsidian × Claude Code 实践指南
-type: summary
+type: 摘要
 date: 2026-04-09
 tags:
 - 知识管理

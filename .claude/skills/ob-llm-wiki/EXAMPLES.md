@@ -22,9 +22,9 @@ cd ml-research
 ```
 
 **LLM 会**：
-- 创建 `wiki/summaries/attention-is-all-you-need.md`
-- 创建/更新 `wiki/entities/Google.md`, `wiki/entities/Transformer.md`
-- 创建/更新 `wiki/concepts/Self-Attention.md`, `wiki/concepts/Multi-Head Attention.md`
+- 创建 `wiki/摘要卡/attention-is-all-you-need.md`
+- 创建/更新 `wiki/实体卡/Google.md`, `wiki/实体卡/Transformer.md`
+- 创建/更新 `wiki/概念卡/Self-Attention.md`, `wiki/概念卡/Multi-Head Attention.md`
 - 更新 `wiki/index.md`
 - 记录到 `wiki/log.md`
 
@@ -33,7 +33,7 @@ cd ml-research
 ```
 查询 wiki：Transformer 相比 RNN 和 CNN 的优势是什么？
 
-请生成一个对比表格，作为新页面保存到 wiki/synthesis/
+请生成一个对比表格，作为新页面保存到 wiki/综合卡/
 ```
 
 ### 第 3 天 - 摄取第二篇论文
@@ -51,7 +51,7 @@ cd ml-research
 ```
 查询 wiki：从 Attention 到 BERT，架构演进的关键里程碑是什么？
 
-请创建一个时间线页面，保存到 wiki/synthesis/timeline.md
+请创建一个时间线页面，保存到 wiki/综合卡/timeline.md
 ```
 
 ### 第 5 天 - 健康检查
@@ -162,7 +162,7 @@ cd product-kb
 ```
 查询 wiki：对比不同认证方式的优缺点
 
-生成对比表格，保存到 wiki/synthesis/auth-comparison.md
+生成对比表格，保存到 wiki/综合卡/auth-comparison.md
 ```
 
 ### 定期维护
@@ -296,7 +296,7 @@ confidence: high
 
 ```dataview
 TABLE title, date, confidence, sources
-FROM "wiki/concepts"
+FROM "wiki/概念卡"
 WHERE contains(tags, "NLP")
 SORT date DESC
 ```
@@ -308,7 +308,7 @@ SORT date DESC
 ```markdown
 ---
 title: "{{title}}"
-type: summary
+type: 摘要
 date: {{date}}
 tags: {{tags}}
 ---

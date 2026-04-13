@@ -1,6 +1,6 @@
 ---
 title: OpenClaw多Agent模式下Skills的分层调用机制
-type: summary
+type: 摘要
 date: 2026-04-12
 tags:
   - OpenClaw

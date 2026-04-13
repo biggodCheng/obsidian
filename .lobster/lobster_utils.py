@@ -334,7 +334,7 @@ class UnifiedIngestionWorkflow:
     def create_summary(self, content: Dict[str, Any]) -> str:
         """创建 Wiki 摘要页面"""
         # TODO: 实现 Wiki 摘要创建逻辑
-        summary_path = self.wiki_dir / "summaries" / f"{slugify(content['title'])}.md"
+        summary_path = self.wiki_dir / "摘要卡" / f"{slugify(content['title'])}.md"
         return str(summary_path)
 
     def extract_cards(self, content: Dict[str, Any], summary_path: str) -> List[NoteCard]:
@@ -394,8 +394,8 @@ class BidirectionalLinker:
     def __init__(self, wiki_dir: Path, notes_dir: Path):
         self.wiki_dir = wiki_dir
         self.notes_dir = notes_dir
-        self.concepts_dir = wiki_dir / "concepts"
-        self.entities_dir = wiki_dir / "entities"
+        self.concepts_dir = wiki_dir / "概念卡"
+        self.entities_dir = wiki_dir / "实体卡"
         self._concept_names: Optional[List[str]] = None
 
     def _get_concept_names(self) -> List[str]:
@@ -430,7 +430,7 @@ class BidirectionalLinker:
         return concepts
 
     def find_matching_concept_pages(self, keywords: List[str]) -> List[Path]:
-        """在 wiki/concepts/ 中查找匹配的页面"""
+        """在 wiki/概念卡/ 中查找匹配的页面"""
         matching_pages = []
 
         if not self.concepts_dir.exists():

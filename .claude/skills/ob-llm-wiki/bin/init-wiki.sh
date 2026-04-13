@@ -10,7 +10,7 @@ echo "🚀 初始化 LLM Wiki: $WIKI_NAME"
 
 # 创建目录结构
 mkdir -p "$WIKI_NAME"/raw/{sources,assets}
-mkdir -p "$WIKI_NAME"/wiki/{entities,concepts,summaries,synthesis}
+mkdir -p "$WIKI_NAME"/wiki/{实体卡,概念卡,摘要卡,综合卡}
 
 # 创建 index.md
 cat > "$WIKI_NAME"/wiki/index.md << 'EOF'
@@ -86,10 +86,10 @@ cat > "$WIKI_NAME"/CLAUDE.md << 'EOF'
 - `wiki/` - LLM 生成的 wiki（读写）
   - `index.md` - 内容索引（每次摄取时更新）
   - `log.md` - 操作日志（追加记录）
-  - `entities/` - 实体页面（人名、组织、产品等）
-  - `concepts/` - 概念页面（理论、方法、术语等）
-  - `summaries/` - 源文件摘要
-  - `synthesis/` - 综合分析页面
+  - `实体卡/` - 实体页面（人名、组织、产品等）
+  - `概念卡/` - 概念页面（理论、方法、术语等）
+  - `摘要卡/` - 源文件摘要
+  - `综合卡/` - 综合分析页面
 
 ## 摄取流程
 
@@ -97,11 +97,11 @@ cat > "$WIKI_NAME"/CLAUDE.md << 'EOF'
 
 1. **读取源文件**：从 `raw/sources/` 读取
 2. **讨论要点**：与用户讨论关键要点
-3. **创建摘要**：在 `wiki/summaries/` 创建摘要页面
+3. **创建摘要**：在 `wiki/摘要卡/` 创建摘要页面
 4. **更新相关页面**：
    - 识别源文件中的实体和概念
-   - 创建或更新 `wiki/entities/` 中的实体页面
-   - 创建或更新 `wiki/concepts/` 中的概念页面
+   - 创建或更新 `wiki/实体卡/` 中的实体页面
+   - 创建或更新 `wiki/概念卡/` 中的概念页面
    - 添加交叉引用
 5. **更新索引**：更新 `wiki/index.md`
 6. **记录日志**：在 `wiki/log.md` 追加条目
@@ -115,7 +115,7 @@ cat > "$WIKI_NAME"/CLAUDE.md << 'EOF'
 1. **读取索引**：先读 `wiki/index.md` 找到相关页面
 2. **深入页面**：读取相关页面内容
 3. **综合答案**：综合信息并引用来源
-4. **归档答案**：如果答案有价值，作为新页面保存到 `wiki/synthesis/`
+4. **归档答案**：如果答案有价值，作为新页面保存到 `wiki/综合卡/`
 
 答案格式可以是：
 - Markdown 页面
@@ -141,7 +141,7 @@ cat > "$WIKI_NAME"/CLAUDE.md << 'EOF'
 ```markdown
 ---
 title: 页面标题
-type: entity|concept|summary|synthesis
+type: 实体卡|概念卡|摘要|综合
 date: YYYY-MM-DD
 tags: [tag1, tag2]
 sources: [source1, source2]
@@ -182,9 +182,9 @@ related: [page1, page2]
 **源文件**: `raw/sources/article.pdf`
 
 **操作**:
-- 创建摘要: `wiki/summaries/article.md`
-- 更新实体: `wiki/entities/entity1.md`, `wiki/entities/entity2.md`
-- 更新概念: `wiki/concepts/concept1.md`
+- 创建摘要: `wiki/摘要卡/article.md`
+- 更新实体: `wiki/实体卡/entity1.md`, `wiki/实体卡/entity2.md`
+- 更新概念: `wiki/概念卡/concept1.md`
 
 **统计**:
 - 新增页面: 1
@@ -255,10 +255,10 @@ cat > "$WIKI_NAME"/README.md << 'EOF'
 ├── wiki/             # LLM 维护的 wiki
 │   ├── index.md      # 索引
 │   ├── log.md        # 日志
-│   ├── entities/     # 实体页面
-│   ├── concepts/     # 概念页面
-│   ├── summaries/    # 摘要页面
-│   └── synthesis/    # 综合页面
+│   ├── 实体卡/       # 实体页面
+│   ├── 概念卡/       # 概念页面
+│   ├── 摘要卡/      # 摘要页面
+│   └── 综合卡/    # 综合页面
 └── CLAUDE.md         # 配置文件
 ```
 

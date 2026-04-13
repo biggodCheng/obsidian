@@ -51,10 +51,10 @@ version: 1.0.0
 ┌───────────────────────────┬─────────────────────────────────┐
 │       Wiki 网络层          │       Lobster 卡片层             │
 │  ┌─────────────────────┐ │  ┌─────────────────────────────┐ │
-│  │ summaries/          │ │  │ 判断卡/  (价值最高)           │ │
-│  │ entities/           │ │  │ 方法卡/                     │ │
-│  │ concepts/           │ │  │ 案例卡/                     │ │
-│  │ synthesis/          │ │  │ 信息卡/                     │ │
+│  │ 摘要卡/             │ │  │ 判断卡/  (价值最高)           │ │
+│  │ 实体卡/             │ │  │ 方法卡/                     │ │
+│  │ 概念卡/             │ │  │ 案例卡/                     │ │
+│  │ 综合卡/             │ │  │ 信息卡/                     │ │
 │  └─────────────────────┘ │  └─────────────────────────────┘ │
 └───────────────────────────┴─────────────────────────────────┘
               ↑                               ↑
@@ -74,9 +74,9 @@ version: 1.0.0
    - 提取核心观点
     ↓
 2. Wiki 网络构建
-   - 创建摘要页面 (wiki/summaries/)
-   - 创建/更新实体页面 (wiki/entities/)
-   - 创建/更新概念页面 (wiki/concepts/)
+   - 创建摘要页面 (wiki/摘要卡/)
+   - 创建/更新实体页面 (wiki/实体卡/)
+   - 创建/更新概念页面 (wiki/概念卡/)
     ↓
 3. Lobster 卡片提炼
    - 识别判断（优先级最高）
@@ -142,7 +142,7 @@ version: 1.0.0
 ```markdown
 ---
 title: 页面标题
-type: entity|concept|summary|synthesis
+type: 实体卡|概念卡|摘要|综合
 date: 2026-04-12
 tags:
   - tag1
@@ -216,9 +216,9 @@ related:
 
 所有文件统一使用 `{{SLUG}}.md` 命名：
 - **卡片**: `卡片库/{type}/{{SLUG}}.md`（如 `卡片库/判断卡/传播力大于功能完备性.md`）
-- **摘要**: `wiki/summaries/{{SLUG}}.md`
-- **概念**: `wiki/concepts/{{SLUG}}.md`
-- **实体**: `wiki/entities/{{SLUG}}.md`
+- **摘要**: `wiki/摘要卡/{{SLUG}}.md`
+- **概念**: `wiki/概念卡/{{SLUG}}.md`
+- **实体**: `wiki/实体卡/{{SLUG}}.md`
 - **SLUG** = 标题的简洁标识（中文直接用标题），日期和类型放 frontmatter 不放文件名
 - **核心原则**: 文件名 = Obsidian wikilink 解析名，确保 `[[文件名]]` 直接命中
 
@@ -227,7 +227,7 @@ related:
 ### 智能概念识别
 
 - 扫描卡片内容，识别关键概念
-- 在 wiki/concepts/ 中查找匹配页面
+- 在 wiki/概念卡/ 中查找匹配页面
 - 自动添加 wiki_concepts 引用
 
 ### 双向引用维护
@@ -252,10 +252,10 @@ personal-wiki/
 ├── wiki/                  # Wiki 输出
 │   ├── index.md
 │   ├── log.md
-│   ├── entities/
-│   ├── concepts/
-│   ├── summaries/
-│   └── synthesis/
+│   ├── 实体卡/
+│   ├── 概念卡/
+│   ├── 摘要卡/
+│   └── 综合卡/
 └── 卡片库/                # 卡片输出
     ├── 判断卡/
     ├── 方法卡/
@@ -362,11 +362,11 @@ linker.scan_and_update_references()
 
 ```
 === Wiki 网络构建 ===
-✓ 创建摘要: wiki/summaries/sbti-viral-propagation-analysis.md
-✓ 创建实体: wiki/entities/袁锐钦.md
-✓ 创建实体: wiki/entities/乔纳·伯杰.md
-✓ 创建概念: wiki/concepts/社交货币.md
-✓ 创建概念: wiki/concepts/病毒循环.md
+✓ 创建摘要: wiki/摘要卡/sbti-viral-propagation-analysis.md
+✓ 创建实体: wiki/实体卡/袁锐钦.md
+✓ 创建实体: wiki/实体卡/乔纳·伯杰.md
+✓ 创建概念: wiki/概念卡/社交货币.md
+✓ 创建概念: wiki/概念卡/病毒循环.md
 
 === Lobster 卡片提炼 ===
 ✓ 创建判断卡: 卡片库/判断卡/社交货币优先级.md

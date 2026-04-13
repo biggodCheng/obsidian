@@ -22,13 +22,13 @@
 **操作**: 创建 ob-search、ob-todo、ob-note、article-processor 四个子技能页面
 
 **创建页面**:
-- `wiki/entities/ob-search.md` - 全库检索技能 (201 行)
-- `wiki/entities/ob-todo.md` - 任务管理技能 (226 行)
-- `wiki/entities/ob-note.md` - 笔记记录技能 (201 行)
-- `wiki/entities/article-processor.md` - 文章处理技能 (211 行)
+- `wiki/实体卡/ob-search.md` - 全库检索技能 (201 行)
+- `wiki/实体卡/ob-todo.md` - 任务管理技能 (226 行)
+- `wiki/实体卡/ob-note.md` - 笔记记录技能 (201 行)
+- `wiki/实体卡/article-processor.md` - 文章处理技能 (211 行)
 
 **更新页面**:
-- `wiki/entities/龙虾AI.md` - 添加四个子技能说明和链接
+- `wiki/实体卡/龙虾AI.md` - 添加四个子技能说明和链接
 
 **统计**:
 - 新增页面: 4 个
@@ -48,9 +48,9 @@
 **操作**: 创建方法卡、案例卡、信息卡页面
 
 **创建页面**:
-- `wiki/concepts/方法卡.md` - 记录"具体做法"的可复用流程 (162 行)
-- `wiki/concepts/案例卡.md` - 记录"真实发生的事"的事实依据 (180 行)
-- `wiki/concepts/信息卡.md` - 记录"是什么"的基础信息 (186 行)
+- `wiki/概念卡/方法卡.md` - 记录"具体做法"的可复用流程 (162 行)
+- `wiki/概念卡/案例卡.md` - 记录"真实发生的事"的事实依据 (180 行)
+- `wiki/概念卡/信息卡.md` - 记录"是什么"的基础信息 (186 行)
 
 **统计**:
 - 新增页面: 3
@@ -114,7 +114,7 @@
 **操作**:
 - 读取索引: `wiki/index.md`
 - 读取相关页面: 判断卡、知识原子化、闭环系统、源文件摘要
-- 创建综合页面: `wiki/synthesis/判断卡应用指南.md` (242行)
+- 创建综合页面: `wiki/综合卡/判断卡应用指南.md` (242行)
 - 更新索引: `wiki/index.md`
 
 **统计**:
@@ -133,12 +133,12 @@
 **源文件**: `raw/sources/obsidian-theory.md`
 
 **操作**:
-- 创建摘要: `wiki/summaries/obsidian-digital-asset-factory.md`
-- 创建实体: `wiki/entities/龙虾AI.md`
-- 创建概念: `wiki/concepts/知识原子化.md`
-- 创建概念: `wiki/concepts/判断卡.md`
-- 创建概念: `wiki/concepts/闭环系统.md`
-- 创建概念: `wiki/concepts/第二大脑.md`
+- 创建摘要: `wiki/摘要卡/obsidian-digital-asset-factory.md`
+- 创建实体: `wiki/实体卡/龙虾AI.md`
+- 创建概念: `wiki/概念卡/知识原子化.md`
+- 创建概念: `wiki/概念卡/判断卡.md`
+- 创建概念: `wiki/概念卡/闭环系统.md`
+- 创建概念: `wiki/概念卡/第二大脑.md`
 - 更新索引: `wiki/index.md`
 
 **统计**:
@@ -166,9 +166,9 @@
 - `raw/sources/progress.md` - 会话日志和测试结果
 
 **创建页面**:
-- `wiki/summaries/four-skills-implementation-plan.md` - 四个核心 AI 技能实现计划
-- `wiki/summaries/four-skills-research-findings.md` - 四个核心 AI 技能研究发现
-- `wiki/summaries/four-skills-implementation-progress.md` - 四个核心 AI 技能实现进度
+- `wiki/摘要卡/four-skills-implementation-plan.md` - 四个核心 AI 技能实现计划
+- `wiki/摘要卡/four-skills-research-findings.md` - 四个核心 AI 技能研究发现
+- `wiki/摘要卡/four-skills-implementation-progress.md` - 四个核心 AI 技能实现进度
 
 **更新页面**:
 - `wiki/index.md` - 更新统计和摘要分类
@@ -207,11 +207,11 @@
 - `raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md` - 生财有术超级术文章
 
 **创建页面**:
-- `wiki/summaries/wechat-vertical-account-acquisition.md` - 公众号垂直小号精准获客方法论
-- `wiki/concepts/痛点分级.md` - 四级痛点分类方法
-- `wiki/concepts/60-30-10法则.md` - 内容配比策略
-- `wiki/concepts/四步转化结构.md` - 转化型文章结构
-- `wiki/concepts/生存画像.md` - 用户画像正确方法
+- `wiki/摘要卡/wechat-vertical-account-acquisition.md` - 公众号垂直小号精准获客方法论
+- `wiki/概念卡/痛点分级.md` - 四级痛点分类方法
+- `wiki/概念卡/60-30-10法则.md` - 内容配比策略
+- `wiki/概念卡/四步转化结构.md` - 转化型文章结构
+- `wiki/概念卡/生存画像.md` - 用户画像正确方法
 
 **更新页面**:
 - `wiki/index.md` - 更新统计（24个页面）、添加新概念和摘要
@@ -256,14 +256,14 @@
 - `raw/sources/SBTI传播核武器拆解.md` - 微信公众号文章（作者：袁锐钦）
 
 **创建页面**:
-- `wiki/summaries/sbti-viral-propagation-analysis.md` - SBTI传播核武器拆解（摘要）
-- `wiki/concepts/社交货币.md` - 让产品成为用户愿意分享的内容
-- `wiki/concepts/病毒循环.md` - 自增长的用户获取机制
-- `wiki/concepts/情绪触发器.md` - 通过情绪波动制造记忆深度
-- `wiki/concepts/CAC.md` - 用户获取成本
-- `wiki/concepts/情境依赖型幽默.md` - 不依赖语言的视觉+情绪共鸣
-- `wiki/entities/袁锐钦.md` - AI编程实践者
-- `wiki/entities/乔纳·伯杰.md` - 《疯传》作者
+- `wiki/摘要卡/sbti-viral-propagation-analysis.md` - SBTI传播核武器拆解（摘要）
+- `wiki/概念卡/社交货币.md` - 让产品成为用户愿意分享的内容
+- `wiki/概念卡/病毒循环.md` - 自增长的用户获取机制
+- `wiki/概念卡/情绪触发器.md` - 通过情绪波动制造记忆深度
+- `wiki/概念卡/CAC.md` - 用户获取成本
+- `wiki/概念卡/情境依赖型幽默.md` - 不依赖语言的视觉+情绪共鸣
+- `wiki/实体卡/袁锐钦.md` - AI编程实践者
+- `wiki/实体卡/乔纳·伯杰.md` - 《疯传》作者
 
 **更新页面**:
 - `wiki/index.md` - 更新统计（36个页面）、添加新实体、概念和摘要
@@ -314,14 +314,14 @@
 - `卡片库/cases/SBTI零成本爆火案例.md` - 案例卡：HTML+27图+30题，零推广服务器被挤爆
 
 **更新 Wiki 页面（添加 lobster_cards 双向引用）**:
-- `wiki/summaries/sbti-viral-propagation-analysis.md` - 添加7张卡片引用
-- `wiki/concepts/社交货币.md` - 添加4张卡片引用
-- `wiki/concepts/病毒循环.md` - 添加3张卡片引用
-- `wiki/concepts/情绪触发器.md` - 添加3张卡片引用
-- `wiki/concepts/CAC.md` - 添加3张卡片引用
-- `wiki/concepts/情境依赖型幽默.md` - 添加2张卡片引用
-- `wiki/entities/袁锐钦.md` - 添加2张卡片引用
-- `wiki/entities/乔纳·伯杰.md` - 添加1张卡片引用
+- `wiki/摘要卡/sbti-viral-propagation-analysis.md` - 添加7张卡片引用
+- `wiki/概念卡/社交货币.md` - 添加4张卡片引用
+- `wiki/概念卡/病毒循环.md` - 添加3张卡片引用
+- `wiki/概念卡/情绪触发器.md` - 添加3张卡片引用
+- `wiki/概念卡/CAC.md` - 添加3张卡片引用
+- `wiki/概念卡/情境依赖型幽默.md` - 添加2张卡片引用
+- `wiki/实体卡/袁锐钦.md` - 添加2张卡片引用
+- `wiki/实体卡/乔纳·伯杰.md` - 添加1张卡片引用
 
 **更新页面**:
 - `wiki/index.md` - 更新统计（44个页面+7张Lobster卡片）、添加Lobster卡片分类

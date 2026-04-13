@@ -17,10 +17,10 @@ fi
 
 # 统计信息
 echo "📊 统计信息:"
-echo "  实体页面: $(find "$WIKI_DIR/entities" -name "*.md" 2>/dev/null | wc -l)"
-echo "  概念页面: $(find "$WIKI_DIR/concepts" -name "*.md" 2>/dev/null | wc -l)"
-echo "  摘要页面: $(find "$WIKI_DIR/summaries" -name "*.md" 2>/dev/null | wc -l)"
-echo "  综合页面: $(find "$WIKI_DIR/synthesis" -name "*.md" 2>/dev/null | wc -l)"
+echo "  实体页面: $(find "$WIKI_DIR/实体卡" -name "*.md" 2>/dev/null | wc -l)"
+echo "  概念页面: $(find "$WIKI_DIR/概念卡" -name "*.md" 2>/dev/null | wc -l)"
+echo "  摘要页面: $(find "$WIKI_DIR/摘要卡" -name "*.md" 2>/dev/null | wc -l)"
+echo "  综合页面: $(find "$WIKI_DIR/综合卡" -name "*.md" 2>/dev/null | wc -l)"
 echo ""
 
 # 检查孤立页面

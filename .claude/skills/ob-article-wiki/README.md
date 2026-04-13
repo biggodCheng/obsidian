@@ -21,10 +21,10 @@
 ### 双重输出
 
 **Wiki 网络层** (`wiki/`):
-- `summaries/` - 文章摘要
-- `entities/` - 人名、组织、产品
-- `concepts/` - 理论、方法、术语
-- `synthesis/` - 综合分析
+- `摘要卡/` - 文章摘要
+- `实体卡/` - 人名、组织、产品
+- `概念卡/` - 理论、方法、术语
+- `综合卡/` - 综合分析
 
 **Lobster 卡片层** (`卡片库/`):
 - `判断卡/` - 判断卡（价值最高）
@@ -48,10 +48,10 @@ personal-wiki/
 ├── wiki/                  # Wiki 输出
 │   ├── index.md
 │   ├── log.md
-│   ├── entities/
-│   ├── concepts/
-│   ├── summaries/
-│   └── synthesis/
+│   ├── 实体卡/
+│   ├── 概念卡/
+│   ├── 摘要卡/
+│   └── 综合卡/
 └── 卡片库/                # 卡片输出
     ├── 判断卡/
     ├── 方法卡/
@@ -70,7 +70,7 @@ personal-wiki/
 
 ```bash
 # 创建目录
-mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
+mkdir -p personal-wiki/wiki/{实体卡,概念卡,摘要卡,综合卡}
 mkdir -p personal-wiki/卡片库/{判断卡,方法卡,案例卡,信息卡}
 ```
 
@@ -163,7 +163,7 @@ mkdir -p personal-wiki/卡片库/{判断卡,方法卡,案例卡,信息卡}
 **解决**:
 ```bash
 # 创建所需目录
-mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
+mkdir -p personal-wiki/wiki/{实体卡,概念卡,摘要卡,综合卡}
 mkdir -p personal-wiki/卡片库/{判断卡,方法卡,案例卡,信息卡}
 ```
 

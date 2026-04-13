@@ -1,6 +1,6 @@
 ---
 title: article-processor - 文章处理技能
-type: entity
+type: 实体卡
 date: 2026-04-09
 tags:
 - AI工具

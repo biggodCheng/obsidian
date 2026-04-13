@@ -1,6 +1,6 @@
 ---
 title: DracoVibeCoding
-type: entity
+type: 实体卡
 date: 2026-04-12
 tags:
   - 作者

@@ -1,6 +1,6 @@
 ---
 title: ob-todo - 任务卡管理技能
-type: entity
+type: 实体卡
 date: 2026-04-09
 tags:
 - AI工具

@@ -1,6 +1,6 @@
 ---
 title: 公众号垂直小号精准获客方法论
-type: summary
+type: 摘要
 date: 2026-04-09
 tags:
 - 公众号

@@ -1,6 +1,6 @@
 ---
 title: Wiki 健康检查报告 - 2026-04-09
-type: synthesis
+type: 综合
 date: 2026-04-09
 tags:
 - 健康检查

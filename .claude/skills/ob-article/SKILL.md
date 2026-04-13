@@ -38,7 +38,7 @@ user-invocable: true
 ## 拆卡方法论 - 三大黄金法则
 
 > **核心原则**：本 skill 严格执行三大黄金法则，所有拆卡决策必须通过这三条检验。
-> 权威来源：`personal-wiki/wiki/synthesis/拆卡方法论.md`
+> 权威来源：`personal-wiki/wiki/综合卡/拆卡方法论.md`
 
 ### 📏 法则一：精确检索原则（拒绝长篇大论）
 

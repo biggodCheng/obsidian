@@ -45,8 +45,8 @@ class LintChecker:
     def __init__(self, wiki_dir: Path, notes_dir: Path):
         self.wiki_dir = wiki_dir
         self.notes_dir = notes_dir
-        self.concepts_dir = wiki_dir / "concepts"
-        self.entities_dir = wiki_dir / "entities"
+        self.concepts_dir = wiki_dir / "概念卡"
+        self.entities_dir = wiki_dir / "实体卡"
         self.issues: List[Dict] = []
 
     def check_all(self) -> List[Dict]:

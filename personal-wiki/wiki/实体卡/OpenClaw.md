@@ -1,6 +1,6 @@
 ---
 title: OpenClaw
-type: entity
+type: 实体卡
 date: 2026-04-12
 tags:
   - OpenClaw
