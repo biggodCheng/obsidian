@@ -46,7 +46,6 @@ user-invocable: true
 找一下关于用户体验的判断卡
 搜索带#产品标签的笔记
 列出所有方法卡
-查找 status 为 mature 的笔记
 ```
 
 ## Output

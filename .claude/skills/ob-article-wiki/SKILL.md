@@ -183,7 +183,6 @@ confidence: high|medium|low
 tags:
   - tag1
   - tag2
-status: new|growing|mature
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
@@ -309,13 +308,7 @@ personal-wiki/
 
 **验证记录**：
 - 每次应用判断卡时记录结果
-- 更新 verification_count
 - 根据反馈调整 confidence
-
-**状态流转**：
-- new → growing: 被应用1次
-- growing → mature: 被应用3次以上且反馈良好
-- mature → outdated: 条件变化不再适用
 
 ## 工具集成
 

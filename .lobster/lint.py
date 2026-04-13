@@ -134,9 +134,9 @@ class LintChecker:
     def _check_missing_frontmatter(self):
         """检查缺失关键字段的卡片"""
         required_fields = {
-            'judgment': ['type', 'confidence', 'tags', 'status', 'created'],
-            'method': ['type', 'confidence', 'tags', 'status', 'created'],
-            'case': ['type', 'confidence', 'tags', 'status', 'created'],
+            'judgment': ['type', 'confidence', 'tags', 'created'],
+            'method': ['type', 'confidence', 'tags', 'created'],
+            'case': ['type', 'confidence', 'tags', 'created'],
         }
         for card_type, fields in required_fields.items():
             type_dir = self.notes_dir / f"{card_type}s"

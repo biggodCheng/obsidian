@@ -284,7 +284,6 @@ tags: [深度学习, NLP, 架构]
 sources: [attention-is-all-you-need, bert, gpt]
 related: [Self-Attention, Encoder-Decoder]
 confidence: high
-status: stable
 ---
 
 # Transformer 架构
