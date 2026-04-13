@@ -133,7 +133,7 @@
 **源文件**: `raw/sources/obsidian-theory.md`
 
 **操作**:
-- 创建摘要: `wiki/摘要卡/obsidian-digital-asset-factory.md`
+- 创建摘要: `wiki/摘要卡/构建数字资产工厂 - Obsidian × Claude Code 实践指南.md`
 - 创建实体: `wiki/实体卡/龙虾AI.md`
 - 创建概念: `wiki/概念卡/知识原子化.md`
 - 创建概念: `wiki/概念卡/判断卡.md`
@@ -207,7 +207,7 @@
 - `raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md` - 生财有术超级术文章
 
 **创建页面**:
-- `wiki/摘要卡/wechat-vertical-account-acquisition.md` - 公众号垂直小号精准获客方法论
+- `wiki/摘要卡/公众号垂直小号精准获客方法论.md` - 公众号垂直小号精准获客方法论
 - `wiki/概念卡/痛点分级.md` - 四级痛点分类方法
 - `wiki/概念卡/60-30-10法则.md` - 内容配比策略
 - `wiki/概念卡/四步转化结构.md` - 转化型文章结构
@@ -256,7 +256,7 @@
 - `raw/sources/SBTI传播核武器拆解.md` - 微信公众号文章（作者：袁锐钦）
 
 **创建页面**:
-- `wiki/摘要卡/sbti-viral-propagation-analysis.md` - SBTI传播核武器拆解（摘要）
+- `wiki/摘要卡/SBTI人格测试-传播核武器拆解.md` - SBTI传播核武器拆解（摘要）
 - `wiki/概念卡/社交货币.md` - 让产品成为用户愿意分享的内容
 - `wiki/概念卡/病毒循环.md` - 自增长的用户获取机制
 - `wiki/概念卡/情绪触发器.md` - 通过情绪波动制造记忆深度
@@ -314,7 +314,7 @@
 - `卡片库/cases/SBTI零成本爆火案例.md` - 案例卡：HTML+27图+30题，零推广服务器被挤爆
 
 **更新 Wiki 页面（添加 lobster_cards 双向引用）**:
-- `wiki/摘要卡/sbti-viral-propagation-analysis.md` - 添加7张卡片引用
+- `wiki/摘要卡/SBTI人格测试-传播核武器拆解.md` - 添加7张卡片引用
 - `wiki/概念卡/社交货币.md` - 添加4张卡片引用
 - `wiki/概念卡/病毒循环.md` - 添加3张卡片引用
 - `wiki/概念卡/情绪触发器.md` - 添加3张卡片引用

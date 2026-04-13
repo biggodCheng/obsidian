@@ -362,7 +362,7 @@ linker.scan_and_update_references()
 
 ```
 === Wiki 网络构建 ===
-✓ 创建摘要: wiki/摘要卡/sbti-viral-propagation-analysis.md
+✓ 创建摘要: wiki/摘要卡/SBTI人格测试-传播核武器拆解.md
 ✓ 创建实体: wiki/实体卡/袁锐钦.md
 ✓ 创建实体: wiki/实体卡/乔纳·伯杰.md
 ✓ 创建概念: wiki/概念卡/社交货币.md
