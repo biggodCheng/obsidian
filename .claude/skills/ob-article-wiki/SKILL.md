@@ -92,6 +92,11 @@ version: 1.0.0
 5. 索引和日志更新
    - 更新 wiki/index.md
    - 追加 wiki/log.md
+    ↓
+6. 属性完整性校验（必须执行）
+   - 逐张卡片检查 frontmatter 必填字段
+   - 修复缺失或不合规的字段
+   - 输出校验报告
 ```
 
 ### 价值导向
@@ -183,8 +188,8 @@ confidence: high|medium|low
 tags:
   - tag1
   - tag2
-created: 2026-04-12
-updated: 2026-04-12
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 wiki_concepts:
   - 概念1
   - 概念2
@@ -205,12 +210,51 @@ related:
 - [[另一个概念]]
 ```
 
+### 卡片 frontmatter 必填字段清单
+
+每张 Lobster 卡片的 frontmatter 必须包含以下字段，**缺一不可**：
+
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| `type` | 卡片类型，必须与所在目录名一致 | `判断卡`（不要写 `judgment`） |
+| `confidence` | 信心程度 | `high` / `medium` / `low` |
+| `tags` | 标签列表，至少1个 | `- 管理学` |
+| `created` | 创建日期 | `2026-04-14` |
+| `updated` | 更新日期 | `2026-04-14` |
+| `wiki_concepts` | 引用的 Wiki 概念，至少1个 | `- 1号位思维` |
+| `sources` | 来源文章或文件 | `- 文章标题` |
+| `related` | 相关卡片或页面 | `- 相关卡片名` |
+
+**注意**：
+- `type` 值必须使用中文（`判断卡`/`方法卡`/`案例卡`/`信息卡`），不使用英文
+- `type` 值必须与文件所在目录名一致（`卡片库/判断卡/xxx.md` → `type: 判断卡`）
+- `tags`、`wiki_concepts`、`sources`、`related` 不能为空列表
+- `[[wikilink]]` 语法只能用在正文中，frontmatter 内一律用纯字符串
+
 ### Frontmatter 格式规范（必须遵守）
 
 1. **不要在 frontmatter 内使用 `[[wikilink]]` 语法** — `[[ ]]` 是 Obsidian Markdown 语法，YAML frontmatter 不支持。所有属性值必须使用纯字符串。`[[ ]]` 只能用在正文（`---` 之后）中。
 2. **不要在 frontmatter 内放 Markdown 标题或注释**（如 `# Wiki 集成`）— frontmatter `---` 分隔符之间的每一行必须是合法 YAML key-value。
 3. **使用 YAML 列表格式**（每项一行 `- value`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误。
 4. **`lobster_cards` 和 `wiki_concepts` 字段同理** — 全部用纯字符串列表。
+
+### 双向链接规范（必须遵守）
+
+**卡片引用 Wiki**：
+- 卡片的 `sources` 字段必须指向**已存在的 wiki 摘要页面文件名**（不是 URL、不是文章标题简称、不是 `用户输入`）
+- 卡片的 `wiki_concepts` 字段必须指向**已存在的 wiki 概念页面文件名**
+- 卡片的 `related` 字段可以引用 wiki 页面名或卡片名
+
+**Wiki 页面引用卡片**：
+- wiki 页面的 `lobster_cards` 字段必须列出**所有引用该 wiki 页面的卡片**
+- 引用来源包括：卡片的 `sources`、`related`、`wiki_concepts` 字段
+
+**校验规则**：
+1. 卡片创建后，检查 `sources` 中的每个值是否匹配 `wiki/` 下某个 `.md` 文件名
+2. 卡片创建后，检查 `related` 中非卡片名的值是否匹配 wiki 文件名
+3. 检查被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
+4. 清理 wiki 页面 `lobster_cards` 中引用不存在卡片的幽灵条目
+5. 不存在 `status` 字段（已废弃）
 
 ### 文件命名规范
 

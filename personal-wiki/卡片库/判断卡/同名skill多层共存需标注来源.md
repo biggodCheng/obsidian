@@ -11,7 +11,7 @@ updated: 2026-04-12
 wiki_concepts:
 - skill三层发现机制
 sources:
-- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- OpenClaw多Agent Skills分层调用机制
 related:
 - skill三层放置策略
 ---

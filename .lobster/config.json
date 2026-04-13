@@ -5,10 +5,6 @@
   "templates_dir": "d:\\DATA\\cgq-obsidian\\templates",
   "card_types": ["判断卡", "方法卡", "案例卡", "信息卡", "日常工作"],
   "confidence_levels": ["high", "medium", "low"],
-  "status_levels": {
-    "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
-    "todo": ["待办", "进行中", "已完成", "已取消"]
-  },
   "filename_pattern": "{{SLUG}}.md",
   "card_subdirs": {
     "判断卡": "判断卡",

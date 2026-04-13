@@ -10,7 +10,7 @@ updated: 2026-04-13
 wiki_concepts:
 - 情绪触发器
 sources:
-- SBTI传播核武器拆解
+- SBTI人格测试-传播核武器拆解
 related:
 - 情绪波动等于记忆深度
 - 让产品过程有情绪

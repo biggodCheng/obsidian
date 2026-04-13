@@ -1,5 +1,5 @@
 ---
-type: case
+type: 案例卡
 confidence: medium
 tags:
 - OpenClaw
@@ -13,7 +13,7 @@ wiki_concepts:
 - OpenClaw
 - DracoVibeCoding
 sources:
-- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- OpenClaw多Agent Skills分层调用机制
 related:
 - skill三层放置策略
 - main的私有skill不天然共享给其他agent

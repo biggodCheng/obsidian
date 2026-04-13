@@ -160,7 +160,6 @@ confidence: high|medium|low
 tags:
   - tag1
   - tag2
-status: new|growing|mature|outdated|discarded
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 wiki_concepts:

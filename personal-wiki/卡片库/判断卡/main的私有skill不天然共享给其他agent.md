@@ -13,7 +13,7 @@ wiki_concepts:
 - skill与tool的分层
 - OpenClaw
 sources:
-- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- OpenClaw多Agent Skills分层调用机制
 related:
 - sub-agent不是main的克隆而是子会话实例
 - skill三层放置策略

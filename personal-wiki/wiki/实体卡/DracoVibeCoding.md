@@ -10,7 +10,8 @@ sources:
   - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
   - OpenClaw
-lobster_cards: []
+lobster_cards:
+  - 130个AI员工的skill管理实战
 ---
 
 # DracoVibeCoding

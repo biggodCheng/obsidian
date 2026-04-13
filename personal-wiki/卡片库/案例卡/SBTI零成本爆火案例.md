@@ -1,5 +1,5 @@
 ---
-type: case
+type: 案例卡
 confidence: high
 tags:
 - 案例
@@ -16,7 +16,7 @@ wiki_concepts:
 - CAC
 - 情境依赖型幽默
 sources:
-- SBTI传播核武器拆解
+- SBTI人格测试-传播核武器拆解
 related:
 - 三步传播产品设计心法
 - 传播力大于功能完备性

@@ -13,7 +13,7 @@ wiki_concepts:
 - skill与tool的分层
 - OpenClaw
 sources:
-- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- OpenClaw多Agent Skills分层调用机制
 related:
 - main的私有skill不天然共享给其他agent
 - 同名skill多层共存需标注来源

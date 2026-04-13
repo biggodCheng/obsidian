@@ -13,9 +13,15 @@ related:
   - skill与tool的分层
   - skill三层发现机制
   - DracoVibeCoding
-lobster_cards:
-  - Tool是能力Skill是方法
   - skill三层放置策略
+lobster_cards:
+  - 130个AI员工的skill管理实战
+  - Tool是能力Skill是方法
+  - main的私有skill不天然共享给其他agent
+  - skill三层放置策略
+  - skill目录结构设计规范
+  - sub-agent不是main的克隆而是子会话实例
+
 ---
 
 # OpenClaw
