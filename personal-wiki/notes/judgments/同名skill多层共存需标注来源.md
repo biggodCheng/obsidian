@@ -2,21 +2,20 @@
 type: judgment
 confidence: high
 tags:
-  - skill
-  - 多层发现
-  - 命名冲突
-  - 工程实践
-status: 新
+- skill
+- 多层发现
+- 命名冲突
+- 工程实践
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill三层发现机制
+- skill三层发现机制
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - skill三层放置策略
+- skill三层放置策略
 ---
-
 # 同名 Skill 多层共存需标注来源
 
 ## 判断内容

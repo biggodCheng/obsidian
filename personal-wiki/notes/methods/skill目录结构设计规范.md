@@ -2,22 +2,22 @@
 type: method
 confidence: medium
 tags:
-  - skill
-  - 目录结构
-  - 工程规范
-  - OpenClaw
-status: 新
+- skill
+- 目录结构
+- 工程规范
+- OpenClaw
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill与tool的分层
+- skill与tool的分层
+- OpenClaw
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - Tool是能力Skill是方法
-  - skill三层放置策略
+- Tool是能力Skill是方法
+- skill三层放置策略
 ---
-
 # Skill 目录结构设计规范
 
 ## 方法描述

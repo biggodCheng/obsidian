@@ -2,21 +2,21 @@
 type: judgment
 confidence: high
 tags:
-  - sub-agent
-  - multi-agent
-  - agent继承
-  - OpenClaw
-status: 新
+- sub-agent
+- multi-agent
+- agent继承
+- OpenClaw
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill三层发现机制
+- skill三层发现机制
+- OpenClaw
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - main的私有skill不天然共享给其他agent
+- main的私有skill不天然共享给其他agent
 ---
-
 # Sub-agent 不是 main 的克隆，而是子会话实例
 
 ## 判断内容

@@ -3,21 +3,23 @@ title: Skill三层发现机制
 type: concept
 date: 2026-04-12
 tags:
-  - skill
-  - agent架构
-  - 分层设计
-  - multi-agent
+- skill
+- agent架构
+- 分层设计
+- multi-agent
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - skill与tool的分层
-  - OpenClaw
+- skill与tool的分层
+- OpenClaw
 lobster_cards:
-  - skill三层放置策略
-  - main的私有skill不天然共享给其他agent
-  - 同名skill多层共存需标注来源
+- skill三层放置策略
+- main的私有skill不天然共享给其他agent
+- 同名skill多层共存需标注来源
+- sub-agent不是main的克隆而是子会话实例
+- Tool是能力Skill是方法
+- 130个AI员工的skill管理实战
 ---
-
 # Skill 三层发现机制
 
 ## 概述

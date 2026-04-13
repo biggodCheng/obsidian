@@ -2,22 +2,23 @@
 type: judgment
 confidence: high
 tags:
-  - skill
-  - multi-agent
-  - agent架构
-  - 共享机制
-status: 新
+- skill
+- multi-agent
+- agent架构
+- 共享机制
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill三层发现机制
+- skill三层发现机制
+- skill与tool的分层
+- OpenClaw
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - sub-agent不是main的克隆而是子会话实例
-  - skill三层放置策略
+- sub-agent不是main的克隆而是子会话实例
+- skill三层放置策略
 ---
-
 # Main 的私有 Skill 不天然共享给其他 Agent
 
 ## 判断内容

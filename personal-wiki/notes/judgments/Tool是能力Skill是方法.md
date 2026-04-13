@@ -2,22 +2,22 @@
 type: judgment
 confidence: high
 tags:
-  - skill
-  - tool
-  - agent架构
-  - 分层设计
-status: 新
+- skill
+- tool
+- agent架构
+- 分层设计
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill与tool的分层
-  - skill三层发现机制
+- skill与tool的分层
+- skill三层发现机制
+- OpenClaw
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - skill目录结构设计规范
+- skill目录结构设计规范
 ---
-
 # Tool 是能力，Skill 是方法
 
 ## 判断内容

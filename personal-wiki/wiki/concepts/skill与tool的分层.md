@@ -3,19 +3,21 @@ title: Skill与Tool的分层
 type: concept
 date: 2026-04-12
 tags:
-  - skill
-  - tool
-  - agent架构
-  - 分层设计
+- skill
+- tool
+- agent架构
+- 分层设计
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - skill三层发现机制
-  - OpenClaw
+- skill三层发现机制
+- OpenClaw
 lobster_cards:
-  - Tool是能力Skill是方法
+- Tool是能力Skill是方法
+- main的私有skill不天然共享给其他agent
+- skill三层放置策略
+- skill目录结构设计规范
 ---
-
 # Skill 与 Tool 的分层
 
 ## 定义

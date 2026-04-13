@@ -2,23 +2,23 @@
 type: method
 confidence: high
 tags:
-  - skill
-  - multi-agent
-  - 分层设计
-  - 架构实践
-status: 新
+- skill
+- multi-agent
+- 分层设计
+- 架构实践
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill三层发现机制
-  - skill与tool的分层
+- skill三层发现机制
+- skill与tool的分层
+- OpenClaw
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - main的私有skill不天然共享给其他agent
-  - 同名skill多层共存需标注来源
+- main的私有skill不天然共享给其他agent
+- 同名skill多层共存需标注来源
 ---
-
 # Skill 三层放置策略
 
 ## 方法描述

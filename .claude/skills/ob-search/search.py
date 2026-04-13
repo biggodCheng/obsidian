@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Lobster Search - 知识库搜索工具
-在 Obsidian 知识库中搜索笔记卡片
+在 Obsidian 知识库中搜索笔记卡片和 Wiki 页面
 """
 
 import sys
@@ -17,8 +17,19 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
-# 添加工具模块路径
-vault_path = Path(r"d:\DATA\cgq-obsidian")
+# 自动定位 vault 根目录（从 config.json 向上查找）
+def find_vault_path():
+    """从当前脚本位置向上查找 .lobster/config.json"""
+    current = Path(__file__).resolve().parent
+    for _ in range(5):
+        config_path = current / ".lobster" / "config.json"
+        if config_path.exists():
+            return current
+        current = current.parent
+    # fallback: 从环境变量或默认值
+    return Path(os.environ.get("LOBSTER_VAULT", "d:\\DATA\\cgq-obsidian"))
+
+vault_path = find_vault_path()
 utils_path = vault_path / ".lobster" / "lobster_utils.py"
 
 if utils_path.exists():
@@ -27,101 +38,128 @@ if utils_path.exists():
     lobster_utils = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(lobster_utils)
 else:
-    print("错误: 找不到 lobster_utils.py", file=sys.stderr)
+    print(f"错误: 找不到 lobster_utils.py (搜索路径: {utils_path})", file=sys.stderr)
     sys.exit(1)
 
 
-def print_note(note, show_content=False, index=None):
+def get_match_context(content: str, query: str, context_lines: int = 3) -> str:
+    """提取匹配关键词周围的上下文片段"""
+    lines = content.split('\n')
+    query_lower = query.lower()
+
+    for i, line in enumerate(lines):
+        if query_lower in line.lower():
+            start = max(0, i - context_lines)
+            end = min(len(lines), i + context_lines + 1)
+            return '\n'.join(lines[start:end])
+
+    # fallback: 返回前 200 字符
+    return content[:200]
+
+
+def print_note(note, show_content=False, index=None, query=None):
     """打印笔记信息"""
     if index is not None:
         print(f"\n[{index}] ", end="")
     else:
         print("\n---")
 
-    print(f"文件: {note.filepath.name}")
-    print(f"类型: {note.card_type}")
-    print(f"标题: {note.title}")
-    print(f"状态: {note.status}")
+    # 显示来源层
+    rel_path = note.filepath
+    if 'personal-wiki/notes/' in str(rel_path):
+        layer = "[卡片]"
+    elif 'personal-wiki/wiki/' in str(rel_path):
+        layer = "[Wiki]"
+    else:
+        layer = "[其他]"
+
+    print(f"{layer} {note.filepath.name}")
+    print(f"  类型: {note.card_type}")
+    print(f"  标题: {note.title}")
+    if note.status:
+        print(f"  状态: {note.status}")
     if note.tags:
-        print(f"标签: {', '.join(note.tags)}")
+        print(f"  标签: {', '.join(note.tags)}")
     if note.confidence:
-        print(f"信心: {note.confidence}")
+        print(f"  信心: {note.confidence}")
+
+    wiki_c = note.frontmatter.get('wiki_concepts', [])
+    if wiki_c:
+        print(f"  概念: {', '.join(str(c) for c in wiki_c)}")
 
     if show_content and note.content:
-        # 显示前 200 字符
-        preview = note.content[:200] + "..." if len(note.content) > 200 else note.content
-        print(f"\n内容预览:\n{preview}")
+        if query:
+            context = get_match_context(note.content, query)
+        else:
+            context = note.content[:200] + ("..." if len(note.content) > 200 else "")
+        print(f"\n  内容:\n  {context.replace(chr(10), chr(10) + '  ')}")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='在 Obsidian 知识库中搜索笔记卡片',
+        description='在 Obsidian 知识库中搜索笔记卡片和 Wiki 页面',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 使用示例:
-  python search.py 用户体验
+  python search.py 用户体验                        # 搜索关键词
+  python search.py 社交货币 --scope all            # 同时搜索卡片和 Wiki
+  python search.py 社交货币 --scope wiki           # 只搜索 Wiki
+  python search.py --concepts 谈判博弈              # 按概念搜索关联卡片
+  python search.py --concepts 谈判博弈,社交货币     # 多概念搜索
   python search.py "判断卡" --type judgment
   python search.py 产品 --tags 产品,设计
-  python search.py 方法 --type method --status mature
-  python search.py "用户转化" --show-content
+  python search.py "用户转化" --show-content        # 显示匹配上下文
         '''
     )
 
     parser.add_argument('query', nargs='?', help='搜索关键词')
     parser.add_argument('--type', '-t', choices=['judgment', 'method', 'case', 'information', 'todo'],
                         help='按卡片类型过滤')
-    parser.add_argument('--status', '-s', help='按状态过滤 (new/growing/mature/outdated/discarded/pending/completed)')
+    parser.add_argument('--status', '-s', help='按状态过滤 (new/growing/mature/outdated/discarded)')
     parser.add_argument('--tags', help='按标签过滤，逗号分隔')
+    parser.add_argument('--scope', choices=['notes', 'wiki', 'all'], default='notes',
+                        help='搜索范围: notes(默认) / wiki / all')
+    parser.add_argument('--concepts', help='按 wiki 概念搜索关联卡片，逗号分隔')
     parser.add_argument('--list', '-l', action='store_true',
                         help='列出所有笔记（不搜索）')
     parser.add_argument('--show-content', '-c', action='store_true',
-                        help='显示内容预览')
+                        help='显示内容预览（匹配上下文）')
     parser.add_argument('--json', '-j', action='store_true',
                         help='以 JSON 格式输出')
-    parser.add_argument('--vault', help='知识库路径（默认使用配置文件中的路径）')
 
     args = parser.parse_args()
 
     # 初始化知识库
-    vault_path_override = args.vault if args.vault else None
-
-    if vault_path_override:
-        # 使用指定的路径
-        class CustomConfig:
-            def __init__(self, path):
-                self.notes_dir = Path(path) / "notes"
-
-        config = CustomConfig(vault_path_override)
-        vault = lobster_utils.LobsterVault(config)
-    else:
-        # 使用默认配置
+    try:
         vault = lobster_utils.LobsterVault()
+    except Exception as e:
+        print(f"错误: 初始化知识库失败 - {e}", file=sys.stderr)
+        sys.exit(1)
 
-    # 列出所有笔记或搜索
-    if args.list or not args.query:
-        filters = {}
-        if args.type:
-            filters['type'] = args.type
-        if args.status:
-            filters['status'] = args.status
-        if args.tags:
-            filters['tags'] = [t.strip() for t in args.tags.split(',')]
+    # 构建过滤器
+    filters = {}
+    if args.type:
+        filters['type'] = args.type
+    if args.status:
+        filters['status'] = args.status
+    if args.tags:
+        filters['tags'] = [t.strip() for t in args.tags.split(',')]
 
-        notes = vault.list_notes(filters)
+    # 解析 concepts 参数
+    concepts = None
+    if args.concepts:
+        concepts = [c.strip() for c in args.concepts.split(',')]
+
+    # 按概念搜索或关键词搜索
+    if args.list or (not args.query and not concepts):
+        notes = vault.list_notes(filters if filters else None)
+    elif concepts:
+        notes = vault.search(args.query or "", filters=filters or None, concepts=concepts)
     else:
-        filters = {}
-        if args.type:
-            filters['type'] = args.type
-        if args.status:
-            filters['status'] = args.status
-        if args.tags:
-            filters['tags'] = [t.strip() for t in args.tags.split(',')]
-
-        notes = vault.search(args.query, filters)
+        notes = vault.search(args.query, filters=filters or None, scope=args.scope)
 
     # 输出结果
     if args.json:
-        # JSON 输出
         results = []
         for note in notes:
             results.append({
@@ -130,17 +168,17 @@ def main():
                 'title': note.title,
                 'status': note.status,
                 'tags': note.tags,
-                'confidence': note.confidence
+                'confidence': note.confidence,
+                'wiki_concepts': note.frontmatter.get('wiki_concepts', []),
             })
         print(json.dumps(results, ensure_ascii=False, indent=2))
     else:
-        # 文本输出
         if not notes:
             print("未找到匹配的笔记")
         else:
-            print(f"找到 {len(notes)} 条笔记:")
+            print(f"找到 {len(notes)} 条结果:")
             for i, note in enumerate(notes, 1):
-                print_note(note, show_content=args.show_content, index=i)
+                print_note(note, show_content=args.show_content, index=i, query=args.query)
 
     return 0
 

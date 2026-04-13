@@ -2,23 +2,23 @@
 type: case
 confidence: medium
 tags:
-  - OpenClaw
-  - multi-agent
-  - skill管理
-  - 实战案例
-status: 新
+- OpenClaw
+- multi-agent
+- skill管理
+- 实战案例
+status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:
-  - skill三层发现机制
-  - OpenClaw
+- skill三层发现机制
+- OpenClaw
+- DracoVibeCoding
 sources:
-  - https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+- https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
 related:
-  - skill三层放置策略
-  - main的私有skill不天然共享给其他agent
+- skill三层放置策略
+- main的私有skill不天然共享给其他agent
 ---
-
 # 130 个 AI 员工的 Skill 管理实战
 
 ## 案例描述

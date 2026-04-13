@@ -1,13 +1,15 @@
 ---
 type: todo
-status: 待办
+status: new
 priority: 中
-tags: [YouTube, 短视频, 内容创作]
+tags:
+- YouTube
+- 短视频
+- 内容创作
 created: 2026-04-13
 updated: 2026-04-13
 title: 发布一条YouTube短视频
 ---
-
 # 发布一条YouTube短视频
 
 ## 任务描述

@@ -7,6 +7,7 @@ Lobster AI - 核心工具模块
 import os
 import json
 import re
+import yaml
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional, Any, Tuple
@@ -46,49 +47,33 @@ class Frontmatter:
 
     @staticmethod
     def parse(content: str) -> Dict[str, Any]:
-        """解析 Markdown 文件的 frontmatter"""
+        """解析 Markdown 文件的 frontmatter（使用 yaml.safe_load）"""
         lines = content.split('\n')
         if not lines or lines[0] != '---':
             return {}
 
         fm_lines = []
+        end_idx = -1
         for i, line in enumerate(lines[1:], 1):
-            if line == '---':
+            if line.strip() == '---':
+                end_idx = i
                 break
             fm_lines.append(line)
 
-        # 简单的 YAML 解析（只处理基本格式）
-        frontmatter = {}
-        for line in fm_lines:
-            if ':' in line:
-                key, value = line.split(':', 1)
-                key = key.strip()
-                value = value.strip()
-                # 处理列表
-                if value.startswith('[') and value.endswith(']'):
-                    value = [v.strip() for v in value[1:-1].split(',') if v.strip()]
-                # 处理布尔值
-                elif value.lower() == 'true':
-                    value = True
-                elif value.lower() == 'false':
-                    value = False
-                frontmatter[key] = value
+        if not fm_lines:
+            return {}
 
-        return frontmatter
+        fm_text = '\n'.join(fm_lines)
+        try:
+            return yaml.safe_load(fm_text) or {}
+        except yaml.YAMLError:
+            return {}
 
     @staticmethod
     def generate(metadata: Dict[str, Any]) -> str:
-        """生成 frontmatter"""
-        lines = ['---']
-        for key, value in metadata.items():
-            if isinstance(value, list):
-                lines.append(f"{key}: [{', '.join(str(v) for v in value)}]")
-            elif isinstance(value, bool):
-                lines.append(f"{key}: {str(value).lower()}")
-            else:
-                lines.append(f"{key}: {value}")
-        lines.append('---')
-        return '\n'.join(lines)
+        """生成 frontmatter（使用标准 YAML 格式）"""
+        fm_text = yaml.dump(metadata, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        return f"---\n{fm_text}---"
 
 
 class NoteCard:
@@ -110,13 +95,18 @@ class NoteCard:
 
         self.frontmatter = Frontmatter.parse(content)
 
-        # 提取正文内容（frontmatter 之后的部分）
+        # 提取正文内容（第二个 --- 之后的部分）
         lines = content.split('\n')
-        if lines and lines[0] == '---':
+        if lines and lines[0].strip() == '---':
+            fm_end = -1
             for i, line in enumerate(lines[1:], 1):
-                if line == '---':
-                    self.content = '\n'.join(lines[i+1:]).strip()
+                if line.strip() == '---':
+                    fm_end = i
                     break
+            if fm_end >= 0:
+                self.content = '\n'.join(lines[fm_end + 1:]).strip()
+            else:
+                self.content = content.strip()
         else:
             self.content = content.strip()
 
@@ -193,32 +183,95 @@ class LobsterVault:
 
         return notes
 
-    def search(self, query: str, filters: Dict[str, Any] = None) -> List[NoteCard]:
-        """搜索笔记"""
+    def search(self, query: str, filters: Dict[str, Any] = None,
+               scope: str = "notes", concepts: List[str] = None) -> List[NoteCard]:
+        """
+        搜索笔记和 Wiki 页面。
+
+        Args:
+            query: 搜索关键词
+            filters: 元数据过滤（type, status, tags）
+            scope: 搜索范围 - "notes"（默认）/ "wiki" / "all"
+            concepts: 按 wiki 概念名过滤，返回引用了这些概念的卡片
+        """
+        results = []
+
+        # 模式 A：按概念搜索
+        if concepts:
+            return self._search_by_concepts(concepts, filters)
+
+        # 模式 B：关键词搜索
+        query_lower = query.lower() if query else ""
+
+        # 搜索 notes 层
+        if scope in ("notes", "all"):
+            notes = self.list_notes(filters)
+            for note in notes:
+                if not query_lower:
+                    results.append((note, 50))
+                    continue
+
+                # 标题匹配
+                if query_lower in note.title.lower():
+                    results.append((note, 100))
+                # wiki_concepts 匹配
+                elif query_lower in str(note.frontmatter.get('wiki_concepts', [])).lower():
+                    results.append((note, 85))
+                # 标签匹配
+                elif any(query_lower in tag.lower() for tag in note.tags):
+                    results.append((note, 80))
+                # 内容匹配
+                elif query_lower in note.content.lower():
+                    results.append((note, 60))
+
+        # 搜索 wiki 层
+        if scope in ("wiki", "all"):
+            wiki_dir = Path(self.config.config.get('wiki_dir', 'personal-wiki/wiki'))
+            if wiki_dir.exists():
+                for md_file in wiki_dir.rglob('*.md'):
+                    wiki_note = NoteCard(str(md_file))
+
+                    if not query_lower:
+                        results.append((wiki_note, 40))
+                        continue
+
+                    # 标题匹配
+                    if query_lower in wiki_note.title.lower():
+                        results.append((wiki_note, 90))
+                    # lobster_cards 匹配
+                    elif query_lower in str(wiki_note.frontmatter.get('lobster_cards', [])).lower():
+                        results.append((wiki_note, 75))
+                    # 标签匹配
+                    elif any(query_lower in tag.lower() for tag in wiki_note.tags):
+                        results.append((wiki_note, 70))
+                    # 内容匹配
+                    elif query_lower in wiki_note.content.lower():
+                        results.append((wiki_note, 50))
+
+        # 按相关度排序，去重
+        results.sort(key=lambda x: x[1], reverse=True)
+        seen = set()
+        unique_results = []
+        for note, score in results:
+            if note.filepath not in seen:
+                seen.add(note.filepath)
+                unique_results.append(note)
+        return unique_results
+
+    def _search_by_concepts(self, concepts: List[str], filters: Dict[str, Any] = None) -> List[NoteCard]:
+        """按 wiki 概念名搜索关联卡片"""
         results = []
         notes = self.list_notes(filters)
 
-        query_lower = query.lower()
-
+        concept_set = set(c.lower() for c in concepts)
         for note in notes:
-            # 搜索标题
-            if query_lower in note.title.lower():
-                results.append((note, 100))
-                continue
+            wiki_c = note.frontmatter.get('wiki_concepts', [])
+            if isinstance(wiki_c, str):
+                wiki_c = [wiki_c]
+            if concept_set.intersection(set(str(c).lower() for c in wiki_c)):
+                results.append(note)
 
-            # 搜索标签
-            for tag in note.tags:
-                if query_lower in tag.lower():
-                    results.append((note, 80))
-                    break
-            else:
-                # 搜索内容
-                if query_lower in note.content.lower():
-                    results.append((note, 60))
-
-        # 按相关度排序
-        results.sort(key=lambda x: x[1], reverse=True)
-        return [note for note, score in results]
+        return results
 
     def create_note(self, card_type: str, title: str, content: str = "",
                     metadata: Dict[str, Any] = None) -> NoteCard:
@@ -348,13 +401,36 @@ class BidirectionalLinker:
         self.notes_dir = notes_dir
         self.concepts_dir = wiki_dir / "concepts"
         self.entities_dir = wiki_dir / "entities"
+        self._concept_names: Optional[List[str]] = None
+
+    def _get_concept_names(self) -> List[str]:
+        """获取所有 wiki 概念名（文件名去后缀）"""
+        if self._concept_names is not None:
+            return self._concept_names
+
+        names = []
+        if self.concepts_dir.exists():
+            for f in self.concepts_dir.glob("*.md"):
+                names.append(f.stem)
+        # 也包含实体
+        if self.entities_dir.exists():
+            for f in self.entities_dir.glob("*.md"):
+                names.append(f.stem)
+
+        self._concept_names = names
+        return names
 
     def identify_concepts_in_card(self, card: NoteCard) -> List[str]:
-        """识别卡片中的关键概念"""
+        """识别卡片中的关键概念（基于文件名匹配 + 内容匹配）"""
         concepts = []
+        concept_names = self._get_concept_names()
 
-        # 扫描卡片内容，查找可能的概念引用
-        # TODO: 实现智能概念识别逻辑
+        # 搜索范围：标题 + 标签 + 内容
+        search_text = f"{card.title} {' '.join(card.tags)} {card.content}".lower()
+
+        for name in concept_names:
+            if name.lower() in search_text:
+                concepts.append(name)
 
         return concepts
 
@@ -366,28 +442,43 @@ class BidirectionalLinker:
             return matching_pages
 
         for concept_file in self.concepts_dir.glob("*.md"):
-            # TODO: 实现关键词匹配逻辑
-            pass
+            name = concept_file.stem.lower()
+            # 匹配文件名
+            for kw in keywords:
+                if kw.lower() in name:
+                    matching_pages.append(concept_file)
+                    break
+            else:
+                # 匹配内容
+                try:
+                    content = concept_file.read_text(encoding='utf-8')
+                    for kw in keywords:
+                        if kw.lower() in content.lower():
+                            matching_pages.append(concept_file)
+                            break
+                except Exception:
+                    pass
 
         return matching_pages
 
     def add_wiki_concepts_to_card(self, card_path: Path, concepts: List[str]):
-        """给卡片添加 Wiki 概念引用"""
+        """给卡片添加 Wiki 概念引用（纯字符串，不用 [[ ]]）"""
         if not concepts:
             return
 
         card = NoteCard(str(card_path))
 
-        # 更新 frontmatter
-        if 'wiki_concepts' not in card.frontmatter:
-            card.frontmatter['wiki_concepts'] = []
+        existing = card.frontmatter.get('wiki_concepts', [])
+        if isinstance(existing, str):
+            existing = [existing]
 
+        new_concepts = list(existing)
         for concept in concepts:
-            concept_link = f"[[{concept}]]"
-            if concept_link not in card.frontmatter['wiki_concepts']:
-                card.frontmatter['wiki_concepts'].append(concept_link)
+            if concept not in new_concepts:
+                new_concepts.append(concept)
 
-        # TODO: 写回文件
+        card.frontmatter['wiki_concepts'] = new_concepts
+        self._write_frontmatter(card_path, card.frontmatter, card.content)
 
     def add_lobster_cards_to_wiki(self, wiki_page: str, cards: List[NoteCard]):
         """给 Wiki 页面添加卡片引用"""
@@ -395,29 +486,88 @@ class BidirectionalLinker:
             return
 
         wiki_path = Path(wiki_page)
+        if not wiki_path.exists():
+            return
 
-        # 读取 Wiki 页面
-        # TODO: 实现读取和更新逻辑
+        card = NoteCard(str(wiki_path))
 
-    def scan_and_update_references(self):
-        """扫描所有文件，更新相互引用"""
-        # 1. 扫描所有 Lobster 卡片
+        existing = card.frontmatter.get('lobster_cards', [])
+        if isinstance(existing, str):
+            existing = [existing]
+
+        new_cards = list(existing)
+        for c in cards:
+            card_name = c.filepath.stem
+            if card_name not in new_cards:
+                new_cards.append(card_name)
+
+        card.frontmatter['lobster_cards'] = new_cards
+        self._write_frontmatter(wiki_path, card.frontmatter, card.content)
+
+    def scan_and_update_references(self, dry_run: bool = False) -> Dict[str, Any]:
+        """扫描所有文件，更新相互引用（双向）"""
+        stats = {'cards_scanned': 0, 'concepts_added': 0, 'backlinks_added': 0}
+
+        # 1. 构建概念 → 卡片 反向索引
+        concept_to_cards: Dict[str, List[str]] = {}
         all_cards = []
-        for card_type in ["judgments", "methods", "cases", "information"]:
+        for card_type in ["judgments", "methods", "cases", "information", "todos"]:
             type_dir = self.notes_dir / card_type
             if type_dir.exists():
                 all_cards.extend(type_dir.glob("*.md"))
 
-        # 2. 对于每张卡片，识别相关概念
+        # 2. 扫描每张卡片，识别并更新概念引用
         for card_path in all_cards:
             card = NoteCard(str(card_path))
+            stats['cards_scanned'] += 1
+
             concepts = self.identify_concepts_in_card(card)
 
             if concepts:
-                self.add_wiki_concepts_to_card(card_path, concepts)
+                if not dry_run:
+                    self.add_wiki_concepts_to_card(card_path, concepts)
+                stats['concepts_added'] += len(concepts)
 
-        # 3. 扫描所有 Wiki 页面，更新卡片引用
-        # TODO: 实现 Wiki 页面扫描和更新逻辑
+                # 记录反向映射
+                card_name = card_path.stem
+                for concept in concepts:
+                    if concept not in concept_to_cards:
+                        concept_to_cards[concept] = []
+                    if card_name not in concept_to_cards[concept]:
+                        concept_to_cards[concept].append(card_name)
+
+        # 3. 更新 Wiki 概念页的反向引用
+        for concept_name, card_names in concept_to_cards.items():
+            concept_path = self.concepts_dir / f"{concept_name}.md"
+            if not concept_path.exists():
+                continue
+
+            wiki_page = NoteCard(str(concept_path))
+            existing = wiki_page.frontmatter.get('lobster_cards', [])
+            if isinstance(existing, str):
+                existing = [existing]
+
+            new_cards = list(existing)
+            added = 0
+            for card_name in card_names:
+                if card_name not in new_cards:
+                    new_cards.append(card_name)
+                    added += 1
+
+            if added > 0:
+                if not dry_run:
+                    wiki_page.frontmatter['lobster_cards'] = new_cards
+                    self._write_frontmatter(concept_path, wiki_page.frontmatter, wiki_page.content)
+                stats['backlinks_added'] += added
+
+        return stats
+
+    @staticmethod
+    def _write_frontmatter(file_path: Path, frontmatter: Dict[str, Any], content: str):
+        """写回文件：frontmatter + 原始内容"""
+        fm_text = Frontmatter.generate(frontmatter)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(f"{fm_text}\n{content}")
 
 
 if __name__ == '__main__':
