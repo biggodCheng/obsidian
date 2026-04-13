@@ -167,13 +167,8 @@ class LobsterVault:
                 if filters:
                     if 'type' in filters and note.card_type != filters['type']:
                         continue
-                    if 'status' in filters:
-                        filter_status = filters['status']
-                        if isinstance(filter_status, list):
-                            if note.status not in filter_status:
-                                continue
-                        elif note.status != filter_status:
-                            continue
+                    if 'confidence' in filters and note.confidence != filters['confidence']:
+                        continue
                     if 'tags' in filters:
                         filter_tags = set(filters['tags'])
                         if not filter_tags.intersection(set(note.tags)):

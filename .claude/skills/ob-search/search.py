@@ -76,12 +76,10 @@ def print_note(note, show_content=False, index=None, query=None):
     print(f"{layer} {note.filepath.name}")
     print(f"  类型: {note.card_type}")
     print(f"  标题: {note.title}")
-    if note.status:
-        print(f"  状态: {note.status}")
-    if note.tags:
-        print(f"  标签: {', '.join(note.tags)}")
     if note.confidence:
         print(f"  信心: {note.confidence}")
+    if note.tags:
+        print(f"  标签: {', '.join(note.tags)}")
 
     wiki_c = note.frontmatter.get('wiki_concepts', [])
     if wiki_c:
@@ -115,7 +113,8 @@ def main():
     parser.add_argument('query', nargs='?', help='搜索关键词')
     parser.add_argument('--type', '-t', choices=['judgment', 'method', 'case', 'information', 'todo'],
                         help='按卡片类型过滤')
-    parser.add_argument('--status', '-s', help='按状态过滤 (new/growing/mature/outdated/discarded)')
+    parser.add_argument('--confidence', '-c', choices=['low', 'medium', 'high'],
+                        help='按信心程度过滤')
     parser.add_argument('--tags', help='按标签过滤，逗号分隔')
     parser.add_argument('--scope', choices=['notes', 'wiki', 'all'], default='notes',
                         help='搜索范围: notes(默认) / wiki / all')
@@ -140,8 +139,8 @@ def main():
     filters = {}
     if args.type:
         filters['type'] = args.type
-    if args.status:
-        filters['status'] = args.status
+    if args.confidence:
+        filters['confidence'] = args.confidence
     if args.tags:
         filters['tags'] = [t.strip() for t in args.tags.split(',')]
 
