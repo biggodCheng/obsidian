@@ -7,7 +7,7 @@
   "confidence_levels": ["high", "medium", "low"],
   "status_levels": {
     "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
-    "todo": ["pending", "in_progress", "completed", "cancelled"]
+    "todo": ["待办", "进行中", "已完成", "已取消"]
   },
   "filename_pattern": "{{SLUG}}.md",
   "card_subdirs": {

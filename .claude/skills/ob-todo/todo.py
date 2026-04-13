@@ -31,14 +31,32 @@ else:
     sys.exit(1)
 
 
+# CLI 英文参数 → 中文状态值（仅用于 --status 参数输入）
+STATUS_CLI_MAP = {
+    'pending': '待办',
+    'in_progress': '进行中',
+    'completed': '已完成',
+    'cancelled': '已取消'
+}
+
+PRIORITY_MAP = {
+    'high': '高',
+    'medium': '中',
+    'low': '低',
+    '高': '高',
+    '中': '中',
+    '低': '低'
+}
+
+
 def create_task(title, description="", priority="medium", due=None, tags=None):
     """创建新任务"""
     vault = lobster_utils.LobsterVault()
 
     metadata = {
         'type': 'todo',
-        'status': 'pending',
-        'priority': priority,
+        'status': '待办',
+        'priority': PRIORITY_MAP.get(priority, priority),
         'tags': tags or []
     }
 
@@ -58,7 +76,7 @@ def list_tasks(status=None, show_completed=False):
     filters = {'type': 'todo'}
 
     if not show_completed:
-        filters['status'] = ['pending', 'in_progress']
+        filters['status'] = ['待办', '进行中']
     elif status:
         filters['status'] = status
 
@@ -66,9 +84,9 @@ def list_tasks(status=None, show_completed=False):
 
     # 按截止日期和优先级排序
     def sort_key(note):
-        priority_order = {'high': 0, 'medium': 1, 'low': 2}
+        priority_order = {'高': 0, '中': 1, '低': 2}
         due = note.frontmatter.get('due', '9999-12-31')
-        return (due, priority_order.get(note.frontmatter.get('priority', 'medium'), 1))
+        return (due, priority_order.get(note.frontmatter.get('priority', '中'), 1))
 
     notes.sort(key=sort_key)
 
@@ -130,8 +148,9 @@ def main():
 
     # list 命令
     list_parser = subparsers.add_parser('list', help='列出任务')
-    list_parser.add_argument('--status', '-s', choices=['pending', 'in_progress', 'completed', 'cancelled'],
-                            help='按状态过滤')
+    list_parser.add_argument('--status', '-s',
+                            choices=['pending', 'in_progress', 'completed', 'cancelled'],
+                            help='按状态过滤 (pending/in_progress/completed/cancelled)')
     list_parser.add_argument('--all', '-a', action='store_true',
                             help='显示所有任务（包括已完成）')
 
@@ -153,10 +172,13 @@ def main():
 
         note = create_task(args.title, args.description, args.priority, args.due, tags)
         print(f"✓ 任务已创建: {note.filepath}")
+        print(f"  状态: 待办 | 优先级: {PRIORITY_MAP.get(args.priority, args.priority)}")
         return 0
 
     elif args.command == 'list':
-        notes = list_tasks(args.status, show_completed=args.all)
+        # CLI 英文参数转中文状态值
+        status_arg = STATUS_CLI_MAP.get(args.status, args.status) if args.status else None
+        notes = list_tasks(status_arg, show_completed=args.all)
 
         if not notes:
             print("没有找到任务")
@@ -164,7 +186,10 @@ def main():
             print(f"\n找到 {len(notes)} 个任务:\n")
             for i, note in enumerate(notes, 1):
                 print(f"[{i}] {note.title}")
-                print(f"    状态: {note.status} | 优先级: {note.frontmatter.get('priority', 'medium')}")
+                status_display = note.status
+                priority_val = note.frontmatter.get('priority', 'medium')
+                priority_display = PRIORITY_MAP.get(priority_val, priority_val)
+                print(f"    状态: {status_display} | 优先级: {priority_display}")
 
                 due = note.frontmatter.get('due')
                 if due:
@@ -178,8 +203,8 @@ def main():
         return 0
 
     elif args.command == 'complete':
-        if update_task_status(args.filepath, 'completed'):
-            print(f"✓ 任务已标记为完成")
+        if update_task_status(args.filepath, '已完成'):
+            print(f"✓ 任务已标记为已完成")
             return 0
         else:
             print("✗ 更新失败")
