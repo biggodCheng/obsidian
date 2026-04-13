@@ -1,7 +1,6 @@
 ---
 type: information
 tags: []
-status: new
 created: "{{date}}"
 updated: "{{date}}"
 wiki_concepts: []

@@ -2,13 +2,21 @@
 title: article-processor - 文章处理技能
 type: entity
 date: 2026-04-09
-tags: [AI工具, 内容处理, 信息摄取, Obsidian, 龙虾AI]
-sources: [obsidian-theory]
-related: [龙虾AI, ob-search, ob-todo, ob-note]
+tags:
+- AI工具
+- 内容处理
+- 信息摄取
+- Obsidian
+- 龙虾AI
+sources:
+- obsidian-theory
+related:
+- 龙虾AI
+- ob-search
+- ob-todo
+- ob-note
 confidence: high
-status: mature
 ---
-
 # article-processor - 文章处理技能
 
 ## 定义

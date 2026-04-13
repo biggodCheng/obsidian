@@ -11,14 +11,24 @@
             "id": "a417b3870b01a7bc",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://mp.weixin.qq.com/s/SVjHER6TT9zP4izr10lHkQ",
-                "title": "垂直小号依然有红利，分享我做三年公众号精准获客的思路",
-                "mode": "webview"
+                "file": "2026-04-09.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "globe-2",
-              "title": "垂直小号依然有红利，分享我做三年公众号精准获客的思路"
+              "icon": "lucide-file",
+              "title": "2026-04-09"
             }
           }
         ]
@@ -200,7 +210,10 @@
   },
   "active": "a417b3870b01a7bc",
   "lastOpenFiles": [
+    "2026-04-13.md",
     "2026-04-09.md",
+    "3 月航海家航海｜OpenClaw 从零基础到实战运用｜航海手册（持续更新） - 飞书云文档 1.md",
+    "3 月航海家航海｜OpenClaw 从零基础到实战运用｜航海手册（持续更新） - 飞书云文档.md",
     "垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
     "Excalidraw/Drawing 2026-04-03 11.04.16.excalidraw.md",
     "Excalidraw",

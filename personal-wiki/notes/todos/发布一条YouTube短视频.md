@@ -1,6 +1,5 @@
 ---
 type: todo
-status: new
 priority: 中
 tags:
 - YouTube

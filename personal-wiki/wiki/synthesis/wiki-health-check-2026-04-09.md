@@ -2,13 +2,18 @@
 title: Wiki 健康检查报告 - 2026-04-09
 type: synthesis
 date: 2026-04-09
-tags: [健康检查, Wiki维护, 质量评估]
-sources: [wiki-self-check]
-related: [判断卡, 知识原子化, 闭环系统]
+tags:
+- 健康检查
+- Wiki维护
+- 质量评估
+sources:
+- wiki-self-check
+related:
+- 判断卡
+- 知识原子化
+- 闭环系统
 confidence: high
-status: mature
 ---
-
 # Wiki 健康检查报告 - 2026-04-09
 
 ## 检查概览

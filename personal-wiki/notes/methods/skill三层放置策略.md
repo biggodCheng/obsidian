@@ -6,7 +6,6 @@ tags:
 - multi-agent
 - 分层设计
 - 架构实践
-status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:

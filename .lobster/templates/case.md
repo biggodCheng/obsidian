@@ -2,7 +2,6 @@
 type: case
 confidence: medium
 tags: []
-status: new
 created: "{{date}}"
 updated: "{{date}}"
 wiki_concepts: []

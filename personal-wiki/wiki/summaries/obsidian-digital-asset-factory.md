@@ -2,13 +2,21 @@
 title: 构建数字资产工厂 - Obsidian × Claude Code 实践指南
 type: summary
 date: 2026-04-09
-tags: [知识管理, Obsidian, AI, Claude Code, 第二大脑, 数字资产]
+tags:
+- 知识管理
+- Obsidian
+- AI
+- Claude Code
+- 第二大脑
+- 数字资产
 sources: 1
-related: [知识原子化, 判断卡, 龙虾AI, 闭环系统]
+related:
+- 知识原子化
+- 判断卡
+- 龙虾AI
+- 闭环系统
 confidence: high
-status: mature
 ---
-
 # 构建数字资产工厂 - Obsidian × Claude Code 实践指南
 
 ## 源文件信息

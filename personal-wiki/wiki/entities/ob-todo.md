@@ -2,13 +2,21 @@
 title: ob-todo - 任务管理技能
 type: entity
 date: 2026-04-09
-tags: [AI工具, 任务管理, 效率工具, Obsidian, 龙虾AI]
-sources: [obsidian-theory]
-related: [龙虾AI, ob-search, ob-note, article-processor]
+tags:
+- AI工具
+- 任务管理
+- 效率工具
+- Obsidian
+- 龙虾AI
+sources:
+- obsidian-theory
+related:
+- 龙虾AI
+- ob-search
+- ob-note
+- article-processor
 confidence: high
-status: mature
 ---
-
 # ob-todo - 任务管理技能
 
 ## 定义

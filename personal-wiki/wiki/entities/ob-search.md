@@ -2,13 +2,21 @@
 title: ob-search - 全库检索技能
 type: entity
 date: 2026-04-09
-tags: [AI工具, 检索, 知识管理, Obsidian, 龙虾AI]
-sources: [obsidian-theory]
-related: [龙虾AI, ob-todo, ob-note, article-processor]
+tags:
+- AI工具
+- 检索
+- 知识管理
+- Obsidian
+- 龙虾AI
+sources:
+- obsidian-theory
+related:
+- 龙虾AI
+- ob-todo
+- ob-note
+- article-processor
 confidence: high
-status: mature
 ---
-
 # ob-search - 全库检索技能
 
 ## 定义

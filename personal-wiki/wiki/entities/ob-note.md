@@ -2,13 +2,21 @@
 title: ob-note - 笔记记录技能
 type: entity
 date: 2026-04-09
-tags: [AI工具, 笔记记录, 洞察捕捉, Obsidian, 龙虾AI]
-sources: [obsidian-theory]
-related: [龙虾AI, ob-search, ob-todo, article-processor]
+tags:
+- AI工具
+- 笔记记录
+- 洞察捕捉
+- Obsidian
+- 龙虾AI
+sources:
+- obsidian-theory
+related:
+- 龙虾AI
+- ob-search
+- ob-todo
+- article-processor
 confidence: high
-status: mature
 ---
-
 # ob-note - 笔记记录技能
 
 ## 定义

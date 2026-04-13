@@ -6,7 +6,6 @@ tags:
 - 目录结构
 - 工程规范
 - OpenClaw
-status: new
 created: 2026-04-12
 updated: 2026-04-12
 wiki_concepts:

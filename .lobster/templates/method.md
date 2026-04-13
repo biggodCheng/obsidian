@@ -2,7 +2,6 @@
 type: method
 confidence: medium
 tags: []
-status: new
 created: "{{date}}"
 updated: "{{date}}"
 wiki_concepts: []
