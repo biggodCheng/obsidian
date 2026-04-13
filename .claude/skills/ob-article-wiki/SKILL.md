@@ -51,7 +51,7 @@ version: 1.0.0
 ┌───────────────────────────┬─────────────────────────────────┐
 │       Wiki 网络层          │       Lobster 卡片层             │
 │  ┌─────────────────────┐ │  ┌─────────────────────────────┐ │
-│  │ summaries/          │ │  │ judgments/  (价值最高)       │ │
+│  │ summaries/          │ │  │ 判断卡/  (价值最高)           │ │
 │  │ entities/           │ │  │ 方法卡/                     │ │
 │  │ concepts/           │ │  │ 案例卡/                     │ │
 │  │ synthesis/          │ │  │ information/                │ │
@@ -156,8 +156,8 @@ lobster_cards:
   - 卡片1
   - 卡片2
 lobster_type:
-  - judgment
-  - method
+  - 判断卡
+  - 方法卡
 ---
 
 # 页面标题
@@ -178,7 +178,7 @@ lobster_type:
 
 ```markdown
 ---
-type: judgment|method|case|information
+type: 判断卡|方法卡|案例卡|information
 confidence: high|medium|low
 tags:
   - tag1
@@ -215,7 +215,7 @@ related:
 ### 文件命名规范
 
 所有文件统一使用 `{{SLUG}}.md` 命名：
-- **卡片**: `notes/{type}/{{SLUG}}.md`（如 `notes/judgments/传播力大于功能完备性.md`）
+- **卡片**: `notes/{type}/{{SLUG}}.md`（如 `notes/判断卡/传播力大于功能完备性.md`）
 - **摘要**: `wiki/summaries/{{SLUG}}.md`
 - **概念**: `wiki/concepts/{{SLUG}}.md`
 - **实体**: `wiki/entities/{{SLUG}}.md`
@@ -257,7 +257,7 @@ personal-wiki/
 │   ├── summaries/
 │   └── synthesis/
 └── notes/                # 卡片输出
-    ├── judgments/
+    ├── 判断卡/
     ├── 方法卡/
     ├── 案例卡/
     └── information/
@@ -369,7 +369,7 @@ linker.scan_and_update_references()
 ✓ 创建概念: wiki/concepts/病毒循环.md
 
 === Lobster 卡片提炼 ===
-✓ 创建判断卡: notes/judgments/2026-04-12-judgment-社交货币优先级.md
+✓ 创建判断卡: notes/判断卡/2026-04-12-judgment-社交货币优先级.md
 ✓ 创建方法卡: notes/方法卡/2026-04-12-method-病毒循环设计.md
 ✓ 创建案例卡: notes/案例卡/2026-04-12-case-SBTI传播案例.md
 

@@ -35,7 +35,7 @@
   },
   "card_types": {
     "judgment": {
-      "dir": "judgments",
+      "dir": "判断卡",
       "priority": "highest",
       "description": "判断卡 - 怎么判断"
     },

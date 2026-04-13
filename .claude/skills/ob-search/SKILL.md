@@ -23,7 +23,7 @@ user-invocable: true
 - 扫描 notes 目录下的所有 .md 文件
 - 解析 frontmatter 元数据
 - 支持关键词搜索（标题、内容、标签）
-- 支持按类型过滤（judgment/method/case/information/todo）
+- 支持按类型过滤（判断卡/方法卡/案例卡/information/任务卡）
 - 支持按状态过滤（new/growing/mature/outdated/discarded）
 - 支持按标签过滤
 - 按相关度排序返回结果

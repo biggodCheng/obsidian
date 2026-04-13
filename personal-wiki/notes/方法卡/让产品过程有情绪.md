@@ -1,5 +1,5 @@
 ---
-type: method
+type: 方法卡
 confidence: high
 tags:
 - 产品设计

@@ -1,5 +1,5 @@
 ---
-type: method
+type: 方法卡
 confidence: medium
 tags:
 - skill

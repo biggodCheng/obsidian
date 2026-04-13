@@ -1,5 +1,5 @@
 ---
-type: judgment
+type: 判断卡
 confidence: high
 tags:
 - sub-agent

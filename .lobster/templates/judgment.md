@@ -1,5 +1,5 @@
 ---
-type: judgment
+type: 判断卡
 confidence: medium
 tags: []
 created: "{{date}}"

@@ -57,14 +57,14 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 使用示例:
-  python note.py judgment "价格敏感度判断" --content "降价10%增加30%销量"
+  python note.py 判断卡 "价格敏感度判断" --content "降价10%增加30%销量"
   python note.py 方法卡 "A/B测试流程" --confidence high
   python note.py 案例卡 "客户转化案例" --tags 营销,转化
   python note.py information "产品参数" --confidence high
         '''
     )
 
-    parser.add_argument('type', choices=['judgment', '方法卡', '案例卡', 'information'],
+    parser.add_argument('type', choices=['判断卡', '方法卡', '案例卡', 'information'],
                        help='卡片类型')
     parser.add_argument('title', help='笔记标题')
     parser.add_argument('--content', '-c', default='', help='笔记内容')

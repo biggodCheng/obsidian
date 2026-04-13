@@ -15,7 +15,7 @@
   - `synthesis/` - 综合分析页面
 
 - `notes/` - Lobster 卡片（与 Wiki 集成）
-  - `judgments/` - 判断卡（价值最高）
+  - `判断卡/` - 判断卡（价值最高）
   - `方法卡/` - 方法卡（可复用流程）
   - `案例卡/` - 案例卡（验证过的事实）
   - `information/` - 信息卡（基础信息）
@@ -89,7 +89,7 @@ related: [page1, page2]
 
 # Lobster 集成字段（可选）
 lobster_cards: []  # 引用的Lobster卡片，如：[[卡片名]], [[另一个卡片]]
-lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
+lobster_type: []   # 相关的卡片类型筛选，如：["判断卡", "方法卡"]
 ---
 
 # 页面标题
@@ -154,7 +154,7 @@ lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
 
 ```markdown
 ---
-type: judgment|方法卡|案例卡|information|任务卡
+type: 判断卡|方法卡|案例卡|information|任务卡
 confidence: high|medium|low
 tags:
   - tag1
@@ -190,7 +190,7 @@ related:
 
 ### 文件命名规范
 
-- **卡片文件**: `{{SLUG}}.md`（如 `notes/judgments/传播力大于功能完备性.md`）
+- **卡片文件**: `{{SLUG}}.md`（如 `notes/判断卡/传播力大于功能完备性.md`）
   - SLUG = 卡片标题的简洁标识，中文直接用标题
   - 日期和类型信息放在 frontmatter 的 `created` 和 `type` 字段中，不重复到文件名
 - **Wiki 摘要文件**: `{{SLUG}}.md`（如 `wiki/summaries/sbti-viral-propagation-analysis.md`）

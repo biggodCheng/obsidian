@@ -104,14 +104,14 @@ def main():
   python search.py 社交货币 --scope wiki           # 只搜索 Wiki
   python search.py --concepts 谈判博弈              # 按概念搜索关联卡片
   python search.py --concepts 谈判博弈,社交货币     # 多概念搜索
-  python search.py "判断卡" --type judgment
+  python search.py "判断卡" --type 判断卡
   python search.py 产品 --tags 产品,设计
   python search.py "用户转化" --show-content        # 显示匹配上下文
         '''
     )
 
     parser.add_argument('query', nargs='?', help='搜索关键词')
-    parser.add_argument('--type', '-t', choices=['judgment', '方法卡', '案例卡', 'information', '任务卡'],
+    parser.add_argument('--type', '-t', choices=['判断卡', '方法卡', '案例卡', 'information', '任务卡'],
                         help='按卡片类型过滤')
     parser.add_argument('--confidence', '-c', choices=['low', 'medium', 'high'],
                         help='按信心程度过滤')

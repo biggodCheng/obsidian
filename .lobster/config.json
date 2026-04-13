@@ -3,7 +3,7 @@
   "notes_dir": "d:\\DATA\\cgq-obsidian\\personal-wiki\\notes",
   "wiki_dir": "d:\\DATA\\cgq-obsidian\\personal-wiki\\wiki",
   "templates_dir": "d:\\DATA\\cgq-obsidian\\templates",
-  "card_types": ["judgment", "方法卡", "案例卡", "information", "任务卡"],
+  "card_types": ["判断卡", "方法卡", "案例卡", "information", "任务卡"],
   "confidence_levels": ["high", "medium", "low"],
   "status_levels": {
     "knowledge": ["new", "growing", "mature", "outdated", "discarded"],
@@ -11,7 +11,7 @@
   },
   "filename_pattern": "{{SLUG}}.md",
   "card_subdirs": {
-    "judgment": "judgments",
+    "判断卡": "判断卡",
     "方法卡": "方法卡",
     "案例卡": "案例卡",
     "information": "information",
