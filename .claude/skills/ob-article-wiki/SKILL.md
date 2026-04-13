@@ -369,9 +369,9 @@ linker.scan_and_update_references()
 ✓ 创建概念: wiki/concepts/病毒循环.md
 
 === Lobster 卡片提炼 ===
-✓ 创建判断卡: notes/判断卡/2026-04-12-judgment-社交货币优先级.md
-✓ 创建方法卡: notes/方法卡/2026-04-12-method-病毒循环设计.md
-✓ 创建案例卡: notes/案例卡/2026-04-12-case-SBTI传播案例.md
+✓ 创建判断卡: notes/判断卡/社交货币优先级.md
+✓ 创建方法卡: notes/方法卡/病毒循环设计.md
+✓ 创建案例卡: notes/案例卡/SBTI传播案例.md
 
 === 双向链接建立 ===
 ✓ 卡片引用 Wiki 概念: 6 个链接

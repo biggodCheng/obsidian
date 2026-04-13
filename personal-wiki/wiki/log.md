@@ -305,10 +305,10 @@
 - `raw/sources/SBTI传播核武器拆解.md` - 微信公众号文章（作者：袁锐钦）
 
 **创建 Lobster 卡片**:
-- `notes/judgments/传播力大于功能完备性.md` - 判断卡：最好的产品不是功能最全的，是最容易被传播的
-- `notes/judgments/用户分享的是自己不是产品.md` - 判断卡：人们分享的是他们自己
-- `notes/judgments/情绪波动等于记忆深度.md` - 判断卡：情绪波动=记忆深度=传播动力
-- `notes/judgments/情境依赖型内容适合出海.md` - 判断卡：情境依赖型内容天然具备出海基因
+- `notes/判断卡/传播力大于功能完备性.md` - 判断卡：最好的产品不是功能最全的，是最容易被传播的
+- `notes/判断卡/用户分享的是自己不是产品.md` - 判断卡：人们分享的是他们自己
+- `notes/判断卡/情绪波动等于记忆深度.md` - 判断卡：情绪波动=记忆深度=传播动力
+- `notes/判断卡/情境依赖型内容适合出海.md` - 判断卡：情境依赖型内容天然具备出海基因
 - `notes/methods/三步传播产品设计心法.md` - 方法卡：让结果可分享→让过程有情绪→给传播找借口
 - `notes/methods/情绪化流程设计法.md` - 方法卡：将数据收集改造为情绪体验
 - `notes/cases/SBTI零成本爆火案例.md` - 案例卡：HTML+27图+30题，零推广服务器被挤爆
@@ -436,7 +436,7 @@
 - 创建摘要: `wiki/summaries/OpenClaw多Agent Skills分层调用机制.md`
 - 创建实体: `wiki/entities/OpenClaw.md`, `wiki/entities/DracoVibeCoding.md`
 - 创建概念: `wiki/concepts/skill与tool的分层.md`, `wiki/concepts/skill三层发现机制.md`
-- 创建判断卡: `notes/judgments/Tool是能力Skill是方法.md`, `notes/judgments/sub-agent不是main的克隆而是子会话实例.md`, `notes/judgments/main的私有skill不天然共享给其他agent.md`, `notes/judgments/同名skill多层共存需标注来源.md`
+- 创建判断卡: `notes/判断卡/Tool是能力Skill是方法.md`, `notes/判断卡/sub-agent不是main的克隆而是子会话实例.md`, `notes/判断卡/main的私有skill不天然共享给其他agent.md`, `notes/判断卡/同名skill多层共存需标注来源.md`
 - 创建方法卡: `notes/methods/skill三层放置策略.md`, `notes/methods/skill目录结构设计规范.md`
 - 创建案例卡: `notes/cases/130个AI员工的skill管理实战.md`
 - 更新索引: `wiki/index.md`

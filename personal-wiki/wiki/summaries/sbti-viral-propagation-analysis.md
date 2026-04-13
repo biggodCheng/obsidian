@@ -14,7 +14,7 @@ lobster_cards:
   - 情绪化流程设计法
   - SBTI零成本爆火案例
 lobster_type:
-  - judgment
+  - 判断卡
   - method
   - case
 ---
