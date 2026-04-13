@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/wiki/log.md",
+                "file": "personal-wiki/raw/sources/构建数字资产工厂.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "构建数字资产工厂"
             }
           }
         ]
@@ -187,6 +187,15 @@
   },
   "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/wiki/concepts/第二大脑.md",
+    "personal-wiki/wiki/concepts/病毒循环.md",
+    "personal-wiki/wiki/entities/OpenClaw.md",
+    "personal-wiki/wiki/entities/ob-todo.md",
+    "personal-wiki/wiki/entities/ob-search.md",
+    "personal-wiki/wiki/entities/ob-note.md",
+    "personal-wiki/wiki/entities/article-processor.md",
+    "personal-wiki/wiki/log.md",
+    "personal-wiki/raw/sources/构建数字资产工厂.md",
     "personal-wiki/wiki/sedVBWGPz",
     "personal-wiki/CLAUDE.md.tmp.23784.1776098020576",
     "personal-wiki/卡片库/案例卡/SBTI零成本爆火案例.md",
@@ -206,14 +215,6 @@
     "personal-wiki/卡片库/判断卡/谈判对手失去你会面临更大风险.md",
     "personal-wiki/卡片库/判断卡/离开谈判桌的能力才是真正的底牌.md",
     "personal-wiki/卡片库/判断卡/情境依赖型内容适合出海.md",
-    "personal-wiki/卡片库/判断卡/用户分享的是自己不是产品.md",
-    "personal-wiki/卡片库/判断卡/情绪波动等于记忆深度.md",
-    "personal-wiki/卡片库/判断卡/态度不是谈判筹码.md",
-    "personal-wiki/卡片库/判断卡/Tool是能力Skill是方法.md",
-    "personal-wiki/卡片库/判断卡/同名skill多层共存需标注来源.md",
-    "personal-wiki/卡片库/判断卡/传播力大于功能完备性.md",
-    "personal-wiki/卡片库/判断卡/价值等于具体行动的结果和影响.md",
-    "personal-wiki/卡片库/判断卡/sub-agent不是main的克隆而是子会话实例.md",
     "personal-wiki/卡片库/案例卡",
     "personal-wiki/卡片库/信息卡",
     "personal-wiki/卡片库/方法卡",
@@ -221,7 +222,6 @@
     "personal-wiki/卡片库/任务卡",
     "personal-wiki/卡片库",
     "personal-wiki/wiki/sedbMTWom",
-    "sedF35Emc",
-    "personal-wiki/notes/信息卡"
+    "sedF35Emc"
   ]
 }
