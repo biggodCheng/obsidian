@@ -428,4 +428,25 @@
 
 ---
 
+## [2026-04-12] ingest | OpenClaw多Agent Skills分层调用机制
+
+**源文件**: https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ
+
+**操作**:
+- 创建摘要: `wiki/summaries/OpenClaw多Agent Skills分层调用机制.md`
+- 创建实体: `wiki/entities/OpenClaw.md`, `wiki/entities/DracoVibeCoding.md`
+- 创建概念: `wiki/concepts/skill与tool的分层.md`, `wiki/concepts/skill三层发现机制.md`
+- 创建判断卡: `notes/judgments/Tool是能力Skill是方法.md`, `notes/judgments/sub-agent不是main的克隆而是子会话实例.md`, `notes/judgments/main的私有skill不天然共享给其他agent.md`, `notes/judgments/同名skill多层共存需标注来源.md`
+- 创建方法卡: `notes/methods/skill三层放置策略.md`, `notes/methods/skill目录结构设计规范.md`
+- 创建案例卡: `notes/cases/130个AI员工的skill管理实战.md`
+- 更新索引: `wiki/index.md`
+- 建立双向链接: 7张卡片 ↔ 5个Wiki页面
+
+**统计**:
+- 新增页面: 5（1摘要 + 2实体 + 2概念）
+- 新增卡片: 7（4判断 + 2方法 + 1案例）
+- 双向链接: 12个
+
+---
+
 日志开始: 2026-04-09
