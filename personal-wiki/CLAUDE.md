@@ -19,7 +19,7 @@
   - `methods/` - 方法卡（可复用流程）
   - `cases/` - 案例卡（验证过的事实）
   - `information/` - 信息卡（基础信息）
-  - `todos/` - 任务卡
+  - `任务卡/` - 任务卡
 
 ## 摄取流程
 
@@ -154,7 +154,7 @@ lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
 
 ```markdown
 ---
-type: judgment|method|case|information|todo
+type: judgment|method|case|information|任务卡
 confidence: high|medium|low
 tags:
   - tag1

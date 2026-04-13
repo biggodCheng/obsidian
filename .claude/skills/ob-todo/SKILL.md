@@ -4,7 +4,7 @@ description: 任务管理技能 - 记录、查看、更新任务卡片
 user-invocable: true
 ---
 
-# Lobster Todo - 任务管理
+# Lobster 任务卡 - 任务管理
 
 管理 Obsidian 知识库中的任务卡片。
 
@@ -20,7 +20,7 @@ user-invocable: true
 ## How It Works
 
 使用 `lobster_utils.py` 核心工具模块：
-- 创建新的任务卡片
+- 创建新的任务卡片（存放在 `notes/任务卡/` 目录）
 - 查看所有任务或按状态过滤
 - 更新任务状态
 - 支持优先级设置
@@ -29,7 +29,7 @@ user-invocable: true
 
 ```yaml
 ---
-type: todo
+type: 任务卡
 status: 待办
 priority: 中
 tags: []

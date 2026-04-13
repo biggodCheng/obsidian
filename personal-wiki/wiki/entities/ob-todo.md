@@ -1,5 +1,5 @@
 ---
-title: ob-todo - 任务管理技能
+title: ob-todo - 任务卡管理技能
 type: entity
 date: 2026-04-09
 tags:
@@ -17,7 +17,7 @@ related:
 - article-processor
 confidence: high
 ---
-# ob-todo - 任务管理技能
+# ob-todo - 任务卡管理技能
 
 ## 定义
 

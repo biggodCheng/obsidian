@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/notes/methods/高赞求案例帖是需求信号.md",
+                "file": "personal-wiki/notes/任务卡/发布一条YouTube短视频.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "高赞求案例帖是需求信号"
+              "title": "发布一条YouTube短视频"
             }
           }
         ]
@@ -187,9 +187,12 @@
   },
   "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/notes/methods/高赞求案例帖是需求信号.md",
+    "personal-wiki/wiki/entities/ob-todo.md.tmp.23784.1776095104291",
+    "personal-wiki/notes/任务卡/发布一条YouTube短视频.md",
+    "personal-wiki/notes/任务卡",
     "personal-wiki/notes/methods/高赞求资料帖是需求信号.md",
     "personal-wiki/notes/methods/高赞求模板帖是需求信号.md",
-    "personal-wiki/notes/methods/高赞求案例帖是需求信号.md",
     "personal-wiki/notes/judgments/情绪波动等于记忆深度.md.tmp.34888.1776094613613",
     "personal-wiki/notes/judgments/谈判对手获得你的价值必须大于承担的风险.md.tmp.34888.1776094607344",
     "personal-wiki/notes/judgments/谈判对手失去你会面临更大风险.md.tmp.34888.1776094606200",
@@ -198,8 +201,6 @@
     "personal-wiki/notes/judgments/传播力大于功能完备性.md.tmp.34888.1776094601628",
     "personal-wiki/notes/judgments/需求感越强谈判地位越低.md.tmp.34888.1776094595751",
     "personal-wiki/notes/judgments/离开谈判桌的能力才是真正的底牌.md.tmp.34888.1776094594690",
-    "personal-wiki/notes/judgments/Tool是能力Skill是方法.md.tmp.34888.1776094590356",
-    "personal-wiki/notes/judgments/sub-agent不是main的克隆而是子会话实例.md.tmp.34888.1776094589252",
     "personal-wiki/notes/judgments/谈判对手获得你的价值必须大于承担的风险.md",
     "personal-wiki/wiki/concepts/谈判博弈.md",
     "personal-wiki/notes/judgments/谈判对手失去你会面临更大风险.md",
@@ -220,7 +221,6 @@
     "personal-wiki/notes/cases/SBTI零成本爆火案例.md",
     "personal-wiki/notes/judgments/同名skill多层共存需标注来源.md",
     "personal-wiki/notes/methods/情绪化流程设计法.md",
-    "personal-wiki/notes/judgments/情绪波动等于记忆深度.md",
-    "personal-wiki/notes/judgments/价值等于具体行动的结果和影响.md"
+    "personal-wiki/notes/judgments/情绪波动等于记忆深度.md"
   ]
 }

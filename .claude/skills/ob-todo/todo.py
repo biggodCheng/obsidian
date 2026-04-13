@@ -54,7 +54,7 @@ def create_task(title, description="", priority="medium", due=None, tags=None):
     vault = lobster_utils.LobsterVault()
 
     metadata = {
-        'type': 'todo',
+        'type': '任务卡',
         'status': '待办',
         'priority': PRIORITY_MAP.get(priority, priority),
         'tags': tags or []
@@ -65,7 +65,7 @@ def create_task(title, description="", priority="medium", due=None, tags=None):
 
     content = f"## 任务描述\n{description}\n\n## 子任务\n\n- [ ] \n\n## 备注\n"
 
-    note = vault.create_note('todo', title, content, metadata)
+    note = vault.create_note('任务卡', title, content, metadata)
     return note
 
 
@@ -73,7 +73,7 @@ def list_tasks(status=None, show_completed=False):
     """列出任务"""
     vault = lobster_utils.LobsterVault()
 
-    filters = {'type': 'todo'}
+    filters = {'type': '任务卡'}
 
     if not show_completed:
         filters['status'] = ['待办', '进行中']
