@@ -1,5 +1,5 @@
 ---
-name: lobster-todo
+name: ob-todo
 description: 任务管理技能 - 记录、查看、更新任务卡片
 user-invocable: true
 ---

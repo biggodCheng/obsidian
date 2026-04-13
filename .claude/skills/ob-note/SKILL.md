@@ -1,5 +1,5 @@
 ---
-name: lobster-note
+name: ob-note
 description: 笔记管理技能 - 快速记录洞察和笔记卡片
 user-invocable: true
 ---

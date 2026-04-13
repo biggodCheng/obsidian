@@ -13,7 +13,7 @@
 ### 明确指定融合模式
 
 ```
-用 lobster-article-wiki 处理这篇文章
+用 ob-article-wiki 处理这篇文章
 ```
 
 ## 功能特性
@@ -189,10 +189,10 @@ mkdir -p personal-wiki/notes/{judgments,methods,cases,information}
 
 ## 相关技能
 
-- **lobster-article** - 单独的文章拆卡
-- **llm-wiki** - 单独的 Wiki 构建
-- **lobster-note** - 快速记录洞察
-- **lobster-search** - 搜索知识库
+- **ob-article** - 单独的文章拆卡
+- **ob-llm-wiki** - 单独的 Wiki 构建
+- **ob-note** - 快速记录洞察
+- **ob-search** - 搜索知识库
 
 ## 技术实现
 
@@ -209,7 +209,7 @@ mkdir -p personal-wiki/notes/{judgments,methods,cases,information}
 ## 版本
 
 - **版本**: 1.0.0
-- **作者**: 基于 lobster-article 和 llm-wiki 融合
+- **作者**: 基于 ob-article 和 ob-llm-wiki 融合
 - **日期**: 2026-04-12
 
 ---

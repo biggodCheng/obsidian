@@ -1,7 +1,7 @@
 {
-  "name": "llm-wiki-skill",
+  "name": "ob-llm-wiki-skill",
   "version": "1.0.0",
-  "description": "LLM Wiki - 用 LLM 构建持久化知识库，基于 Andrej Karpathy 的 llm-wiki 概念",
+  "description": "LLM Wiki - 用 LLM 构建持久化知识库，基于 Andrej Karpathy 的 ob-llm-wiki 概念",
   "main": "skill.md",
   "scripts": {
     "init": "bash ./bin/init-wiki.sh",
@@ -17,7 +17,7 @@
     "obsidian",
     "claude"
   ],
-  "author": "基于 Andrej Karpathy 的 llm-wiki 概念",
+  "author": "基于 Andrej Karpathy 的 ob-llm-wiki 概念",
   "license": "MIT",
   "repository": {
     "type": "git",

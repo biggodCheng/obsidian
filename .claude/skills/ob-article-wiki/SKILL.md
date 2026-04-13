@@ -6,7 +6,7 @@ trigger:
   - 当用户要求处理文章并拆卡时
   - 当用户提到"融合模式"、"lobster-wiki"时
   - 当用户需要同时创建知识网络和价值资产时
-author: 基于 lobster-article 和 llm-wiki 的融合
+author: 基于 ob-article 和 ob-llm-wiki 的融合
 version: 1.0.0
 ---
 
@@ -111,7 +111,7 @@ version: 1.0.0
 帮我摄取这个文章：[文章路径/URL]
 
 # 明确指定融合模式
-用 lobster-article-wiki 处理这篇文章
+用 ob-article-wiki 处理这篇文章
 
 # 从 URL 摄取
 摄取 https://example.com/article
@@ -322,7 +322,7 @@ personal-wiki/
 ### 依赖
 
 - `lobster_utils.py` - Python 核心工具
-- `llm-wiki` - Wiki 基础技能
+- `ob-llm-wiki` - Wiki 基础技能
 - Obsidian - Markdown 编辑器
 
 ### Python 类
@@ -404,4 +404,4 @@ linker.scan_and_update_references()
 
 ---
 
-> 本技能融合了 lobster-article 的价值导向拆卡能力和 llm-wiki 的知识网络构建能力，实现一次摄取、双重收益的完整知识管理方案。
+> 本技能融合了 ob-article 的价值导向拆卡能力和 ob-llm-wiki 的知识网络构建能力，实现一次摄取、双重收益的完整知识管理方案。

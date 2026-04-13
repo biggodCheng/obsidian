@@ -1,5 +1,5 @@
 ---
-name: lobster-search
+name: ob-search
 description: 在 Obsidian 知识库中搜索笔记卡片，支持关键词、标签、类型过滤
 user-invocable: true
 ---

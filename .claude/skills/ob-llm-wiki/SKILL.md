@@ -1,5 +1,5 @@
 ---
-name: llm-wiki
+name: ob-llm-wiki
 description: LLM Wiki - 用 LLM 构建持久化知识库。不同于传统 RAG，LLM 会增量构建和维护一个结构化的 markdown wiki，作为你与原始源文件之间的中间层。
 trigger:
   - 当用户要求构建个人知识库时
@@ -7,7 +7,7 @@ trigger:
   - 当用户询问关于知识管理、笔记系统时
   - 当用户想要查询现有知识库时
   - 当用户要求健康检查或清理 wiki 时
-author: 基于 Andrej Karpathy 的 llm-wiki 概念
+author: 基于 Andrej Karpathy 的 ob-llm-wiki 概念
 version: 1.0.0
 ---
 
