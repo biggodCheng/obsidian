@@ -187,8 +187,8 @@ class CardCreator:
     def __init__(self, vault):
         self.vault = vault
         self.validator = GoldenRulesValidator()
-        self.created_count = {'judgment': 0, 'method': 0, 'case': 0, 'information': 0}
-        self.failed_count = {'judgment': 0, 'method': 0, 'case': 0, 'information': 0}
+        self.created_count = {'judgment': 0, 'method': 0, '案例卡': 0, 'information': 0}
+        self.failed_count = {'judgment': 0, 'method': 0, '案例卡': 0, 'information': 0}
         self.validation_log = []
 
     def _sanitize_content(self, content: str) -> str:
@@ -215,7 +215,7 @@ class CardCreator:
         创建卡片，自动执行三大法则检验
 
         Args:
-            card_type: 卡片类型 (judgment/method/case/information)
+            card_type: 卡片类型 (judgment/method/案例卡/information)
             title: 卡片标题
             content: 卡片内容
             metadata: 元数据
@@ -287,7 +287,7 @@ class CardCreator:
         print(f"\n总计: {passed}/{total} 通过 ({passed/total*100:.1f}%)")
 
         # 按类型统计
-        for card_type in ['judgment', 'method', 'case', 'information']:
+        for card_type in ['judgment', 'method', '案例卡', 'information']:
             type_logs = [log for log in self.validation_log if log['type'] == card_type]
             if type_logs:
                 type_passed = sum(1 for log in type_logs if log['validation']['passed'])
@@ -415,14 +415,14 @@ def create_cards_from_insights(
     # 创建案例卡
     for case in insights['cases']:
         metadata = {
-            'type': 'case',
+            'type': '案例卡',
             'confidence': 'medium',
             'tags': case.get('tags', []),
             'sources': [source_url]
         }
 
         card = creator.create_card(
-            'case',
+            '案例卡',
             case.get('title', '案例'),
             case.get('content', ''),
             metadata
