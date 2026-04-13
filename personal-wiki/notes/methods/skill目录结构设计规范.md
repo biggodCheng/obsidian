@@ -55,3 +55,5 @@ Skill 不是"只有一个 markdown 文件"，而是一组围绕某种任务组�
 
 ## 相关 Wiki 概念
 - [[skill与tool的分层]]
+## 来源
+- [https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ](https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ)

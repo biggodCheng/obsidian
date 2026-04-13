@@ -40,3 +40,5 @@ related:
 ## 相关 Wiki 概念
 - [[skill与tool的分层]]
 - [[skill三层发现机制]]
+## 来源
+- [https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ](https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ)
