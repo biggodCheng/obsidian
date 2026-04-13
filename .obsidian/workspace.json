@@ -11,10 +11,14 @@
             "id": "542d185ed7697c78",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "personal-wiki/wiki/摘要卡/10条管理心法找回工作掌控感.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "10条管理心法找回工作掌控感"
             }
           }
         ]
@@ -183,6 +187,11 @@
   },
   "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/wiki/概念卡/暴露脆弱建信任.md",
+    "personal-wiki/wiki/实体卡/刘向东.md",
+    "personal-wiki/wiki/概念卡/1号位思维.md",
+    "personal-wiki/wiki/实体卡/王丹维.md",
+    "personal-wiki/wiki/实体卡/刘润.md",
     "personal-wiki/wiki/摘要卡/SBTI人格测试-传播核武器拆解.md",
     "personal-wiki/wiki/摘要卡/obsidian-digital-asset-factory.md",
     "personal-wiki/wiki/摘要卡/构建数字资产工厂 - Obsidian × Claude Code 实践指南.md",
@@ -205,10 +214,6 @@
     "personal-wiki/wiki/概念卡/skill三层发现机制.md",
     "personal-wiki/wiki/概念卡/CAC.md",
     "personal-wiki/wiki/概念卡/信息卡.md",
-    "personal-wiki/wiki/概念卡/四步转化结构.md",
-    "personal-wiki/wiki/概念卡/社交货币.md",
-    "personal-wiki/wiki/概念卡/判断卡.md",
-    "personal-wiki/wiki/概念卡/第二大脑.md",
     "personal-wiki/日常工作",
     "personal-wiki/卡片库/日常工作",
     "personal-wiki/wiki/综合卡/判断卡应用指南.html",
