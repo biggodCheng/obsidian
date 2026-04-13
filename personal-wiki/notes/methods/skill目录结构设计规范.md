@@ -53,6 +53,10 @@ some-skill/
 
 Skill 不是"只有一个 markdown 文件"，而是一组围绕某种任务组织起来的资源。
 
+## 相关卡片
+- [[Tool是能力Skill是方法]]
+- [[skill三层放置策略]]
+
 ## 相关 Wiki 概念
 - [[skill与tool的分层]]
 ## 来源

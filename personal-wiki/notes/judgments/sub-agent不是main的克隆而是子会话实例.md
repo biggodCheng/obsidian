@@ -39,6 +39,9 @@ Sub-agent 不是 main agent 的完全克隆，而是在运行时按目标 agent 
 - 适用于 sessions_spawn / 子代理拉起场景
 - 适用于评估多 agent 协作中的能力继承问题
 
+## 相关卡片
+- [[main的私有skill不天然共享给其他agent]]
+
 ## 相关 Wiki 概念
 - [[skill三层发现机制]]
 - [[OpenClaw]]
