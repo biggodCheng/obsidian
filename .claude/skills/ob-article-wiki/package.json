@@ -49,8 +49,8 @@
       "priority": "medium",
       "description": "案例卡 - 真实发生"
     },
-    "information": {
-      "dir": "information",
+    "信息卡": {
+      "dir": "信息卡",
       "priority": "low",
       "description": "信息卡 - 是什么"
     }

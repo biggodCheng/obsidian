@@ -187,8 +187,8 @@ class CardCreator:
     def __init__(self, vault):
         self.vault = vault
         self.validator = GoldenRulesValidator()
-        self.created_count = {'判断卡': 0, '方法卡': 0, '案例卡': 0, 'information': 0}
-        self.failed_count = {'判断卡': 0, '方法卡': 0, '案例卡': 0, 'information': 0}
+        self.created_count = {'判断卡': 0, '方法卡': 0, '案例卡': 0, '信息卡': 0}
+        self.failed_count = {'判断卡': 0, '方法卡': 0, '案例卡': 0, '信息卡': 0}
         self.validation_log = []
 
     def _sanitize_content(self, content: str) -> str:
@@ -215,7 +215,7 @@ class CardCreator:
         创建卡片，自动执行三大法则检验
 
         Args:
-            card_type: 卡片类型 (判断卡/方法卡/案例卡/information)
+            card_type: 卡片类型 (判断卡/方法卡/案例卡/信息卡)
             title: 卡片标题
             content: 卡片内容
             metadata: 元数据
@@ -287,7 +287,7 @@ class CardCreator:
         print(f"\n总计: {passed}/{total} 通过 ({passed/total*100:.1f}%)")
 
         # 按类型统计
-        for card_type in ['判断卡', '方法卡', '案例卡', 'information']:
+        for card_type in ['判断卡', '方法卡', '案例卡', '信息卡']:
             type_logs = [log for log in self.validation_log if log['type'] == card_type]
             if type_logs:
                 type_passed = sum(1 for log in type_logs if log['validation']['passed'])
@@ -337,7 +337,7 @@ def extract_insights(content: str, url: str = "") -> Dict[str, List[dict]]:
         ],
         '方法卡': [],
         'cases': [],
-        'information': []
+        '信息卡': []
     }
 
     return insights
@@ -431,16 +431,16 @@ def create_cards_from_insights(
             created_cards.append(card)
 
     # 创建信息卡（谨慎创建）
-    for info in insights['information']:
+    for info in insights['信息卡']:
         metadata = {
-            'type': 'information',
+            'type': '信息卡',
             'confidence': 'high',
             'tags': info.get('tags', []),
             'sources': [source_url]
         }
 
         card = creator.create_card(
-            'information',
+            '信息卡',
             info.get('title', '信息'),
             info.get('content', ''),
             metadata
@@ -505,7 +505,7 @@ def main():
     print(f"  判断卡: {len(insights['判断卡'])} 个")
     print(f"  方法卡: {len(insights['方法卡'])} 个")
     print(f"  案例卡: {len(insights['cases'])} 个")
-    print(f"  信息卡: {len(insights['information'])} 个")
+    print(f"  信息卡: {len(insights['信息卡'])} 个")
 
     if args.dry_run:
         print("\n[DRY RUN] 未创建卡片")

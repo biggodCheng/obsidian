@@ -1,5 +1,5 @@
 ---
-type: information
+type: 信息卡
 tags: []
 created: "{{date}}"
 updated: "{{date}}"

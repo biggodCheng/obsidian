@@ -54,7 +54,7 @@ version: 1.0.0
 │  │ summaries/          │ │  │ 判断卡/  (价值最高)           │ │
 │  │ entities/           │ │  │ 方法卡/                     │ │
 │  │ concepts/           │ │  │ 案例卡/                     │ │
-│  │ synthesis/          │ │  │ information/                │ │
+│  │ synthesis/          │ │  │ 信息卡/                     │ │
 │  └─────────────────────┘ │  └─────────────────────────────┘ │
 └───────────────────────────┴─────────────────────────────────┘
               ↑                               ↑
@@ -178,7 +178,7 @@ lobster_type:
 
 ```markdown
 ---
-type: 判断卡|方法卡|案例卡|information
+type: 判断卡|方法卡|案例卡|信息卡
 confidence: high|medium|low
 tags:
   - tag1
@@ -260,7 +260,7 @@ personal-wiki/
     ├── 判断卡/
     ├── 方法卡/
     ├── 案例卡/
-    └── information/
+    └── 信息卡/
 ```
 
 ### 配置文件
