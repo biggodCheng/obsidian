@@ -507,7 +507,8 @@ class BidirectionalLinker:
         concept_to_cards: Dict[str, List[str]] = {}
         all_cards = []
         for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "日常工作"]:
-            type_dir = self.notes_dir / card_type
+            subdir = self.config.config.get('card_subdirs', {}).get(card_type, card_type)
+            type_dir = self.notes_dir / subdir
             if type_dir.exists():
                 all_cards.extend(type_dir.glob("*.md"))
 
