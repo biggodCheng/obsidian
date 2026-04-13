@@ -40,7 +40,7 @@
       "description": "判断卡 - 怎么判断"
     },
     "method": {
-      "dir": "methods",
+      "dir": "方法卡",
       "priority": "high",
       "description": "方法卡 - 具体做法"
     },

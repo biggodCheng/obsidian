@@ -28,7 +28,7 @@
 
 **Lobster 卡片层** (`notes/`):
 - `judgments/` - 判断卡（价值最高）
-- `methods/` - 方法卡（可复用流程）
+- `方法卡/` - 方法卡（可复用流程）
 - `案例卡/` - 案例卡（验证事实）
 - `information/` - 信息卡（基础数据）
 
@@ -54,7 +54,7 @@ personal-wiki/
 │   └── synthesis/
 └── notes/                # 卡片输出
     ├── judgments/
-    ├── methods/
+    ├── 方法卡/
     ├── 案例卡/
     └── information/
 ```
@@ -71,7 +71,7 @@ personal-wiki/
 ```bash
 # 创建目录
 mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
-mkdir -p personal-wiki/notes/{judgments,methods,案例卡,information}
+mkdir -p personal-wiki/notes/{judgments,方法卡,案例卡,information}
 ```
 
 ## 使用示例
@@ -164,7 +164,7 @@ mkdir -p personal-wiki/notes/{judgments,methods,案例卡,information}
 ```bash
 # 创建所需目录
 mkdir -p personal-wiki/wiki/{entities,concepts,summaries,synthesis}
-mkdir -p personal-wiki/notes/{judgments,methods,案例卡,information}
+mkdir -p personal-wiki/notes/{judgments,方法卡,案例卡,information}
 ```
 
 ## 高级用法

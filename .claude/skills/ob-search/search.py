@@ -111,7 +111,7 @@ def main():
     )
 
     parser.add_argument('query', nargs='?', help='搜索关键词')
-    parser.add_argument('--type', '-t', choices=['judgment', 'method', '案例卡', 'information', '任务卡'],
+    parser.add_argument('--type', '-t', choices=['judgment', '方法卡', '案例卡', 'information', '任务卡'],
                         help='按卡片类型过滤')
     parser.add_argument('--confidence', '-c', choices=['low', 'medium', 'high'],
                         help='按信心程度过滤')

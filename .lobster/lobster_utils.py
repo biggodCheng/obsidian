@@ -506,7 +506,7 @@ class BidirectionalLinker:
         # 1. 构建概念 → 卡片 反向索引
         concept_to_cards: Dict[str, List[str]] = {}
         all_cards = []
-        for card_type in ["judgments", "methods", "案例卡", "information", "任务卡"]:
+        for card_type in ["judgments", "方法卡", "案例卡", "information", "任务卡"]:
             type_dir = self.notes_dir / card_type
             if type_dir.exists():
                 all_cards.extend(type_dir.glob("*.md"))

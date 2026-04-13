@@ -187,8 +187,8 @@ class CardCreator:
     def __init__(self, vault):
         self.vault = vault
         self.validator = GoldenRulesValidator()
-        self.created_count = {'judgment': 0, 'method': 0, '案例卡': 0, 'information': 0}
-        self.failed_count = {'judgment': 0, 'method': 0, '案例卡': 0, 'information': 0}
+        self.created_count = {'judgment': 0, '方法卡': 0, '案例卡': 0, 'information': 0}
+        self.failed_count = {'judgment': 0, '方法卡': 0, '案例卡': 0, 'information': 0}
         self.validation_log = []
 
     def _sanitize_content(self, content: str) -> str:
@@ -215,7 +215,7 @@ class CardCreator:
         创建卡片，自动执行三大法则检验
 
         Args:
-            card_type: 卡片类型 (judgment/method/案例卡/information)
+            card_type: 卡片类型 (judgment/方法卡/案例卡/information)
             title: 卡片标题
             content: 卡片内容
             metadata: 元数据
@@ -287,7 +287,7 @@ class CardCreator:
         print(f"\n总计: {passed}/{total} 通过 ({passed/total*100:.1f}%)")
 
         # 按类型统计
-        for card_type in ['judgment', 'method', '案例卡', 'information']:
+        for card_type in ['judgment', '方法卡', '案例卡', 'information']:
             type_logs = [log for log in self.validation_log if log['type'] == card_type]
             if type_logs:
                 type_passed = sum(1 for log in type_logs if log['validation']['passed'])
@@ -335,7 +335,7 @@ def extract_insights(content: str, url: str = "") -> Dict[str, List[dict]]:
                 'inapplicable_conditions': ['示例不适用条件']
             }
         ],
-        'methods': [],
+        '方法卡': [],
         'cases': [],
         'information': []
     }
@@ -395,16 +395,16 @@ def create_cards_from_insights(
             created_cards.append(card)
 
     # 创建方法卡
-    for method in insights['methods']:
+    for method in insights['方法卡']:
         metadata = {
-            'type': 'method',
+            'type': '方法卡',
             'confidence': method.get('confidence', 'medium'),
             'tags': method.get('tags', []),
             'sources': [source_url]
         }
 
         card = creator.create_card(
-            'method',
+            '方法卡',
             method.get('title', '方法'),
             method.get('content', ''),
             metadata
@@ -503,7 +503,7 @@ def main():
     total = sum(len(v) for v in insights.values())
     print(f"\n提取到 {total} 个洞见:")
     print(f"  判断卡: {len(insights['judgments'])} 个")
-    print(f"  方法卡: {len(insights['methods'])} 个")
+    print(f"  方法卡: {len(insights['方法卡'])} 个")
     print(f"  案例卡: {len(insights['cases'])} 个")
     print(f"  信息卡: {len(insights['information'])} 个")
 

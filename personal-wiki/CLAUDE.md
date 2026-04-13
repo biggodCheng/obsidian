@@ -16,7 +16,7 @@
 
 - `notes/` - Lobster 卡片（与 Wiki 集成）
   - `judgments/` - 判断卡（价值最高）
-  - `methods/` - 方法卡（可复用流程）
+  - `方法卡/` - 方法卡（可复用流程）
   - `案例卡/` - 案例卡（验证过的事实）
   - `information/` - 信息卡（基础信息）
   - `任务卡/` - 任务卡
@@ -154,7 +154,7 @@ lobster_type: []   # 相关的卡片类型筛选，如：["judgment", "method"]
 
 ```markdown
 ---
-type: judgment|method|案例卡|information|任务卡
+type: judgment|方法卡|案例卡|information|任务卡
 confidence: high|medium|low
 tags:
   - tag1

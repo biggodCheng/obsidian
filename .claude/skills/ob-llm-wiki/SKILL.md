@@ -130,7 +130,7 @@ personal-wiki/
 │   └── synthesis/         # 综合分析
 └── notes/                # Lobster 卡片层
     ├── judgments/         # 判断卡（价值最高）
-    ├── methods/           # 方法卡
+    ├── 方法卡/             # 方法卡
     ├── 案例卡/             # 案例卡
     └── information/       # 信息卡
 ```
