@@ -214,5 +214,13 @@ related:
 
 ---
 
+## 禁止修改的目录
+
+以下目录和文件属于第三方/外部，LLM **禁止修改**：
+- `.obsidian/plugins/` — 所有 Obsidian 第三方插件（包括其 JS、配置文件等）
+- `cgq-obsidian/.obsidian/plugins/` — 同上
+
+---
+
 配置版本: 1.0.0
 最后更新: {{date}}
