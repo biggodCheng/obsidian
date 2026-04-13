@@ -50,7 +50,10 @@ related:
 - [[同名skill多层共存需标注来源]]
 
 ## 相关 Wiki 概念
+- [[OpenClaw]]
 - [[skill三层发现机制]]
 - [[skill与tool的分层]]
+
 ## 来源
+- [[OpenClaw多Agent Skills分层调用机制]]
 - [https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ](https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ)

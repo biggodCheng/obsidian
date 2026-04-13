@@ -36,5 +36,7 @@ related:
 
 ## 相关 Wiki 概念
 - [[skill三层发现机制]]
+
 ## 来源
+- [[OpenClaw多Agent Skills分层调用机制]]
 - [https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ](https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ)

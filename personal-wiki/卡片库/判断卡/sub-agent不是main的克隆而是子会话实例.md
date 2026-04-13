@@ -45,5 +45,7 @@ Sub-agent 不是 main agent 的完全克隆，而是在运行时按目标 agent 
 ## 相关 Wiki 概念
 - [[skill三层发现机制]]
 - [[OpenClaw]]
+
 ## 来源
+- [[OpenClaw多Agent Skills分层调用机制]]
 - [https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ](https://mp.weixin.qq.com/s/rFecRxZ1ci2aQd9QSunUFQ)

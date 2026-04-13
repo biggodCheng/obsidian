@@ -56,6 +56,8 @@ some-skill/
 - [[skill三层发现机制]]
 
 ## Lobster 卡片
+- [[main的私有skill不天然共享给其他agent]]
+- [[skill三层放置策略]]
 - [[Tool是能力Skill是方法]]
 - [[skill目录结构设计规范]]
 

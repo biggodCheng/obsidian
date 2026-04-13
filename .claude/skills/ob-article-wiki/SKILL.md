@@ -96,6 +96,11 @@ version: 1.0.0
 6. 属性完整性校验（必须执行）
    - 逐张卡片检查 frontmatter 必填字段
    - 修复缺失或不合规的字段
+   - 检查卡片正文 wikilink 与 frontmatter 完全对应：
+     - `## 来源` 中的 `[[wikilink]]` 必须覆盖 `sources` 全部值
+     - `## 相关 Wiki 概念` 中的 `[[wikilink]]` 必须覆盖 `wiki_concepts` 全部值
+     - `## 相关卡片` 中的 `[[wikilink]]` 必须覆盖 `related` 中卡片名的全部值
+   - 检查 wiki 页面正文 `## Lobster 卡片` 中的 `[[wikilink]]` 必须覆盖 `lobster_cards` 全部值
    - 输出校验报告
 ```
 
@@ -194,10 +199,9 @@ wiki_concepts:
   - 概念1
   - 概念2
 sources:
-  - source1
+  - wiki摘要页面名
 related:
-  - card1
-  - page1
+  - 相关卡片名
 ---
 
 # 卡片标题
@@ -206,9 +210,21 @@ related:
 ...
 
 ## 相关 Wiki 概念
-- [[相关概念]]
-- [[另一个概念]]
+- [[概念1]]
+- [[概念2]]
+
+## 来源
+- [[wiki摘要页面名]]
+
+## 相关卡片
+- [[相关卡片名]]
 ```
+
+**正文 wikilink 强制规则**：
+- `## 相关 Wiki 概念` — frontmatter `wiki_concepts` 中的**每一个值**都必须以 `[[值]]` 形式出现在此节中
+- `## 来源` — frontmatter `sources` 中的**每一个值**都必须以 `[[值]]` 形式出现在此节中
+- `## 相关卡片` — frontmatter `related` 中指向**卡片的值**都必须以 `[[值]]` 形式出现在此节中
+- 三节缺一不可，且内容必须与 frontmatter 完全对应
 
 ### 卡片 frontmatter 必填字段清单
 
@@ -244,10 +260,12 @@ related:
 - 卡片的 `sources` 字段必须指向**已存在的 wiki 摘要页面文件名**（不是 URL、不是文章标题简称、不是 `用户输入`）
 - 卡片的 `wiki_concepts` 字段必须指向**已存在的 wiki 概念页面文件名**
 - 卡片的 `related` 字段可以引用 wiki 页面名或卡片名
+- **正文强制**：frontmatter 中 `sources`、`wiki_concepts`、`related` 的每个值都必须在正文对应节中以 `[[值]]` 形式出现
 
 **Wiki 页面引用卡片**：
 - wiki 页面的 `lobster_cards` 字段必须列出**所有引用该 wiki 页面的卡片**
 - 引用来源包括：卡片的 `sources`、`related`、`wiki_concepts` 字段
+- **正文强制**：frontmatter 中 `lobster_cards` 的每个值都必须在正文 `## Lobster 卡片` 节中以 `[[值]]` 形式出现
 
 **校验规则**：
 1. 卡片创建后，检查 `sources` 中的每个值是否匹配 `wiki/` 下某个 `.md` 文件名
@@ -255,6 +273,8 @@ related:
 3. 检查被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
 4. 清理 wiki 页面 `lobster_cards` 中引用不存在卡片的幽灵条目
 5. 不存在 `status` 字段（已废弃）
+6. **新增**：检查卡片正文中 `## 来源`、`## 相关 Wiki 概念`、`## 相关卡片` 是否包含 frontmatter 对应字段的全部值的 `[[wikilink]]`
+7. **新增**：检查 wiki 页面正文中 `## Lobster 卡片` 是否包含 `lobster_cards` 全部值的 `[[wikilink]]`
 
 ### 文件命名规范
 

@@ -32,3 +32,6 @@ lobster_cards:
 
 ## 相关实体
 - [[OpenClaw]]
+
+## Lobster 卡片
+- [[130个AI员工的skill管理实战]]
