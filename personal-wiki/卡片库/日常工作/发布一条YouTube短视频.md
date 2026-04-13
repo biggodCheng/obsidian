@@ -1,5 +1,5 @@
 ---
-type: 任务卡
+type: 日常工作
 priority: 中
 tags:
 - YouTube

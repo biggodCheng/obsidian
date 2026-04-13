@@ -1,12 +1,12 @@
 ---
 name: ob-todo
-description: 任务管理技能 - 记录、查看、更新任务卡片
+description: 任务管理技能 - 记录、查看、更新日常工作片
 user-invocable: true
 ---
 
-# Lobster 任务卡 - 任务管理
+# Lobster 日常工作 - 任务管理
 
-管理 Obsidian 知识库中的任务卡片。
+管理 Obsidian 知识库中的日常工作片。
 
 ## When to Use
 
@@ -20,7 +20,7 @@ user-invocable: true
 ## How It Works
 
 使用 `lobster_utils.py` 核心工具模块：
-- 创建新的任务卡片（存放在 `卡片库/任务卡/` 目录）
+- 创建新的日常工作片（存放在 `卡片库/日常工作/` 目录）
 - 查看所有任务或按状态过滤
 - 更新任务状态
 - 支持优先级设置
@@ -29,7 +29,7 @@ user-invocable: true
 
 ```yaml
 ---
-type: 任务卡
+type: 日常工作
 status: 待办
 priority: 中
 tags: []

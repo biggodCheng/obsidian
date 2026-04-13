@@ -67,7 +67,7 @@ class LintChecker:
                 for f in d.glob("*.md"):
                     valid_wiki_names.add(f.stem)
 
-        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "任务卡"]:
+        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "日常工作"]:
             type_dir = self.notes_dir / card_type
             if not type_dir.exists():
                 continue
@@ -88,7 +88,7 @@ class LintChecker:
     def _check_wiki_broken_card_links(self):
         """检查 wiki 页面的 lobster_cards 是否有对应的卡片文件"""
         valid_card_names: Set[str] = set()
-        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "任务卡"]:
+        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "日常工作"]:
             type_dir = self.notes_dir / card_type
             if type_dir.exists():
                 for f in type_dir.glob("*.md"):
@@ -156,7 +156,7 @@ class LintChecker:
     def _check_status_consistency(self):
         """检查 status 字段值是否在合法范围内"""
         valid_statuses = {'new', 'growing', 'mature', 'outdated', 'discarded'}
-        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "任务卡"]:
+        for card_type in ["判断卡", "方法卡", "案例卡", "信息卡", "日常工作"]:
             type_dir = self.notes_dir / card_type
             if not type_dir.exists():
                 continue
