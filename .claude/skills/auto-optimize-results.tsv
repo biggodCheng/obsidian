@@ -11,4 +11,10 @@ timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
 2026-04-14T10:00	baseline	darwin-skill	-	73.5	baseline	-	初始评估	dry_run
 2026-04-14T10:00	baseline	ob-llm-wiki	-	52	baseline	-	初始评估	dry_run
 2026-04-14T10:25	a6a40ba	search.py	-	-	fix	argparse -c缩写冲突	eval_mode
+2026-04-14T13:10	127c725	ob-llm-wiki	70.6	69.5	revert	检查点设计	新增3个确认点但效果分下降(dry_run波动)	dry_run
+2026-04-14T13:12	493cee2	ob-llm-wiki	70.6	69.6	revert	指令具体性	细化Lint/Query/SLUG但效果分仍下降(dry_run波动)	dry_run
+2026-04-14T13:00	baseline	ob-llm-wiki	-	70.6	baseline	-	本轮基线重新评估(结构+效果)	dry_run
+2026-04-14T13:00	baseline	ob-article-wiki	-	73.2	baseline	-	本轮基线重新评估(结构+效果)	dry_run
+2026-04-14T13:00	baseline	darwin-skill	-	77.5	baseline	-	本轮基线重新评估(结构+效果)	dry_run
+2026-04-14T10:25	a6a40ba	search.py	-	-	fix	argparse -c缩写冲突	eval_mode
 2026-04-14T10:25	a6a40ba	CLAUDE.md	-	-	fix	frontmatter格式矛盾(内联数组+wikilink)	eval_mode
