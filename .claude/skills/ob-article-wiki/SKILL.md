@@ -285,12 +285,14 @@ related:
 - **正文强制**：frontmatter 中每个引用值都必须在正文对应节以 `[[值]]` 形式出现
 
 **步骤 7 校验清单**（逐项检查，输出通过/警告/错误）：
-1. 卡片 `sources` 每个值是否匹配 `wiki/摘要卡/` 下某个 `.md` 文件名
+1. 卡片 `sources` 每个值是否匹配 `wiki/摘要卡/` 下某个 `.md` 文件名（"只拆卡"模式下匹配 `raw/sources/` 文件名，**不带 URL**）
 2. 卡片 `related` 中非卡片名的值是否匹配 wiki 文件名
-3. 被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
-4. 卡片正文 `## 来源/## 相关 Wiki 概念/## 相关卡片` 是否包含 frontmatter 对应字段全部值的 `[[wikilink]]`
-5. Wiki 页面正文 `## Lobster 卡片` 是否包含 `lobster_cards` 全部值的 `[[wikilink]]`
-6. 不存在 `status` 字段（已废弃）
+3. 卡片 `related` **不允许为空列表** — 同批拆出的卡片必须交叉关联
+4. 被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
+5. 卡片正文 `## 来源/## 相关 Wiki 概念/## 相关卡片` 是否包含 frontmatter 对应字段全部值的 `[[wikilink]]`
+6. Wiki 页面正文 `## Lobster 卡片` 是否包含 `lobster_cards` 全部值的 `[[wikilink]]`
+7. 正文不存在空章节（如 `## 相关 Wiki 概念` 后无内容则删除该节）
+8. 不存在 `status` 字段（已废弃）
 
 ### 文件命名规范
 

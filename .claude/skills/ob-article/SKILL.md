@@ -48,6 +48,28 @@ user-invocable: true
    - 保存到 `personal-wiki/卡片库/{类型}/` 目录
    - 添加原文链接到 `sources` 字段
 
+5. **保存后校验** ⚠️ 每次保存必须执行
+   - 逐张卡片检查以下项目，不通过立即修复：
+
+   **frontmatter 字段检查**：
+   - `sources`: 只写来源标题（对应 `raw/sources/` 文件名），**不带 URL**
+     - ✅ `普通人能不能成为张雪`
+     - ❌ `普通人能不能成为张雪？ https://mp.weixin.qq.com/s/...`
+   - `related`: 同批拆出的卡片必须交叉关联，**不允许为空列表**
+     - 同一文章拆出 3 张卡，每张卡的 `related` 至少包含其他卡片之一
+     - 检查语义关联性，不要强行关联无关卡片
+   - `wiki_concepts`: 有 Wiki 模式时填入，纯拆卡模式可为空列表
+
+   **正文章节检查**：
+   - 必须包含 `## 相关卡片` 章节，用 `[[wikilink]]` 链接到 related 中的卡片
+   - 必须包含 `## 来源` 章节，用 `[[wikilink]]` 链接到 `raw/sources/` 中的源文件
+   - 不允许出现空的章节标题（如 `## 相关 Wiki 概念` 后无内容则删除该节）
+
+   **交叉一致性检查**：
+   - frontmatter 中的 `related` 列表 ↔ 正文 `## 相关卡片` 的 `[[wikilink]]` 列表必须一一对应
+   - frontmatter 中的 `sources` ↔ 正文 `## 来源` 的 `[[wikilink]]` 必须对应
+   - 不允许出现"frontmatter 有但正文没有"或"正文有但 frontmatter 没有"的不一致
+
 ## 边界条件
 
 - **URL 无法访问** → 依次尝试 tavily_extract → web_reader → gstack，全部失败则报错
