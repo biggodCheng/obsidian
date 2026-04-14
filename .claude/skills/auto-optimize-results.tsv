@@ -9,3 +9,6 @@ timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
 2026-04-14T10:00	baseline	ob-todo	-	35	baseline	-	初始评估(预估)	dry_run
 2026-04-14T10:15	66a191c	ob-todo	35	77.9	keep	工作流+指令+资源	从功能介绍重写为执行指南+CLI映射	dry_run
 2026-04-14T10:00	baseline	darwin-skill	-	73.5	baseline	-	初始评估	dry_run
+2026-04-14T10:00	baseline	ob-llm-wiki	-	52	baseline	-	初始评估	dry_run
+2026-04-14T10:25	a6a40ba	search.py	-	-	fix	argparse -c缩写冲突	eval_mode
+2026-04-14T10:25	a6a40ba	CLAUDE.md	-	-	fix	frontmatter格式矛盾(内联数组+wikilink)	eval_mode
