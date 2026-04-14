@@ -1,0 +1,5 @@
+[
+  {"id": 1, "prompt": "评估所有skills的质量", "expected": "执行Phase 0.5-1：设计测试prompt，逐个skill打分，展示评分卡"},
+  {"id": 2, "prompt": "优化 ob-article 这个skill", "expected": "执行Phase 0.5-2：评估基线，诊断短板，hill-climbing优化，每轮验证"},
+  {"id": 3, "prompt": "看看skill优化历史", "expected": "读取并展示results.tsv中的优化记录"}
+]

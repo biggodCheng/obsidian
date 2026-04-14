@@ -1,0 +1,5 @@
+[
+  {"id": 1, "prompt": "帮我处理这篇文章: https://example.com/article", "expected": "抓取URL内容，按拆卡方法论拆分为判断卡、方法卡、案例卡，每张卡通过三大法则检验"},
+  {"id": 2, "prompt": "拆解这篇文章，重点提取判断卡: https://example.com/growth-article", "expected": "同上但优先提取判断卡，减少信息卡和案例卡的创建"},
+  {"id": 3, "prompt": "提取这篇文章的精华", "expected": "因为未提供URL，应询问用户文章来源（URL或文件路径）"}
+]

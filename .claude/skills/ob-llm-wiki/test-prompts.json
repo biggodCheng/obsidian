@@ -1,0 +1,5 @@
+[
+  {"id": 1, "prompt": "帮我摄取这个文档到 wiki：personal-wiki/raw/sources/test-article.md", "expected": "读取源文件，创建摘要页面，更新实体/概念页面，更新索引和日志"},
+  {"id": 2, "prompt": "查询 wiki：冷启动策略有哪些？", "expected": "读取index.md找到相关页面，综合答案并引用来源"},
+  {"id": 3, "prompt": "对 wiki 进行健康检查", "expected": "检查矛盾、孤立页面、缺失交叉引用，输出健康报告"}
+]
