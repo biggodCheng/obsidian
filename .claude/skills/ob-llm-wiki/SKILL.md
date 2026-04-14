@@ -53,6 +53,10 @@ Raw Sources（只读） → The Wiki（LLM 读写） → The Schema（配置）
 - 文件路径：直接 Read 工具读取
 - URL：依次尝试 `tavily_extract` → `web_reader` → `gstack browser`
 - 全部失败 → 告知用户，提供备选方案（手动粘贴文本）
+- **备份源文件**（URL 摄取成功后必须执行）：
+  - 将提取到的 markdown 正文保存到 `personal-wiki/raw/sources/{文章标题}.md`
+  - 如果页面包含图片、视频、音频、PDF、Word 等附件资源，下载并保存到 `personal-wiki/raw/assets/{类型}/`（类型为 `images`/`videos`/`audio`/`pdf`/`documents`）
+  - 在备份文件头部记录原始 URL 和备份时间
 
 **Step 2：内容分析与确认 ⚠️ 必须执行**
 - 展示提取到的核心要点（3-5 条）

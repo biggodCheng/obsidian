@@ -26,6 +26,10 @@ user-invocable: true
    - 如仍失败，尝试 `gstack` browser skill
    - **全部失败** → 告知用户并提供备选方案（手动粘贴文本、换其他工具）
    - 提取正文，过滤广告和导航
+   - **备份源文件**（URL 摄取成功后必须执行）：
+     - 将提取到的 markdown 正文保存到 `personal-wiki/raw/sources/{文章标题}.md`
+     - 如果页面包含图片、视频、音频、PDF、Word 等附件资源，下载并保存到 `personal-wiki/raw/assets/{类型}/`（类型为 `images`/`videos`/`audio`/`pdf`/`documents`）
+     - 在 `raw/sources/{文章标题}.md` 头部记录原始 URL 和备份时间
 
 2. **AI 拆卡**（严格遵循下方拆卡方法论）
    - 分析文章内容

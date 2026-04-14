@@ -74,6 +74,10 @@ version: 1.0.0
    - 提取核心观点
    - URL输入：优先 tavily_extract → 失败则 web_reader → 失败则 gstack browser
    - 全部失败 → 告知用户，提供备选方案（手动粘贴文本）
+   - **备份源文件**（URL 摄取成功后必须执行）：
+     - 将提取到的 markdown 正文保存到 `personal-wiki/raw/sources/{文章标题}.md`
+     - 如果页面包含图片、视频、音频、PDF、Word 等附件资源，下载并保存到 `personal-wiki/raw/assets/{类型}/`（类型为 `images`/`videos`/`audio`/`pdf`/`documents`）
+     - 在备份文件头部记录原始 URL 和备份时间
     ↓
 2. 展示提取结果并确认 ⚠️ 必须执行
    - 展示：识别到的实体列表、概念列表、拟提取的卡片类型和数量
@@ -321,7 +325,13 @@ related:
 
 ```
 personal-wiki/
-├── raw/sources/           # 源文件存放
+├── raw/sources/           # 源文件存放（markdown备份）
+├── raw/assets/            # 附件资源存放
+│   ├── images/            # 图片
+│   ├── videos/            # 视频
+│   ├── audio/             # 音频
+│   ├── pdf/               # PDF文件
+│   └── documents/         # Word等文档
 ├── wiki/                  # Wiki 输出
 │   ├── index.md
 │   ├── log.md
