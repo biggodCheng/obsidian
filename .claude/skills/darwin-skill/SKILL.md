@@ -106,9 +106,11 @@ for each skill in 优化范围:
   2. 按维度1-7逐项打分（附简短理由）
 
   # 效果评分（用子agent做，独立于主agent）
-  3. 对每个测试prompt，spawn子agent：
-     - with_skill: 带着SKILL.md执行测试prompt
-     - baseline: 不带skill执行同一prompt
+  3. 对每个测试prompt，使用 Agent 工具 spawn 子agent：
+     - subagent_type: "general-purpose"
+     - with_skill: 在 prompt 中包含 SKILL.md 内容作为上下文，执行测试 prompt
+     - baseline: 不包含 SKILL.md，直接执行同一 prompt
+     - 可并行 spawn 多个子 agent（多个 skill 或多个 prompt 同时评估）
   4. 对比两组输出，打维度8的分
 
   # 汇总
@@ -158,7 +160,10 @@ for each skill:
 
     # Step 4: 重新评估
     - 结构维度：主agent重新打分
-    - 效果维度：spawn独立子agent重跑测试prompt（关键！不能自己评自己）
+    - 效果维度：使用 Agent 工具 spawn 独立子agent重跑测试prompt（关键！不能自己评自己）
+      - subagent_type: "general-purpose"
+      - 在 prompt 中包含修改后的 SKILL.md 内容作为上下文
+      - 子 agent 不应知道修改前的版本，避免锚定效应
 
     # Step 5: 决策
     if 新总分 > 旧总分:
