@@ -18,3 +18,4 @@ timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
 2026-04-14T13:00	baseline	darwin-skill	-	77.5	baseline	-	本轮基线重新评估(结构+效果)	dry_run
 2026-04-14T10:25	a6a40ba	search.py	-	-	fix	argparse -c缩写冲突	eval_mode
 2026-04-14T10:25	a6a40ba	CLAUDE.md	-	-	fix	frontmatter格式矛盾(内联数组+wikilink)	eval_mode
+2026-04-14T13:20	b9c6de7	ob-article-wiki	73.2	75.2	keep	精简去重+分支修复 合并4节为1(492→440行)+修复组合分支漏洞+删Python工具引用	dry_run
