@@ -1,5 +1,5 @@
 [
-  {"id": 1, "prompt": "帮我摄取这篇文章：personal-wiki/raw/sources/test-article.md", "expected": "执行融合摄取：创建Wiki摘要+实体+概念页面，同时提取Lobster卡片，建立双向链接"},
-  {"id": 2, "prompt": "用融合模式处理这个URL，重点提取判断卡", "expected": "同上但优先提取判断卡，Wiki网络也重点围绕判断相关的概念"},
-  {"id": 3, "prompt": "只创建 Wiki 摘要，不提取卡片", "expected": "只执行Wiki网络构建部分（摘要、实体、概念页面），跳过Lobster卡片提取"}
+  {"id": 1, "prompt": "帮我摄取这篇文章：https://mp.weixin.qq.com/s/example", "expected": "URL提取→展示确认→Wiki构建+卡片提炼→双向链接→校验→索引"},
+  {"id": 2, "prompt": "重点提取这篇文章的判断卡，不创建Wiki页面", "expected": "跳过Wiki构建，只做卡片提炼+校验"},
+  {"id": 3, "prompt": "摄取这篇文档，但只创建Wiki摘要，不拆卡", "expected": "只建Wiki网络，跳过卡片提炼"}
 ]

@@ -1,5 +1,5 @@
 [
-  {"id": 1, "prompt": "评估所有skills的质量", "expected": "执行Phase 0.5-1：设计测试prompt，逐个skill打分，展示评分卡"},
-  {"id": 2, "prompt": "优化 ob-article 这个skill", "expected": "执行Phase 0.5-2：评估基线，诊断短板，hill-climbing优化，每轮验证"},
-  {"id": 3, "prompt": "看看skill优化历史", "expected": "读取并展示results.tsv中的优化记录"}
+  {"id": 1, "prompt": "优化 ob-todo 这个skill", "expected": "Phase 0.5→1→2，评估+优化+验证，人类确认检查点"},
+  {"id": 2, "prompt": "评估所有skills的质量", "expected": "设计测试prompt + 基线评估，展示评分卡，不进入优化"},
+  {"id": 3, "prompt": "看看skill优化历史", "expected": "读取results.tsv，格式化展示"}
 ]

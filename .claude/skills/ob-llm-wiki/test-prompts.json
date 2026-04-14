@@ -1,5 +1,5 @@
 [
-  {"id": 1, "prompt": "帮我摄取这个文档到 wiki：personal-wiki/raw/sources/test-article.md", "expected": "读取源文件，创建摘要页面，更新实体/概念页面，更新索引和日志"},
-  {"id": 2, "prompt": "查询 wiki：冷启动策略有哪些？", "expected": "读取index.md找到相关页面，综合答案并引用来源"},
-  {"id": 3, "prompt": "对 wiki 进行健康检查", "expected": "检查矛盾、孤立页面、缺失交叉引用，输出健康报告"}
+  {"id": 1, "prompt": "摄取这篇文档到wiki：personal-wiki/raw/sources/test.md", "expected": "执行完整摄取流程：读源文件→展示要点确认→建Wiki页面→更新索引"},
+  {"id": 2, "prompt": "wiki里有什么关于增长策略的内容？", "expected": "读index.md→找到相关页面→跟踪引用→综合答案并引用来源"},
+  {"id": 3, "prompt": "健康检查一下wiki", "expected": "扫描wiki目录→检查孤立页面/矛盾声明/缺失引用→输出三级报告"}
 ]
