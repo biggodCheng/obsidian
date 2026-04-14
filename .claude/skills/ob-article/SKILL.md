@@ -6,7 +6,7 @@ user-invocable: true
 
 # Lobster Article - 文章处理
 
-抓取网页文章内容，提取正文，并使用 AI 自动拆分为知识卡片。
+抓取网页文章内容，提取正文，以markdown格式存入 raw/sources ，并使用 AI 自动拆分为知识卡片。
 
 ## When to Use
 
@@ -21,8 +21,8 @@ user-invocable: true
 ## How It Works
 
 1. **URL 内容抓取**
-   - 优先使用 `web_reader` MCP 工具获取网页内容
-   - 如失败，尝试 `tavily_extract`
+   - 优先使用 `tavily_extract` MCP 工具获取网页内容
+   - 如失败，尝试 `web_reader`
    - 如仍失败，尝试 `gstack` browser skill
    - **全部失败** → 告知用户并提供备选方案（手动粘贴文本、换其他工具）
    - 提取正文，过滤广告和导航
@@ -46,7 +46,7 @@ user-invocable: true
 
 ## 边界条件
 
-- **URL 无法访问** → 依次尝试 web_reader → tavily_extract → gstack，全部失败则报错
+- **URL 无法访问** → 依次尝试 tavily_extract → web_reader → gstack，全部失败则报错
 - **URL 指向非文章**（视频页、登录墙、404）→ 告知用户并建议手动提供文本
 - **提取不到有价值卡片** → 告知用户文章内容不适合拆卡，建议直接存为信息
 - **同名卡片已存在** → 询问用户：覆盖 / 新建（加后缀）/ 跳过
@@ -334,8 +334,8 @@ Layer 3: 未来复用检验
 ## Dependencies
 
 需要以下依赖之一：
-- `web_reader` MCP server（推荐）
 - `tavily` MCP server
+- `web_reader` MCP server（推荐）
 - 或 `gstack` browser skill
 
 ## Usage Examples

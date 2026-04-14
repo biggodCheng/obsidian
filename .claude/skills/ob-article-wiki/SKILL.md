@@ -72,7 +72,7 @@ version: 1.0.0
    - 读取源文件
    - 识别标题、作者、结构
    - 提取核心观点
-   - URL输入：优先 web_reader → 失败则 tavily_extract → 失败则 gstack browser
+   - URL输入：优先 tavily_extract → 失败则 web_reader → 失败则 gstack browser
    - 全部失败 → 告知用户，提供备选方案（手动粘贴文本）
     ↓
 2. 展示提取结果并确认 ⚠️ 必须执行
@@ -118,7 +118,7 @@ version: 1.0.0
 
 ### 边界条件
 
-- **URL 无法访问** → 依次尝试 web_reader → tavily_extract → gstack，全部失败则报错
+- **URL 无法访问** → 依次尝试 tavily_extract → web_reader → gstack，全部失败则报错
 - **源文件不存在** → 告知用户，检查路径
 - **提取不到有价值内容** → 告知用户，建议直接存为信息
 - **Wiki 概念页面已存在** → 更新而非覆盖（追加新关联，保留已有内容）
