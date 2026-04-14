@@ -8,9 +8,7 @@ tags:
 created: 2026-04-14
 updated: 2026-04-14
 wiki_concepts:
-  - B2B
-  - 产品组合
-  - 抗周期
+  - 最穷技术栈与独立开发
 sources:
   - 最穷技术栈与独立开发
 related:

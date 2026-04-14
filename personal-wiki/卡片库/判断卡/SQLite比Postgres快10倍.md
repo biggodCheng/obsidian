@@ -8,8 +8,7 @@ tags:
 created: 2026-04-14
 updated: 2026-04-14
 wiki_concepts:
-  - SQLite
-  - 数据库性能
+  - 最穷技术栈与独立开发
 sources:
   - 最穷技术栈与独立开发
 related:
