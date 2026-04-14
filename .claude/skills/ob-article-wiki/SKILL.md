@@ -127,8 +127,8 @@ version: 1.0.0
 
 ### 高级模式分支
 
-- **"只创建 Wiki 摘要，不提取卡片"** → 跳过步骤 4-5，只执行 Wiki 网络构建
-- **"只拆卡，不创建 Wiki"** → 跳过步骤 3，直接从内容提取卡片
+- **"只创建 Wiki 摘要，不提取卡片"** → 跳过步骤 4-6，只执行 Wiki 网络构建（步骤 1-3→7-8）
+- **"只拆卡，不创建 Wiki"** → 跳过步骤 3 和 6，卡片的 `wiki_concepts` 和 `sources` 留空，步骤 7 仅校验卡片本身
 - **"重点提取判断卡"** → 步骤 4 仅提取判断卡
 
 ### 价值导向
@@ -247,15 +247,12 @@ related:
 - [[相关卡片名]]
 ```
 
-**正文 wikilink 强制规则**：
-- `## 相关 Wiki 概念` — frontmatter `wiki_concepts` 中的**每一个值**都必须以 `[[值]]` 形式出现在此节中
-- `## 来源` — frontmatter `sources` 中的**每一个值**都必须以 `[[值]]` 形式出现在此节中
-- `## 相关卡片` — frontmatter `related` 中指向**卡片的值**都必须以 `[[值]]` 形式出现在此节中
-- 三节缺一不可，且内容必须与 frontmatter 完全对应
+**正文 wikilink 强制规则**（与上方双向链接规则对应）：
+- `## 相关 Wiki 概念` — `wiki_concepts` 每个值都以 `[[值]]` 出现
+- `## 来源` — `sources` 每个值都以 `[[值]]` 出现
+- `## 相关卡片` — `related` 中卡片值都以 `[[值]]` 出现
 
 ### 卡片 frontmatter 必填字段清单
-
-每张 Lobster 卡片的 frontmatter 必须包含以下字段，**缺一不可**：
 
 | 字段 | 说明 | 示例 |
 |------|------|------|
@@ -268,50 +265,35 @@ related:
 | `sources` | 来源文章或文件 | `- 文章标题` |
 | `related` | 相关卡片或页面 | `- 相关卡片名` |
 
-**注意**：
-- `type` 值必须使用中文（`判断卡`/`方法卡`/`案例卡`/`信息卡`），不使用英文
-- `type` 值必须与文件所在目录名一致（`卡片库/判断卡/xxx.md` → `type: 判断卡`）
-- `tags`、`wiki_concepts`、`sources`、`related` 不能为空列表
-- `[[wikilink]]` 语法只能用在正文中，frontmatter 内一律用纯字符串
+**注意**：`type` 用中文、与目录名一致；`tags`/`wiki_concepts`/`sources`/`related` 不能为空列表。
 
-### Frontmatter 格式规范（必须遵守）
+### Frontmatter 与链接规范（必须遵守）
 
-1. **不要在 frontmatter 内使用 `[[wikilink]]` 语法** — `[[ ]]` 是 Obsidian Markdown 语法，YAML frontmatter 不支持。所有属性值必须使用纯字符串。`[[ ]]` 只能用在正文（`---` 之后）中。
-2. **不要在 frontmatter 内放 Markdown 标题或注释**（如 `# Wiki 集成`）— frontmatter `---` 分隔符之间的每一行必须是合法 YAML key-value。
-3. **使用 YAML 列表格式**（每项一行 `- value`）而非内联数组（`[a, b]`）— 更易读，避免嵌套括号解析错误。
-4. **`lobster_cards` 和 `wiki_concepts` 字段同理** — 全部用纯字符串列表。
+**Frontmatter 三条铁律**：
+1. **不用 `[[wikilink]]`** — frontmatter 只用纯字符串，`[[ ]]` 只能用在正文
+2. **不放 Markdown 标题或注释** — `---` 之间每行必须是合法 YAML
+3. **用 YAML 列格式**（`- value`）不用内联数组（`[a, b]`）
 
-### 双向链接规范（必须遵守）
+**双向链接规则**：
+- 卡片 `sources` → 指向已存在的 wiki 摘要页面文件名（不是URL）
+- 卡片 `wiki_concepts` → 指向已存在的 wiki 概念页面文件名
+- Wiki 页面 `lobster_cards` → 列出所有引用该页面的卡片名
+- **正文强制**：frontmatter 中每个引用值都必须在正文对应节以 `[[值]]` 形式出现
 
-**卡片引用 Wiki**：
-- 卡片的 `sources` 字段必须指向**已存在的 wiki 摘要页面文件名**（不是 URL、不是文章标题简称、不是 `用户输入`）
-- 卡片的 `wiki_concepts` 字段必须指向**已存在的 wiki 概念页面文件名**
-- 卡片的 `related` 字段可以引用 wiki 页面名或卡片名
-- **正文强制**：frontmatter 中 `sources`、`wiki_concepts`、`related` 的每个值都必须在正文对应节中以 `[[值]]` 形式出现
-
-**Wiki 页面引用卡片**：
-- wiki 页面的 `lobster_cards` 字段必须列出**所有引用该 wiki 页面的卡片**
-- 引用来源包括：卡片的 `sources`、`related`、`wiki_concepts` 字段
-- **正文强制**：frontmatter 中 `lobster_cards` 的每个值都必须在正文 `## Lobster 卡片` 节中以 `[[值]]` 形式出现
-
-**校验规则**：
-1. 卡片创建后，检查 `sources` 中的每个值是否匹配 `wiki/` 下某个 `.md` 文件名
-2. 卡片创建后，检查 `related` 中非卡片名的值是否匹配 wiki 文件名
-3. 检查被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
-4. 清理 wiki 页面 `lobster_cards` 中引用不存在卡片的幽灵条目
-5. 不存在 `status` 字段（已废弃）
-6. **新增**：检查卡片正文中 `## 来源`、`## 相关 Wiki 概念`、`## 相关卡片` 是否包含 frontmatter 对应字段的全部值的 `[[wikilink]]`
-7. **新增**：检查 wiki 页面正文中 `## Lobster 卡片` 是否包含 `lobster_cards` 全部值的 `[[wikilink]]`
+**步骤 7 校验清单**（逐项检查，输出通过/警告/错误）：
+1. 卡片 `sources` 每个值是否匹配 `wiki/摘要卡/` 下某个 `.md` 文件名
+2. 卡片 `related` 中非卡片名的值是否匹配 wiki 文件名
+3. 被引用的 wiki 页面是否在 `lobster_cards` 中列出了该卡片
+4. 卡片正文 `## 来源/## 相关 Wiki 概念/## 相关卡片` 是否包含 frontmatter 对应字段全部值的 `[[wikilink]]`
+5. Wiki 页面正文 `## Lobster 卡片` 是否包含 `lobster_cards` 全部值的 `[[wikilink]]`
+6. 不存在 `status` 字段（已废弃）
 
 ### 文件命名规范
 
-所有文件统一使用 `{{SLUG}}.md` 命名：
 - **卡片**: `卡片库/{type}/{{SLUG}}.md`（如 `卡片库/判断卡/传播力大于功能完备性.md`）
-- **摘要**: `wiki/摘要卡/{{SLUG}}.md`
-- **概念**: `wiki/概念卡/{{SLUG}}.md`
-- **实体**: `wiki/实体卡/{{SLUG}}.md`
-- **SLUG** = 标题的简洁标识（中文直接用标题），日期和类型放 frontmatter 不放文件名
-- **核心原则**: 文件名 = Obsidian wikilink 解析名，确保 `[[文件名]]` 直接命中
+- **Wiki**: `wiki/{类型卡}/{{SLUG}}.md`
+- **SLUG** = 标题（中文直接用标题），日期和类型放 frontmatter
+- **核心原则**: 文件名 = Obsidian wikilink 解析名，`[[文件名]]` 直接命中
 
 ## 自动化特性
 
@@ -401,45 +383,12 @@ personal-wiki/
 - 每次应用判断卡时记录结果
 - 根据反馈调整 confidence
 
-## 工具集成
-
-### 依赖
-
-- `lobster_utils.py` - Python 核心工具
-- `ob-llm-wiki` - Wiki 基础技能
-- Obsidian - Markdown 编辑器
-
-### Python 类
-
-**`UnifiedIngestionWorkflow`**:
-```python
-workflow = UnifiedIngestionWorkflow()
-summary_page, cards = workflow.ingest_article(source_file)
-```
-
-**`BidirectionalLinker`**:
-```python
-linker = BidirectionalLinker(wiki_dir, notes_dir)
-linker.scan_and_update_references()
-```
-
 ## 验证方法
 
-### 功能检查
-
-摄取一篇文章后验证：
-- [ ] Wiki 摘要页面已创建
-- [ ] 相关实体/概念页面已更新
-- [ ] 判断卡/方法卡已提取
-- [ ] 双向引用已建立
-- [ ] 索引和日志已更新
-
-### 质量检查
-
-- [ ] 判断卡有明确的适用条件
-- [ ] Wiki 概念页面引用了相关卡片
-- [ ] 所有链接都是有效的
-- [ ] 元数据完整且一致
+摄取一篇文章后，按步骤 7 校验清单检查，并确认：
+- Wiki 摘要页面已创建、索引已更新
+- 卡片 frontmatter 必填字段完整
+- 双向引用的 `[[wikilink]]` 正文与 frontmatter 对应
 
 ## 示例
 
