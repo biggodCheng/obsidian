@@ -1,1 +1,10 @@
 timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
+2026-04-14T10:00	baseline	ob-note	-	26.6	baseline	-	初始评估	dry_run
+2026-04-14T10:05	66a191c	ob-note	26.6	70.2	keep	工作流+指令+检查点	从功能介绍重写为执行指南	dry_run
+2026-04-14T10:00	baseline	ob-search	-	33.7	baseline	-	初始评估	dry_run
+2026-04-14T10:10	66a191c	ob-search	33.7	84.4	keep	工作流+指令+资源	从能力说明书重写为执行指南+CLI映射	dry_run
+2026-04-14T10:00	baseline	ob-article	-	63.6	baseline	-	初始评估	dry_run
+2026-04-14T10:00	baseline	ob-article-wiki	-	65.9	baseline	-	初始评估	dry_run
+2026-04-14T10:00	baseline	ob-todo	-	35	baseline	-	初始评估(预估)	dry_run
+2026-04-14T10:15	66a191c	ob-todo	35	77.9	keep	工作流+指令+资源	从功能介绍重写为执行指南+CLI映射	dry_run
+2026-04-14T10:00	baseline	darwin-skill	-	73.5	baseline	-	初始评估	dry_run
