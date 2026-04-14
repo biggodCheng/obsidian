@@ -121,7 +121,7 @@ def main():
     parser.add_argument('--concepts', help='按 wiki 概念搜索关联卡片，逗号分隔')
     parser.add_argument('--list', '-l', action='store_true',
                         help='列出所有笔记（不搜索）')
-    parser.add_argument('--show-content', '-c', action='store_true',
+    parser.add_argument('--show-content', action='store_true',
                         help='显示内容预览（匹配上下文）')
     parser.add_argument('--json', '-j', action='store_true',
                         help='以 JSON 格式输出')

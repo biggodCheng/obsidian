@@ -84,13 +84,19 @@
 title: 页面标题
 type: 实体卡|概念卡|摘要|综合
 date: YYYY-MM-DD
-tags: [tag1, tag2]
-sources: [source1, source2]
-related: [page1, page2]
+tags:
+  - tag1
+  - tag2
+sources:
+  - source1
+  - source2
+related:
+  - page1
+  - page2
 
 # Lobster 集成字段（可选）
-lobster_cards: []  # 引用的Lobster卡片，如：[[卡片名]], [[另一个卡片]]
-lobster_type: []   # 相关的卡片类型筛选，如：["判断卡", "方法卡"]
+lobster_cards: []  # 引用的Lobster卡片，如：卡片名, 另一个卡片
+lobster_type: []   # 相关的卡片类型筛选，如：判断卡, 方法卡
 ---
 
 # 页面标题
@@ -201,12 +207,12 @@ related:
 ## Wiki-Lobster 交叉引用
 
 **Wiki 页面引用 Lobster 卡片**：
-- 在 frontmatter 中添加 `lobster_cards: [[卡片名]]`
-- 在页面内容中添加 `## Lobster 卡片` 章节
+- 在 frontmatter 中添加 `lobster_cards` 列表（纯字符串，不用 `[[ ]]`）
+- 在页面内容中添加 `## Lobster 卡片` 章节，用 `[[卡片名]]` 链接
 
 **Lobster 卡片引用 Wiki 概念**：
-- 在 frontmatter 中添加 `wiki_concepts: [[概念名]]`
-- 在卡片内容中添加 `## 相关 Wiki 概念` 章节
+- 在 frontmatter 中添加 `wiki_concepts` 列表（纯字符串，不用 `[[ ]]`）
+- 在卡片内容中添加 `## 相关 Wiki 概念` 章节，用 `[[概念名]]` 链接
 
 **自动化维护**：
 - 每次摄取时自动扫描并更新所有相关引用
