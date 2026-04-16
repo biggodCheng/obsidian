@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/卡片库/判断卡/一人公司早期唯一正确姿势是量变暴力输出.md",
+                "file": "personal-wiki/skill技能/一句话生成专业 PPT：html-ppt-skill.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "一人公司早期唯一正确姿势是量变暴力输出"
+              "title": "一句话生成专业 PPT：html-ppt-skill"
             }
           }
         ]
@@ -185,8 +185,16 @@
       "bases:新建数据库": false
     }
   },
-  "active": "542d185ed7697c78",
+  "active": "b544c27046955be1",
   "lastOpenFiles": [
+    "personal-wiki/skill技能/OpenClaw_完整技能手册.md",
+    "personal-wiki/skill技能/一句话生成专业 PPT：html-ppt-skill.md",
+    "personal-wiki/skill技能/CLAUDE.md",
+    "personal-wiki/raw/sources/构建数字资产工厂.md",
+    "personal-wiki/CLAUDE.md",
+    "personal-wiki/skill技能",
+    "CLAUDE.md",
+    "personal-wiki/卡片库/判断卡/一人公司早期唯一正确姿势是量变暴力输出.md",
     "personal-wiki/卡片库/方法卡/AI指令模版.md",
     "personal-wiki/卡片库/方法卡/人机分工流水线三步法.md",
     "personal-wiki/卡片库/判断卡/真问题来自业务现场.md",
@@ -205,23 +213,15 @@
     "personal-wiki/卡片库/案例卡/日拍75条视频的一人公司主理人.md",
     "personal-wiki/卡片库/方法卡/一人公司选赛道三特征.md",
     "personal-wiki/卡片库/方法卡/一人公司四步验证路径.md",
-    "personal-wiki/卡片库/判断卡/一人公司早期唯一正确姿势是量变暴力输出.md",
     "personal-wiki/卡片库/判断卡/一人公司定价取决于身份而非资料本身.md",
     "personal-wiki/卡片库/判断卡/一人公司的目标必须高到刺破随便试试的伪装.md",
     "personal-wiki/raw/sources/一人公司月入5万的秘密-把信息垃圾卖到一千块.md",
-    "personal-wiki/wiki/摘要卡/10条管理心法找回工作掌控感.md",
-    "personal-wiki/卡片库/方法卡/信息差三层变现路径.md",
-    "personal-wiki/卡片库/判断卡/没有产品的内容是在给平台免费打工.md",
-    "personal-wiki/卡片库/判断卡/信息差是一人公司最核心的资产.md",
-    "personal-wiki/wiki/概念卡/信息差三层变现模型.md",
-    "personal-wiki/wiki/概念卡/目标量级校准.md",
     "skills-lock.json",
     "_all_wikilinks_raw.txt",
     "_valid_filenames.txt",
     "personal-wiki/卡片库/判断卡/情绪波动等于记忆深度.md.tmp.56568.1776105874523",
     "personal-wiki/日常工作/2026-04",
     "personal-wiki/日常工作",
-    "personal-wiki/卡片库/日常工作",
-    "personal-wiki/wiki/综合卡/判断卡应用指南.html"
+    "personal-wiki/卡片库/日常工作"
   ]
 }

@@ -23,13 +23,11 @@
   "providerConfigs": {
     "claude": {
       "safeMode": "acceptEdits",
-      "cliPath": "",
-      "cliPathsByHost": {
-        "LAPTOP-3GMOUTEH": "C:\\nvm4w\\nodejs\\node_modules\\@anthropic-ai\\claude-code\\cli.js"
-      },
+      "cliPath": "C:\\nvm4w\\nodejs\\claude",
+      "cliPathsByHost": {},
       "loadUserSettings": true,
-      "enableChrome": false,
-      "enableBangBash": false,
+      "enableChrome": true,
+      "enableBangBash": true,
       "enableOpus1M": false,
       "enableSonnet1M": false,
       "lastModel": "haiku",
@@ -44,18 +42,22 @@
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
-      "installationMethodsByHost": {
-        "LAPTOP-3GMOUTEH": "native-windows"
-      },
+      "installationMethodsByHost": {},
       "wslDistroOverridesByHost": {}
     }
   },
   "settingsProvider": "claude",
-  "savedProviderModel": {},
-  "savedProviderEffort": {},
+  "savedProviderModel": {
+    "claude": "glm-4.7"
+  },
+  "savedProviderEffort": {
+    "claude": "high"
+  },
   "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {},
-  "lastCustomModel": "",
+  "savedProviderThinkingBudget": {
+    "claude": "off"
+  },
+  "lastCustomModel": "glm-4.7",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,
