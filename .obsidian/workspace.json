@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/skill技能/一句话生成专业 PPT：html-ppt-skill.md",
+                "file": "personal-wiki/思考灵感/项目idea/AI文特征.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "一句话生成专业 PPT：html-ppt-skill"
+              "title": "AI文特征"
             }
           }
         ]
@@ -185,10 +185,24 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "542d185ed7697c78",
   "lastOpenFiles": [
-    "personal-wiki/skill技能/OpenClaw_完整技能手册.md",
+    "personal-wiki/思考灵感/项目idea/算命网站.md",
+    "personal-wiki/思考灵感/项目idea/AI文特征.md",
+    "personal-wiki/思考灵感/网站工具/网站指纹工具.md",
+    "personal-wiki/思考灵感/网站工具/网站指纹工具",
+    "personal-wiki/思考灵感/网站工具",
+    "personal-wiki/卡片库/方法卡/AI推翻法.md",
+    "personal-wiki/卡片库/方法卡/AI行动推演法.md",
+    "personal-wiki/卡片库/方法卡/AI费曼法.md",
+    "personal-wiki/卡片库/方法卡/AI实时解惑法.md",
+    "personal-wiki/卡片库/方法卡/非线性阅读法.md",
+    "personal-wiki/卡片库/判断卡/AI总结法本质是娱乐.md",
+    "personal-wiki/raw/sources/AI阅读法 快速内化吸收一本书.md",
     "personal-wiki/skill技能/一句话生成专业 PPT：html-ppt-skill.md",
+    "personal-wiki/思考灵感/项目idea",
+    "personal-wiki/思考灵感",
+    "personal-wiki/skill技能/OpenClaw_完整技能手册.md",
     "personal-wiki/skill技能/CLAUDE.md",
     "personal-wiki/raw/sources/构建数字资产工厂.md",
     "personal-wiki/CLAUDE.md",
@@ -204,24 +218,10 @@
     "personal-wiki/wiki/概念卡/强判断vs罗列信息.md",
     "personal-wiki/wiki/概念卡/人机分工-收敛与锚定.md",
     "personal-wiki/wiki/概念卡/暗知识vs明知识.md",
-    "personal-wiki/wiki/概念卡/真问题vs伪命题.md",
-    "personal-wiki/wiki/摘要卡/还在让AI写全文？你的内容竞争力已经被锁死了.md",
-    "personal-wiki/raw/sources/还在让AI写全文？你的内容竞争力已经被锁死了.md",
     "personal-wiki/wiki/综合卡/拆卡方法论.md.tmp.35908.1776155515634",
     "personal-wiki/wiki/概念卡/判断卡.md.tmp.35908.1776155499102",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-14.md",
-    "personal-wiki/卡片库/案例卡/日拍75条视频的一人公司主理人.md",
-    "personal-wiki/卡片库/方法卡/一人公司选赛道三特征.md",
-    "personal-wiki/卡片库/方法卡/一人公司四步验证路径.md",
-    "personal-wiki/卡片库/判断卡/一人公司定价取决于身份而非资料本身.md",
-    "personal-wiki/卡片库/判断卡/一人公司的目标必须高到刺破随便试试的伪装.md",
-    "personal-wiki/raw/sources/一人公司月入5万的秘密-把信息垃圾卖到一千块.md",
     "skills-lock.json",
     "_all_wikilinks_raw.txt",
-    "_valid_filenames.txt",
-    "personal-wiki/卡片库/判断卡/情绪波动等于记忆深度.md.tmp.56568.1776105874523",
-    "personal-wiki/日常工作/2026-04",
-    "personal-wiki/日常工作",
-    "personal-wiki/卡片库/日常工作"
+    "_valid_filenames.txt"
   ]
 }
