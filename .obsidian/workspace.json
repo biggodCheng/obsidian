@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/思考灵感/项目idea/AI文特征.md",
-                "mode": "source",
+                "file": "personal-wiki/卡片库/方法卡/提高ECPM的三种方法.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "AI文特征"
+              "title": "提高ECPM的三种方法"
             }
           }
         ]
@@ -185,43 +185,43 @@
       "bases:新建数据库": false
     }
   },
-  "active": "542d185ed7697c78",
+  "active": "b544c27046955be1",
   "lastOpenFiles": [
-    "personal-wiki/思考灵感/项目idea/算命网站.md",
+    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-20.md",
+    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-15.md.tmp.42084.1776687486157",
+    "personal-wiki/卡片库/方法卡/精细化运营的五大关键点.md",
+    "personal-wiki/卡片库/方法卡/公转私的三层架构模型.md",
+    "personal-wiki/卡片库/判断卡/泛流量吃平台的钱精准流量转化自己的产品.md",
+    "personal-wiki/卡片库/判断卡/纯AI内容的存活周期.md",
+    "personal-wiki/卡片库/方法卡/RPA自动化全流程设计.md",
+    "personal-wiki/卡片库/判断卡/细分才有机会.md",
+    "personal-wiki/卡片库/判断卡/卷流量不如卷单价.md",
+    "personal-wiki/卡片库/方法卡/公众号赛道选择的五维评估法.md",
+    "personal-wiki/卡片库/判断卡/项目周期性的四个阶段.md",
+    "personal-wiki/卡片库/案例卡/林途公众号矩阵从0到200W收益的完整历程.md",
+    "personal-wiki/wiki/摘要卡/公众号6个月流量主收益200W复盘.md",
+    "personal-wiki/wiki/实体卡/DracoVibeCoding.md",
+    "personal-wiki/wiki/概念卡/ECPM.md",
+    "personal-wiki/wiki/概念卡/流量主.md",
+    "personal-wiki/wiki/概念卡/账号矩阵.md",
+    "personal-wiki/wiki/实体卡/林途.md",
+    "personal-wiki/卡片库/方法卡/本地GPU批量推理法.md",
+    "personal-wiki/raw/sources/垂直小号依然有红利，分享我做三年公众号精准获客的思路.md",
+    "personal-wiki/卡片库/方法卡/提高ECPM的三种方法.md",
+    "personal-wiki/卡片库/判断卡/永远赚不到认知以外的钱.md",
+    "personal-wiki/卡片库/判断卡/企业号vs个人号的成功率差异.md",
+    "新建 文本文档.txt",
     "personal-wiki/思考灵感/项目idea/AI文特征.md",
+    "personal-wiki/思考灵感/项目idea/算命网站.md",
     "personal-wiki/思考灵感/网站工具/网站指纹工具.md",
     "personal-wiki/思考灵感/网站工具/网站指纹工具",
     "personal-wiki/思考灵感/网站工具",
     "personal-wiki/卡片库/方法卡/AI推翻法.md",
-    "personal-wiki/卡片库/方法卡/AI行动推演法.md",
-    "personal-wiki/卡片库/方法卡/AI费曼法.md",
-    "personal-wiki/卡片库/方法卡/AI实时解惑法.md",
-    "personal-wiki/卡片库/方法卡/非线性阅读法.md",
-    "personal-wiki/卡片库/判断卡/AI总结法本质是娱乐.md",
-    "personal-wiki/raw/sources/AI阅读法 快速内化吸收一本书.md",
-    "personal-wiki/skill技能/一句话生成专业 PPT：html-ppt-skill.md",
     "personal-wiki/思考灵感/项目idea",
     "personal-wiki/思考灵感",
-    "personal-wiki/skill技能/OpenClaw_完整技能手册.md",
-    "personal-wiki/skill技能/CLAUDE.md",
-    "personal-wiki/raw/sources/构建数字资产工厂.md",
-    "personal-wiki/CLAUDE.md",
     "personal-wiki/skill技能",
-    "CLAUDE.md",
-    "personal-wiki/卡片库/判断卡/一人公司早期唯一正确姿势是量变暴力输出.md",
-    "personal-wiki/卡片库/方法卡/AI指令模版.md",
-    "personal-wiki/卡片库/方法卡/人机分工流水线三步法.md",
-    "personal-wiki/卡片库/判断卡/真问题来自业务现场.md",
-    "personal-wiki/卡片库/判断卡/人做收敛锚定AI做发散.md",
-    "personal-wiki/卡片库/判断卡/暗知识是竞争壁垒.md",
-    "personal-wiki/卡片库/判断卡/外包思考起点等于放弃竞争.md",
-    "personal-wiki/wiki/概念卡/强判断vs罗列信息.md",
-    "personal-wiki/wiki/概念卡/人机分工-收敛与锚定.md",
-    "personal-wiki/wiki/概念卡/暗知识vs明知识.md",
     "personal-wiki/wiki/综合卡/拆卡方法论.md.tmp.35908.1776155515634",
     "personal-wiki/wiki/概念卡/判断卡.md.tmp.35908.1776155499102",
-    "skills-lock.json",
-    "_all_wikilinks_raw.txt",
-    "_valid_filenames.txt"
+    "skills-lock.json"
   ]
 }
