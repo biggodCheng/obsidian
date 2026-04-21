@@ -13,12 +13,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://mp.weixin.qq.com/s/hE-_AFBXd8Tl90uAHXtWdg",
-                "title": "10条管理心法，帮你找回工作掌控感",
+                "url": "https://open.weixin.qq.com/connect/qrconnect?appid=wx3ac5ffd9daadaa75&redirect_uri=https%3A%2F%2Fscys.com%2Fconn%2Fweb%2Flogin%2Fwx_callback&response_type=code&scope=snsapi_login&state=b5c2289520c7facb093c0a1c0d26a9d5#wechat_redirect",
+                "title": "微信登录",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "10条管理心法，帮你找回工作掌控感"
+              "title": "微信登录"
             }
           }
         ]
@@ -206,11 +206,17 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "417ea69694c20dc7",
+  "active": "4f29572b4e0549ae",
   "lastOpenFiles": [
+    "2026-04-20.md",
+    "写给独立开发者：如何快速做出产品MVP.md",
+    "现在做套壳产品，有巨大机会.md",
+    "如何提高做产品的成功率.md",
+    "翻石头：独立开发者的日常修行.md",
+    "从华杉老师写作和我看书经历，看习惯如何决定一个人的命运.md",
+    "2026-04-09.md",
     "10条管理心法，帮你找回工作掌控感.md",
     "2026-04-14.md",
-    "2026-04-09.md",
     "2026-04-13.md",
     "3 月航海家航海｜OpenClaw 从零基础到实战运用｜航海手册（持续更新） - 飞书云文档 1.md",
     "3 月航海家航海｜OpenClaw 从零基础到实战运用｜航海手册（持续更新） - 飞书云文档.md",
