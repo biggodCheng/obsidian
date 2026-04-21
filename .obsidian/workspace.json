@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/思考灵感/项目idea/产品原则.md",
-                "mode": "source",
+                "file": "personal-wiki/wiki/实体卡/article-processor.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "产品原则"
+              "title": "article-processor"
             }
           }
         ]
@@ -187,6 +187,21 @@
   },
   "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/wiki/实体卡/ob-note.md",
+    "personal-wiki/wiki/实体卡/ob-search.md",
+    "personal-wiki/wiki/实体卡/ob-todo.md",
+    "personal-wiki/wiki/实体卡/OpenClaw.md",
+    "personal-wiki/wiki/实体卡/Steve Hanov.md",
+    "personal-wiki/wiki/实体卡/袁锐钦.md",
+    "personal-wiki/wiki/实体卡/王丹维.md",
+    "personal-wiki/wiki/实体卡/苏摩.md",
+    "personal-wiki/wiki/实体卡/刘小排r.md",
+    "personal-wiki/wiki/实体卡/龙虾AI.md",
+    "personal-wiki/wiki/实体卡/乔纳·伯杰.md",
+    "personal-wiki/wiki/实体卡/怡然.md",
+    "personal-wiki/wiki/实体卡/万维钢.md",
+    "personal-wiki/思考灵感/项目idea/产品原则.md",
+    "personal-wiki/wiki/实体卡/刘向东.md",
     "cgq-obsidian/2026-04-09.md",
     "personal-wiki/卡片库/案例/20250421093108.md",
     "personal-wiki/卡片库/案例/20250421093107.md",
@@ -198,21 +213,6 @@
     "personal-wiki/卡片库/判断/20250421093101.md",
     "personal-wiki/wiki/概念卡/打无记忆的牌.md",
     "personal-wiki/wiki/概念卡/验证付费意愿.md",
-    "personal-wiki/wiki/概念卡/产品形态选择.md",
-    "personal-wiki/wiki/概念卡/MVP.md",
-    "personal-wiki/wiki/摘要卡/写给独立开发者如何快速做出产品MVP.md",
-    "personal-wiki/raw/sources/写给独立开发者：如何快速做出产品MVP.md",
-    "personal-wiki/卡片库/案例/20250421093008.md",
-    "personal-wiki/卡片库/案例/20250421093007.md",
-    "personal-wiki/卡片库/方法/20250421093006.md",
-    "personal-wiki/卡片库/判断/20250421093005.md",
-    "personal-wiki/卡片库/判断/20250421093004.md",
-    "personal-wiki/卡片库/判断/20250421093003.md",
-    "personal-wiki/卡片库/判断/20250421093002.md",
-    "personal-wiki/卡片库/判断/20250421093001.md",
-    "personal-wiki/wiki/概念卡/技术平权.md",
-    "personal-wiki/wiki/概念卡/傻X窗口.md",
-    "personal-wiki/wiki/概念卡/边缘创新.md",
     "personal-wiki/卡片库/方法",
     "personal-wiki/卡片库/案例",
     "personal-wiki/卡片库/判断",
@@ -222,6 +222,6 @@
     "personal-wiki/思考灵感/网站工具",
     "personal-wiki/思考灵感/项目idea",
     "personal-wiki/思考灵感",
-    "personal-wiki/skill技能"
+    "personal-wiki/思考灵感/skill技能"
   ]
 }
