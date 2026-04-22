@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/卡片库/判断卡/做海外网站是快速做MVP的最佳选择.md",
-                "mode": "preview",
+                "file": "personal-wiki/思考灵感/项目idea/产品原则.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "做海外网站是快速做MVP的最佳选择"
+              "title": "产品原则"
             }
           }
         ]
@@ -185,11 +185,27 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/思考灵感/项目idea/网站冷启动和推广.md",
+    "personal-wiki/思考灵感/项目idea/老婆可以做的项目.md",
+    "personal-wiki/思考灵感/项目idea/老人可以做的项目.md",
+    "personal-wiki/思考灵感/项目idea/塔罗.md",
+    "personal-wiki/思考灵感/项目idea/算命网站.md",
+    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
+    "personal-wiki/思考灵感/项目idea/产品原则.md",
+    "personal-wiki/思考灵感/项目idea/做出海 Web 工具原因.md",
+    "personal-wiki/思考灵感/项目idea/扣子skills.md",
+    "personal-wiki/思考灵感/skill技能/言外之意-Elips.md",
+    "personal-wiki/raw/sources/我刻意觉察并练习的几个思维模式分享.md",
+    "personal-wiki/思考灵感/项目idea/AI文特征.md",
+    "personal-wiki/思考灵感/网站工具/网站指纹工具.md",
+    "personal-wiki/raw/sources/写给独立开发者：如何快速做出产品MVP.md",
+    "personal-wiki/raw/sources/翻石头：独立开发者的日常修行.md",
+    "personal-wiki/卡片库/判断卡/做海外网站是快速做MVP的最佳选择.md",
+    "cgq-obsidian/2026-04-21.md",
     "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-21.md",
     "personal-wiki/卡片库/方法卡/两天内做MVP的方法.md",
-    "personal-wiki/卡片库/判断卡/做海外网站是快速做MVP的最佳选择.md",
     "personal-wiki/wiki/概念卡/产品形态选择.md",
     "personal-wiki/卡片库/案例卡/靠窗座位的想要与一定要.md",
     "personal-wiki/卡片库/案例卡/KeywordSea两天11小时的MVP案例.md",
@@ -197,22 +213,6 @@
     "personal-wiki/卡片库/案例卡/Raphael AI月活100万的套壳案例.md",
     "personal-wiki/卡片库/案例卡/Manus是伟大的套壳产品案例.md",
     "personal-wiki/卡片库/案例卡/杜国楹背背佳的28年成功案例.md",
-    "personal-wiki/卡片库/案例卡/巴菲特从巴伦周刊找到的两只股票.md",
-    "personal-wiki/卡片库/案例卡/独立开发者的石头堆5个核心信息源.md",
-    "personal-wiki/卡片库/案例卡/巴菲特50年阅读巴伦周刊只找到2只股票.md",
-    "personal-wiki/卡片库/案例卡/大柱子vs二拴子习惯差异造成的命运分化.md",
-    "personal-wiki/卡片库/案例卡/10年看1077本书的阅读习惯.md",
-    "personal-wiki/卡片库/案例卡/华杉老师每天早上7点写作的日日不断习惯.md",
-    "personal-wiki/卡片库/方法卡/半天内做MVP的方法.md",
-    "personal-wiki/卡片库/方法卡/寻找套壳产品机会的三个方法.md",
-    "personal-wiki/卡片库/方法卡/红杉AI助理产品的三条评价标准.md",
-    "personal-wiki/卡片库/方法卡/洞察需求的四维公式.md",
-    "personal-wiki/卡片库/方法卡/独立开发者翻石头的15个问题清单.md",
-    "personal-wiki/卡片库/判断卡/投资自己是最划算的投资.md",
-    "personal-wiki/卡片库/判断卡/快速做MVP需要提高失败的速度.md",
-    "personal-wiki/卡片库/判断卡/MVP功能取舍只围绕验证内容开发.md",
-    "personal-wiki/卡片库/判断卡/套壳产品的机会窗口期不超过半年.md",
-    "personal-wiki/卡片库/判断卡/套壳产品的价值在于降低AI使用门槛.md",
     "personal-wiki/卡片库/方法",
     "personal-wiki/卡片库/案例",
     "personal-wiki/卡片库/判断",
