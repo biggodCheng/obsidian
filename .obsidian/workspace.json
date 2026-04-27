@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
+                "file": "personal-wiki/思考灵感/项目idea/产品idea.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "如何找产品需求"
+              "title": "产品idea"
             }
           }
         ]
@@ -185,8 +185,9 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "542d185ed7697c78",
   "lastOpenFiles": [
+    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
     "personal-wiki/wiki/概念卡/账号矩阵.md",
     "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-27.md",
     "personal-wiki/思考灵感/项目idea/老婆可以做的项目.md",
@@ -201,7 +202,6 @@
     "personal-wiki/思考灵感/项目idea/算命网站.md",
     "personal-wiki/思考灵感/项目idea/上线流程.md",
     "personal-wiki/思考灵感/项目idea/塔罗.md",
-    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
     "personal-wiki/思考灵感/项目idea/PRD文档案例.md",
     "personal-wiki/思考灵感/项目idea/老人可以做的项目.md",
     "personal-wiki/思考灵感/项目idea/做出海 Web 工具原因.md",
