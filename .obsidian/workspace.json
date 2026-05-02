@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/思考灵感/项目idea/产品idea.md",
+                "file": "personal-wiki/思考灵感/skill技能/CLAUDE.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "产品idea"
+              "title": "CLAUDE"
             }
           }
         ]
@@ -185,11 +185,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b544c27046955be1",
+  "active": "542d185ed7697c78",
   "lastOpenFiles": [
-    "personal-wiki/思考灵感/项目idea/富贵的内容方法论.md",
     "personal-wiki/思考灵感/项目idea/产品原则.md",
+    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
     "personal-wiki/思考灵感/项目idea/产品idea.md",
+    "personal-wiki/思考灵感/项目idea/富贵的内容方法论.md",
     "personal-wiki/思考灵感/skill技能/调研竞品skill.md",
     "personal-wiki/思考灵感/项目idea/扣子skills.md",
     "personal-wiki/思考灵感/skill技能/言外之意-Elips.md",
@@ -202,7 +203,6 @@
     "personal-wiki/思考灵感/项目idea/网站冷启动和推广.md",
     "personal-wiki/思考灵感/项目idea/算命网站.md",
     "personal-wiki/思考灵感/项目idea/上线流程.md",
-    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
     "personal-wiki/思考灵感/项目idea/谷歌七万美金的nano banana hackthon获奖项目.md",
     "personal-wiki/思考灵感/项目idea/独立创业者手册.md",
     "personal-wiki/wiki/概念卡/账号矩阵.md",
