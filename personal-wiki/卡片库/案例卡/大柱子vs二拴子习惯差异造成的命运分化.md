@@ -1,8 +1,7 @@
 ---
 type: 案例
 slug: 大柱子vs二拴子习惯差异造成的命运分化
-created_at: 2026-04-21
-created: 2026-04-27
+created: 2026-04-21
 updated: 2026-04-27
 tags: [习惯, 对比, 命运分化]
 sources:
