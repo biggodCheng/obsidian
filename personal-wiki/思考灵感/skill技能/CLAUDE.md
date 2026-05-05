@@ -8,8 +8,6 @@
 
 ## 1. 编码前先思考
 
-[](https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md#1-think-before-coding)
-
 **不要妄下断言。不要掩饰困惑。坦诚地权衡利弊。**
 
 实施前：
@@ -20,8 +18,6 @@
 - 如果有什么不清楚的地方，停下来。说出让你困惑的地方。然后提问。
 
 ## 2. 简单至上
-
-[](https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md#2-simplicity-first)
 
 **用最少的代码解决问题。不要进行任何推测。**
 
@@ -34,8 +30,6 @@
 问问自己：“一位资深工程师会认为这过于复杂吗？” 如果答案是肯定的，那就简化它。
 
 ## 3. 手术改变
-
-[](https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md#3-surgical-changes)
 
 **只碰你必须碰的东西。只收拾你自己的烂摊子。**
 
@@ -54,8 +48,6 @@
 测试要求：每一行修改后的代码都应该直接追溯到用户的请求。
 
 ## 4. 目标驱动型执行
-
-[](https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md#4-goal-driven-execution)
 
 **定义成功标准。循环直至验证通过。**
 
