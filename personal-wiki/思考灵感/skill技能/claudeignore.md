@@ -1,0 +1,17 @@
+*.log
+
+*.png
+
+node_modules/
+
+.next/
+
+dist/
+
+coverage/
+
+__pycache__/
+
+*.pyc
+
+build/
