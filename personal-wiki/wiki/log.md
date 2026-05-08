@@ -287,6 +287,37 @@
 
 ---
 
+## [2026-05-08] ingest | 搞懂Token，AI账单至少省一半
+
+**源文件**: `raw/sources/搞懂Token-AI账单至少省一半.md`
+**原始URL**: https://mp.weixin.qq.com/s/PTAAinMaXGobU3Yrw_vHkQ
+
+**操作**:
+- 创建摘要: `wiki/摘要卡/搞懂Token-AI账单至少省一半.md`
+- 创建实体: `wiki/实体卡/stormzhang.md`
+- 创建概念: `wiki/概念卡/Token.md`, `wiki/概念卡/Token经济学.md`, `wiki/概念卡/上下文窗口.md`, `wiki/概念卡/Agent滚雪球效应.md`, `wiki/概念卡/Prompt Caching.md`, `wiki/概念卡/claudeignore.md`, `wiki/概念卡/Subagent隔离.md`
+- 创建判断卡: 4张
+- 创建方法卡: 2张
+- 创建案例卡: 2张
+- 更新索引: `wiki/index.md`
+
+**统计**:
+- Wiki页面: 9个(摘要1+实体1+概念7)
+- Lobster卡片: 8张(判断4+方法2+案例2)
+- 双向链接: 已建立完整交叉引用
+
+**核心价值**:
+- Token底层机制: BPE算法按词频切分，中文比英文更费Token
+- Token经济学: 输出5倍于输入成本，隐性Token是最大盲区
+- Agent滚雪球效应: 每轮带完整上下文，方向错立刻停
+- .claudeignore: 投入产出比最高的单一优化，减少30-40%消耗
+- Claude Code深度优化: /clear、/compact、Subagent隔离、按任务切模型
+
+**标签**:
+- #Token #AI成本优化 #Claude Code #Agent
+
+---
+
 ## [2026-05-03] lint | 健康检查二次修复（用户要求处理所有待修复项）
 
 **检查范围**: personal-wiki/wiki/ + personal-wiki/卡片库/
