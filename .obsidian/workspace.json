@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal-wiki/思考灵感/提示词/个人介绍网页-网页版.md",
+                "file": "personal-wiki/思考灵感/网站工具/产品上线TodoList.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "个人介绍网页-网页版"
+              "title": "产品上线TodoList"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "苏格",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "file": "personal-wiki/思考灵感/提示词/Seedance 2.0 AI视频导演提示词.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "2026-04-05-method-openclaw-skill三层结构设计 的反向链接列表"
+              "title": "Seedance 2.0 AI视频导演提示词 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "file": "personal-wiki/思考灵感/提示词/Seedance 2.0 AI视频导演提示词.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "2026-04-05-method-openclaw-skill三层结构设计 的出链列表"
+              "title": "Seedance 2.0 AI视频导演提示词 的出链列表"
             }
           },
           {
@@ -156,24 +156,35 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/2026-04-05-method-openclaw-skill三层结构设计.md",
+                "file": "personal-wiki/思考灵感/提示词/Seedance 2.0 AI视频导演提示词.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-04-05-method-openclaw-skill三层结构设计 的大纲"
+              "title": "Seedance 2.0 AI视频导演提示词 的大纲"
+            }
+          },
+          {
+            "id": "c20762001f4545c2",
+            "type": "leaf",
+            "state": {
+              "type": "x-article-preview",
+              "state": {},
+              "icon": "newspaper",
+              "title": "X 文章预览"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 574.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "qmd-as-md-obsidian:Render Quarto to PDF": false,
       "qmd-as-md-obsidian:Toggle Quarto Preview": false,
       "marp-slides:Show Slide Preview": false,
       "switcher:打开快速切换": false,
@@ -182,46 +193,49 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "x-article-in-obsidian:打开 X 文章预览": false
     }
   },
   "active": "542d185ed7697c78",
   "lastOpenFiles": [
-    "personal-wiki/思考灵感/提示词/个人介绍网页-卡片版.md",
-    "personal-wiki/思考灵感/提示词/个人介绍网页-网页版.md",
-    "personal-wiki/思考灵感/提示词/Editorial 杂志感个人主页.md",
-    "personal-wiki/思考灵感/提示词/AI 科技感-深色炫酷风.md",
-    "personal-wiki/思考灵感/提示词/苹果官网感-极简高级风.md",
-    "personal-wiki/思考灵感/提示词/SPEC编程提示词.md",
-    "personal-wiki/思考灵感/提示词/公众号各赛道提示词.md",
-    "personal-wiki/思考灵感/提示词/小红书提示词.md",
-    "personal-wiki/raw/assets/images/未命名",
-    "personal-wiki/思考灵感/提示词/文章提示词.md",
-    "personal-wiki/思考灵感/提示词/逆向Prompt提取专家.md",
-    "personal-wiki/卡片库/方法卡/半天内做MVP的方法.md",
-    "personal-wiki/wiki/摘要卡/10条管理心法找回工作掌控感.md",
-    "personal-wiki/wiki/index.md",
-    "personal-wiki/wiki/摘要卡/从华杉老师写作和我看书经历，看习惯如何决定一个人的命运.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-05-03.md",
-    "personal-wiki/wiki/综合卡/拆卡方法论.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-14.md",
-    "personal-wiki/wiki/综合卡/拆卡模式对比分析.md",
-    "personal-wiki/wiki/综合卡/判断卡应用指南.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-15.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-20.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-21.md",
-    "personal-wiki/wiki/综合卡/Wiki健康检查报告-2026-04-27.md",
-    "personal-wiki/思考灵感/网站工具/发外链模板.md",
-    "personal-wiki/思考灵感/skill技能/OpenClaw_完整技能手册.md",
-    "personal-wiki/思考灵感/skill技能/claudeignore.md",
-    "personal-wiki/wiki/index.md.tmp.12152.1d873614e287",
-    "personal-wiki/wiki/概念卡/Subagent隔离.md.tmp.12152.1916a7d2c13c",
-    "personal-wiki/wiki/概念卡/claudeignore.md.tmp.12152.fbdd3e31aa29",
-    "personal-wiki/wiki/概念卡/Prompt Caching.md.tmp.12152.aca5e9073b67",
-    "personal-wiki/wiki/概念卡/上下文窗口.md.tmp.12152.5a940b76e6c6",
-    "personal-wiki/思考灵感/提示词",
-    "personal-wiki/卡片库/方法",
-    "personal-wiki/卡片库/案例",
-    "personal-wiki/卡片库/判断"
+    "personal-wiki/raw/sources/运营3个SaaS应用月入$35,000：Samuel Rondo的创业方法论.md",
+    "personal-wiki/思考灵感/网站工具/产品上线TodoList.md",
+    "personal-wiki/日常工作/布置网站总结.md",
+    "personal-wiki/思考灵感/项目idea/AI追问梳理需求提示词.md",
+    "personal-wiki/思考灵感/项目idea/富贵的内容方法论.md",
+    "personal-wiki/思考灵感/项目idea/独立创业者手册.md",
+    "personal-wiki/思考灵感/项目idea/产品idea.md",
+    "personal-wiki/思考灵感/项目idea/产品原则.md",
+    "personal-wiki/思考灵感/项目idea/PRD文档案例.md",
+    "personal-wiki/思考灵感/项目idea/AI文特征.md",
+    "personal-wiki/思考灵感/项目idea/做出海 Web 工具原因.md",
+    "personal-wiki/思考灵感/项目idea/网站冷启动和推广.md",
+    "personal-wiki/思考灵感/项目idea/算命网站.md",
+    "personal-wiki/思考灵感/项目idea/上线流程.md",
+    "personal-wiki/思考灵感/项目idea/老婆可以做的项目.md",
+    "personal-wiki/思考灵感/项目idea/如何找产品需求.md",
+    "personal-wiki/思考灵感/提示词/Seedance 2.0 AI视频导演提示词.md",
+    "2026-05-13.md",
+    "personal-wiki/思考灵感/提示词/X 短文或者短视频提示词.md",
+    "cgq-obsidian/2026-04-09.md",
+    "x-article-in-obsidian/src/ui/welcomeModal.ts",
+    "x-article-in-obsidian/src/views/xArticlePreviewView.ts",
+    "x-article-in-obsidian/src/commands/publishViaMcp.ts",
+    "x-article-in-obsidian/src/commands/copyPublishScript.ts",
+    "x-article-in-obsidian/src/views",
+    "x-article-in-obsidian/src/ui",
+    "x-article-in-obsidian/src/templateMapper.ts",
+    "x-article-in-obsidian/src/settings.ts",
+    "x-article-in-obsidian/src/renderEnhancements.ts",
+    "x-article-in-obsidian/src/markdown.ts",
+    "x-article-in-obsidian/docs/screenshot-2.png",
+    "x-article-in-obsidian/docs/screenshot-1.png",
+    "x-article-in-obsidian/docs/marker-regression-sample.md",
+    "x-article-in-obsidian/README_EN.md",
+    "x-article-in-obsidian/README.md",
+    "x-article-in-obsidian/AGENTS.md",
+    "personal-wiki/日常工作/公众号文章/裁掉3个客服后，他的客户满意度反而涨了14%，年省40W.md",
+    "personal-wiki/思考灵感/提示词/SPEC编程提示词.md"
   ]
 }

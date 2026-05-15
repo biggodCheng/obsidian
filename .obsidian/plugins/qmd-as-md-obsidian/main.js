@@ -27,7 +27,8 @@ const DEFAULT_SETTINGS = {
     quartoPath: 'quarto',
     enableQmdLinking: true,
     quartoTypst: '',
-    emitCompilationLogs: true, // Default is to emit logs
+    emitCompilationLogs: true,
+    openPdfInObsidian: false,
 };
 class QmdAsMdPlugin extends obsidian.Plugin {
     constructor() {
@@ -45,13 +46,10 @@ class QmdAsMdPlugin extends obsidian.Plugin {
             this.addSettingTab(new QmdSettingTab(this.app, this));
             console.log('Settings tab added successfully');
             this.addRibbonIcon('eye', 'Toggle Quarto Preview', async () => {
-                const activeView = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
-                if (activeView?.file && this.isQuartoFile(activeView.file)) {
-                    console.log(`Toggling preview for: ${activeView.file.path}`);
-                    await this.togglePreview(activeView.file);
-                }
-                else {
-                    new obsidian.Notice('Current file is not a Quarto document');
+                const file = this.getActiveQuartoFile();
+                if (file) {
+                    console.log(`Toggling preview for: ${file.path}`);
+                    await this.togglePreview(file);
                 }
             });
             console.log('Ribbon icon added');
@@ -59,17 +57,22 @@ class QmdAsMdPlugin extends obsidian.Plugin {
                 id: 'toggle-quarto-preview',
                 name: 'Toggle Quarto Preview',
                 callback: async () => {
-                    const activeView = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
-                    if (activeView?.file && this.isQuartoFile(activeView.file)) {
-                        console.log(`Command: Toggling preview for ${activeView.file.path}`);
-                        await this.togglePreview(activeView.file);
-                    }
-                    else {
-                        new obsidian.Notice('Current file is not a Quarto document');
+                    const file = this.getActiveQuartoFile();
+                    if (file) {
+                        console.log(`Command: Toggling preview for ${file.path}`);
+                        await this.togglePreview(file);
                     }
                 },
                 hotkeys: [{ modifiers: ['Ctrl', 'Shift'], key: 'p' }],
             });
+            this.addRibbonIcon('file-output', 'Render Quarto to PDF', async () => {
+                const file = this.getActiveQuartoFile();
+                if (file)
+                    await this.renderPdf(file);
+            });
+            this.registerRenderCommand('render-quarto-pdf', 'Render Quarto (use YAML format)');
+            this.registerRenderCommand('render-quarto-pdf-typst', 'Render Quarto to PDF (Typst engine)', 'typst');
+            this.registerRenderCommand('render-quarto-pdf-latex', 'Render Quarto to PDF (LaTeX engine)', 'pdf');
             console.log('Commands added');
         }
         catch (error) {
@@ -89,6 +92,37 @@ class QmdAsMdPlugin extends obsidian.Plugin {
     }
     isQuartoFile(file) {
         return file.extension === 'qmd';
+    }
+    getActiveQuartoFile() {
+        const activeView = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
+        if (activeView?.file && this.isQuartoFile(activeView.file)) {
+            return activeView.file;
+        }
+        new obsidian.Notice('Current file is not a Quarto document');
+        return null;
+    }
+    getVaultFullPath(file) {
+        const adapter = this.app.vault.adapter;
+        if (adapter instanceof obsidian.FileSystemAdapter) {
+            return adapter.getFullPath(file.path);
+        }
+        new obsidian.Notice('Vault is not on a local filesystem; cannot run Quarto.');
+        return null;
+    }
+    pdfPathFor(qmdFile) {
+        return qmdFile.path.replace(/\.qmd$/i, '.pdf');
+    }
+    registerRenderCommand(id, name, toFormat) {
+        this.addCommand({
+            id,
+            name,
+            icon: 'file-output',
+            callback: async () => {
+                const file = this.getActiveQuartoFile();
+                if (file)
+                    await this.renderPdf(file, toFormat);
+            },
+        });
     }
     registerQmdExtension() {
         console.log('Registering .qmd as markdown...');
@@ -114,7 +148,9 @@ class QmdAsMdPlugin extends obsidian.Plugin {
                 new obsidian.Notice(`File ${file.path} not found`);
                 return;
             }
-            const filePath = this.app.vault.adapter.getFullPath(abstractFile.path);
+            const filePath = this.getVaultFullPath(abstractFile);
+            if (!filePath)
+                return;
             const workingDir = path__namespace.dirname(filePath);
             console.log(`Resolved file path: ${filePath}`);
             console.log(`Working directory: ${workingDir}`);
@@ -192,6 +228,103 @@ class QmdAsMdPlugin extends obsidian.Plugin {
             new obsidian.Notice('All Quarto previews stopped');
         }
     }
+    async renderPdf(file, toFormat) {
+        try {
+            const abstractFile = this.app.vault.getAbstractFileByPath(file.path);
+            if (!abstractFile || !(abstractFile instanceof obsidian.TFile)) {
+                new obsidian.Notice(`File ${file.path} not found`);
+                return;
+            }
+            const filePath = this.getVaultFullPath(abstractFile);
+            if (!filePath)
+                return;
+            const workingDir = path__namespace.dirname(filePath);
+            const envVars = { ...process.env };
+            if (this.settings.quartoTypst.trim()) {
+                envVars.QUARTO_TYPST = this.settings.quartoTypst.trim();
+            }
+            const engineLabel = toFormat === 'typst' ? 'Typst' : toFormat === 'pdf' ? 'LaTeX' : 'use YAML format';
+            new obsidian.Notice(`Rendering Quarto (${engineLabel})...`);
+            // Best-guess path used for the pre-render leaf-capture (so we can
+            // reuse an existing PDF tab on recompile). The authoritative path
+            // comes from quarto's "Output created:" stdout line, parsed below.
+            const guessedPdfPath = this.pdfPathFor(file);
+            const existingLeaf = this.app.workspace
+                .getLeavesOfType('pdf')
+                .find((l) => l.view?.file?.path === guessedPdfPath);
+            const args = ['render', filePath];
+            if (toFormat)
+                args.push('--to', toFormat);
+            const quartoProcess = child_process.spawn(this.settings.quartoPath, args, {
+                cwd: workingDir,
+                env: envVars,
+            });
+            let detectedOutputBasename = null;
+            quartoProcess.stdout?.on('data', (data) => {
+                const output = data.toString();
+                if (this.settings.emitCompilationLogs) {
+                    console.log(`Quarto Render Output: ${output}`);
+                }
+                const match = output.match(/Output created:\s*(.+?)\s*$/m);
+                if (match) {
+                    detectedOutputBasename = path__namespace.basename(match[1].trim());
+                }
+            });
+            quartoProcess.stderr?.on('data', (data) => {
+                if (this.settings.emitCompilationLogs) {
+                    console.error(`Quarto Render Error: ${data.toString()}`);
+                }
+            });
+            quartoProcess.on('close', async (code) => {
+                if (code !== 0) {
+                    new obsidian.Notice(`Quarto render failed (exit ${code}). Check console.`);
+                    return;
+                }
+                const sourceDir = file.parent?.path ?? '';
+                const outputVaultPath = detectedOutputBasename
+                    ? (sourceDir ? `${sourceDir}/${detectedOutputBasename}` : detectedOutputBasename)
+                    : guessedPdfPath;
+                const outputTFile = await this.waitForVaultFile(outputVaultPath);
+                if (!outputTFile) {
+                    new obsidian.Notice(`Quarto rendered, but ${outputVaultPath} did not appear in the vault within the timeout. Check Quarto's output-dir or vault sync.`);
+                    return;
+                }
+                const isPdf = outputVaultPath.toLowerCase().endsWith('.pdf');
+                if (!this.settings.openPdfInObsidian || !isPdf) {
+                    new obsidian.Notice(isPdf
+                        ? `PDF rendered: ${outputVaultPath}`
+                        : `Rendered: ${outputVaultPath} (Obsidian's built-in viewer only handles PDFs).`);
+                    return;
+                }
+                try {
+                    const leaf = existingLeaf?.parent != null
+                        ? existingLeaf
+                        : this.app.workspace.getLeaf('split', 'vertical');
+                    await leaf.openFile(outputTFile, { active: false });
+                    this.app.workspace.revealLeaf(leaf);
+                    new obsidian.Notice(`Opened ${outputVaultPath}`);
+                }
+                catch (err) {
+                    console.error('Failed to open PDF in Obsidian:', err);
+                    new obsidian.Notice(`PDF rendered at ${outputVaultPath}, but Obsidian could not open it (no PDF viewer registered?).`);
+                }
+            });
+        }
+        catch (error) {
+            console.error('Failed to render Quarto PDF:', error);
+            new obsidian.Notice('Failed to render Quarto PDF');
+        }
+    }
+    async waitForVaultFile(vaultPath, timeoutMs = 5000) {
+        const start = Date.now();
+        while (Date.now() - start < timeoutMs) {
+            const f = this.app.vault.getAbstractFileByPath(vaultPath);
+            if (f instanceof obsidian.TFile)
+                return f;
+            await new Promise((r) => setTimeout(r, 200));
+        }
+        return null;
+    }
 }
 class QmdSettingTab extends obsidian.PluginSettingTab {
     constructor(app, plugin) {
@@ -245,6 +378,16 @@ class QmdSettingTab extends obsidian.PluginSettingTab {
             .onChange(async (value) => {
             console.log(`Emit Compilation Logs set to: ${value}`);
             this.plugin.settings.emitCompilationLogs = value;
+            await this.plugin.saveSettings();
+        }));
+        new obsidian.Setting(containerEl)
+            .setName('Open Compiled PDF in Obsidian')
+            .setDesc('When rendering to PDF, open the resulting file inside Obsidian using the built-in PDF viewer. The .qmd source must live in the vault so the rendered PDF is accessible.')
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.openPdfInObsidian)
+            .onChange(async (value) => {
+            console.log(`Open PDF in Obsidian set to: ${value}`);
+            this.plugin.settings.openPdfInObsidian = value;
             await this.plugin.saveSettings();
         }));
         console.log('Settings tab rendered successfully');

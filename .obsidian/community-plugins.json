@@ -1,6 +1,7 @@
 [
-  "obsidian-clipper",
   "qmd-as-md-obsidian",
   "marp-slides",
-  "dataview"
+  "dataview",
+  "x-article-in-obsidian",
+  "obsidian-clipper"
 ]
